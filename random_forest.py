@@ -20,6 +20,7 @@ if __name__ == '__main__':
     #class_column = 'diagnosis'
     #print(df)
 
-    tree = RandomTree(df, class_column)
+    tree = RandomTree()
+    tree.train(df, class_column)
     tree.print_tree()
 

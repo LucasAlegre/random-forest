@@ -5,12 +5,19 @@ class RandomTree:
 
     AttributeMetadata = None
 
-    def __init__(self, data, class_column):
+    def __init__(self):
+        self.data = None
+        self.class_column = None  # class to be predicted
+        self.attributes = None
+        self.root = None
+
+    def train(self, data, class_column):
         self.data = data
         self.class_column = class_column
         self.attributes = set(self.data.columns.values)
         self.attributes.remove(self.class_column)  # all columns except the class
         RandomTree.AttributeMetadata = {atr: data[atr].unique().tolist() for atr in self.attributes}
+
         self.root = RandomTreeNode(data, self.attributes.copy(), self.class_column)
        
     def predict(self, instance):
@@ -18,6 +25,7 @@ class RandomTree:
 
     def print_tree(self):
         self.root.print_node()
+
 
 class RandomTreeNode:
 
@@ -29,26 +37,26 @@ class RandomTreeNode:
         self.terminal_class = terminal_class
         self.children = dict()
 
-        if self._number_of_classes(data) == 1:
+        if self._number_of_classes(data) == 1:  # if all instances have the same class
             self.is_leaf = True
             self.terminal_class = data[class_column].values[0]
             return
         
-        if len(attributes) == 0:
+        if len(attributes) == 0:  # if there is no more attributes to divide
             self.is_leaf = True
             self.terminal_class = data[class_column].value_counts().idxmax()
             return
 
         entropy = self.entropy(data)
-        self.node_attribute = max(attributes, key=lambda a: entropy - self.entropy_attribute(data, a))
-        self.is_numerical = data[self.node_attribute].dtype != object
+        self.node_attribute = max(attributes, key=lambda a: entropy - self.entropy_attribute(data, a))  # attribute with the max gain (entropy - entropy of the attribute)
+        self.is_numerical = data[self.node_attribute].dtype != object  # (object == str on Pandas)
         attributes.remove(self.node_attribute)
 
         for v in RandomTree.AttributeMetadata[self.node_attribute]:
             dv = data[data[self.node_attribute] == v]
             if len(dv) == 0:
                 self.is_leaf = True
-                self.terminal_class = data[class_column].value_counts().idxmax()
+                self.terminal_class = data[class_column].value_counts().idxmax()   # most frequent class
                 return
             else:
                 self.children[v] = RandomTreeNode(dv, attributes.copy(), class_column)
