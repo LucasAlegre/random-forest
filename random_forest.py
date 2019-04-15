@@ -12,11 +12,12 @@ if __name__ == '__main__':
     #class_column = 'g/b'
     #print(df)
 
-    # df = pd.read_csv('datasets/wine.csv')
-    # class_column = 'class'
-    # print(df)
+    #df = pd.read_csv('datasets/wine.csv')
+    #class_column = 'class'
+    #print(df)
 
     #df = pd.read_csv('datasets/wdbc.csv')
+    #df.drop('id', axis=1, inplace=True)
     #class_column = 'diagnosis'
     #print(df)
 
