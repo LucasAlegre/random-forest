@@ -29,10 +29,11 @@ class RandomTree:
 
 class RandomTreeNode:
 
-    def __init__(self, data, attributes, class_column, is_leaf=False, terminal_class=None):
+    def __init__(self, data, attributes, class_column, is_leaf=False, terminal_class=None, cut_point_by_mean=True):
         self.is_leaf = is_leaf
         self.is_numerical = None
         self.class_column = class_column
+        self.cut_point_by_mean = cut_point_by_mean
         self.cut_point = None
         self.terminal_class = terminal_class
         self.children = dict()
@@ -69,6 +70,12 @@ class RandomTreeNode:
         
         return self.children[instance[self.node_attribute]].predict(instance)
 
+    def _calculate_cut_point_for(self, attribute, data):
+        if self.cut_point_by_mean:
+            return data[attribute].mean()
+        else:
+            pass
+
     def _number_of_classes(self, data):
         return data[self.class_column].nunique()
 
@@ -87,9 +94,15 @@ class RandomTreeNode:
                 value_counts = g[self.class_column].value_counts().tolist()
                 entropy = sum((-x/g_size)*log2(x/g_size) for x in value_counts)
                 mean_entropy += (g_size/n)*entropy
-        
         else:  # numerical attribute
-            pass
+            cut_point = self._calculate_cut_point_for(attribute, data)
+            subset_greater_than_cut = data[data[attribute] > cut_point]
+            less_or_equal_cut = data[data[attribute] <= cut_point]
+            for g in [subset_greater_than_cut, less_or_equal_cut]:
+                g_size = len(g)
+                value_counts = g[self.class_column].value_counts().tolist()
+                entropy = sum((-x/g_size)*log2(x/g_size) for x in value_counts)
+                mean_entropy += (g_size/n)*entropy
         
         return mean_entropy
     
@@ -100,6 +113,3 @@ class RandomTreeNode:
             print('{} {}'.format(height*'--', self.node_attribute))
             for c in self.children.values():
                 c.print_node(height + 1)
-
-    
-        

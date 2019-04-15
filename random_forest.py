@@ -12,9 +12,9 @@ if __name__ == '__main__':
     #class_column = 'g/b'
     #print(df)
 
-    #df = pd.read_csv('datasets/wine.csv')
-    #class_column = 'class'
-    #print(df)
+    # df = pd.read_csv('datasets/wine.csv')
+    # class_column = 'class'
+    # print(df)
 
     #df = pd.read_csv('datasets/wdbc.csv')
     #class_column = 'diagnosis'
