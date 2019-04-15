@@ -3,7 +3,8 @@ from math import log2
 
 class RandomTree:
 
-    AttributeMetadata = None
+    AttributesDomain = {}
+    NumericalAttributes = set()
 
     def __init__(self):
         self.data = None
@@ -14,9 +15,11 @@ class RandomTree:
     def train(self, data, class_column):
         self.data = data
         self.class_column = class_column
+
         self.attributes = set(self.data.columns.values)
         self.attributes.remove(self.class_column)  # all columns except the class
-        RandomTree.AttributeMetadata = {atr: data[atr].unique().tolist() for atr in self.attributes}
+
+        self._compute_metadata()
 
         self.root = RandomTreeNode(data, self.attributes.copy(), self.class_column)
        
@@ -26,16 +29,22 @@ class RandomTree:
     def print_tree(self):
         self.root.print_node()
 
+    def _compute_metadata(self):
+        for atr in self.attributes:
+            if self.data[atr].dtype == object:  # Categorical Attribute (object == str on Pandas)
+                RandomTree.AttributesDomain[atr] = self.data[atr].unique().tolist()
+            else:
+                RandomTree.NumericalAttributes.add(atr)
+
 
 class RandomTreeNode:
 
-    def __init__(self, data, attributes, class_column, is_leaf=False, terminal_class=None, cut_point_by_mean=True):
-        self.is_leaf = is_leaf
-        self.is_numerical = None
+    def __init__(self, data, attributes, class_column, cut_point_by_mean=True):
+        self.is_leaf = False
         self.class_column = class_column
         self.cut_point_by_mean = cut_point_by_mean
         self.cut_point = None
-        self.terminal_class = terminal_class
+        self.terminal_class = None
         self.children = dict()
 
         if self._number_of_classes(data) == 1:  # if all instances have the same class
@@ -50,23 +59,33 @@ class RandomTreeNode:
 
         entropy = self.entropy(data)
         self.node_attribute = max(attributes, key=lambda a: entropy - self.entropy_attribute(data, a))  # attribute with the max gain (entropy - entropy of the attribute)
-        self.is_numerical = data[self.node_attribute].dtype != object  # (object == str on Pandas)
         attributes.remove(self.node_attribute)
 
-        for v in RandomTree.AttributeMetadata[self.node_attribute]:
-            dv = data[data[self.node_attribute] == v]
-            if len(dv) == 0:
-                self.is_leaf = True
-                self.terminal_class = data[class_column].value_counts().idxmax()   # most frequent class
-                return
-            else:
-                self.children[v] = RandomTreeNode(dv, attributes.copy(), class_column)
+        if self.node_attribute not in RandomTree.NumericalAttributes:
+            for v in RandomTree.AttributesDomain[self.node_attribute]:
+                dv = data[data[self.node_attribute] == v]
+                if len(dv) == 0:
+                    self.is_leaf = True
+                    self.terminal_class = data[class_column].value_counts().idxmax()   # most frequent class
+                    self.children = None
+                    return
+                else:
+                    self.children[v] = RandomTreeNode(dv, attributes.copy(), class_column)
+        
+        else:
+            cut_point = self._calculate_cut_point_for(self.node_attribute, data)
+            subset_greater_than_cut = data[data[self.node_attribute] > cut_point]
+            less_or_equal_cut = data[data[self.node_attribute] <= cut_point]
+            self.children = {
+                False: RandomTreeNode(subset_greater_than_cut, attributes.copy(), class_column),
+                True: RandomTreeNode(less_or_equal_cut, attributes.copy(), class_column)
+            }
 
     def predict(self, instance):
         if self.is_leaf:
             return self.terminal_class
-        if self.is_numerical:
-            return self.children[instance[self.node_attribute] < self.cut_point].predict(instance)
+        if self.node_attribute in RandomTree.NumericalAttributes:
+            return self.children[instance[self.node_attribute] <= self.cut_point].predict(instance)
         
         return self.children[instance[self.node_attribute]].predict(instance)
 
@@ -88,12 +107,13 @@ class RandomTreeNode:
         n = len(data)
         mean_entropy = 0
 
-        if data[attribute].dtype == object:  # categorical attribute (object == str on Pandas)
+        if attribute not in RandomTree.NumericalAttributes:  # categorical attribute (object == str on Pandas)
             for _, g in data.groupby(attribute):
                 g_size = len(g)
                 value_counts = g[self.class_column].value_counts().tolist()
                 entropy = sum((-x/g_size)*log2(x/g_size) for x in value_counts)
                 mean_entropy += (g_size/n)*entropy
+
         else:  # numerical attribute
             cut_point = self._calculate_cut_point_for(attribute, data)
             subset_greater_than_cut = data[data[attribute] > cut_point]
