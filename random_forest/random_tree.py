@@ -1,4 +1,5 @@
 from math import log2
+from graphviz import Digraph
 
 
 class RandomTree:
@@ -26,15 +27,28 @@ class RandomTree:
     def predict(self, instance):
         return self.root.predict(instance)
 
-    def print_tree(self):
-        self.root.print_node()
-
     def _compute_metadata(self):
         for atr in self.attributes:
             if self.data[atr].dtype == object:  # Categorical Attribute (object == str on Pandas)
                 RandomTree.AttributesDomain[atr] = self.data[atr].unique().tolist()
             else:
                 RandomTree.NumericalAttributes.add(atr)
+
+    def print_tree(self):
+        self.root.print_node()
+
+    def view_tree(self):
+        g = Digraph('DecisionTree')
+        g.node_attr.update(color='lightblue2', style='filled', fontname='Arial')
+        g.edge_attr.update(fontname='Arial')
+        nodes = [self.root]
+        while len(nodes) != 0:
+            node = nodes.pop(0)
+            g.node(str(id(node)), str(node), shape="box" if node.is_leaf else "ellipse", color="gray" if node.is_leaf else "lightblue2")
+            for value, child in node.children.items():
+                g.edge(str(id(node)), str(id(child)), label=str(value))
+                nodes.append(child)
+        g.view()
 
 
 class RandomTreeNode:
@@ -46,6 +60,7 @@ class RandomTreeNode:
         self.cut_point = None
         self.terminal_class = None
         self.children = dict()
+        self.num_samples = len(data)
 
         if self._number_of_classes(data) == 1:  # if all instances have the same class
             self.is_leaf = True
@@ -57,8 +72,10 @@ class RandomTreeNode:
             self.terminal_class = data[class_column].value_counts().idxmax()
             return
 
-        entropy = self.entropy(data)
-        self.node_attribute = max(attributes, key=lambda a: entropy - self.entropy_attribute(data, a))  # attribute with the max gain (entropy - entropy of the attribute)
+        self.data_entropy = self.entropy(data)
+        attr_entropies = {attr: self.entropy_attribute(data, attr) for attr in attributes}
+        self.node_attribute = max(attributes, key=lambda attr: self.data_entropy - attr_entropies[attr])  # attribute with the max gain (entropy - entropy of the attribute)
+        self.gain = self.data_entropy - attr_entropies[self.node_attribute]
         attributes.remove(self.node_attribute)
 
         if self.node_attribute not in RandomTree.NumericalAttributes:
@@ -73,9 +90,9 @@ class RandomTreeNode:
                     self.children[v] = RandomTreeNode(dv, attributes.copy(), class_column)
         
         else:
-            cut_point = self._calculate_cut_point_for(self.node_attribute, data)
-            subset_greater_than_cut = data[data[self.node_attribute] > cut_point]
-            less_or_equal_cut = data[data[self.node_attribute] <= cut_point]
+            self.cut_point = self._calculate_cut_point_for(self.node_attribute, data)
+            subset_greater_than_cut = data[data[self.node_attribute] > self.cut_point]
+            less_or_equal_cut = data[data[self.node_attribute] <= self.cut_point]
             self.children = {
                 False: RandomTreeNode(subset_greater_than_cut, attributes.copy(), class_column),
                 True: RandomTreeNode(less_or_equal_cut, attributes.copy(), class_column)
@@ -133,3 +150,14 @@ class RandomTreeNode:
             print('{} {}'.format(height*'--', self.node_attribute))
             for c in self.children.values():
                 c.print_node(height + 1)
+    
+    def __str__(self):
+        if self.is_leaf:
+            return "{}\n\nSamples: {}".format(self.terminal_class, self.num_samples)
+        else:
+            if self.node_attribute in RandomTree.NumericalAttributes:
+                attribute = "{} <= {:.2f}".format(self.node_attribute, self.cut_point)
+            else:
+                attribute = self.node_attribute
+            return "{}\n\nEntropy: {:.3f}\nGain: {:.3f}\nSamples: {}".format(attribute, self.data_entropy, self.gain, self.num_samples)
+ 
