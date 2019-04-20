@@ -37,8 +37,8 @@ class RandomTree:
     def print_tree(self):
         self.root.print_node()
 
-    def view_tree(self):
-        g = Digraph('DecisionTree')
+    def view_tree(self, name):
+        g = Digraph(name)
         g.node_attr.update(color='lightblue2', style='filled', fontname='Arial')
         g.edge_attr.update(fontname='Arial')
         nodes = [self.root]
@@ -61,6 +61,7 @@ class RandomTreeNode:
         self.terminal_class = None
         self.children = dict()
         self.num_samples = len(data)
+        self.data_entropy = self.entropy(data)
 
         if self._number_of_classes(data) == 1:  # if all instances have the same class
             self.is_leaf = True
@@ -72,7 +73,6 @@ class RandomTreeNode:
             self.terminal_class = data[class_column].value_counts().idxmax()
             return
 
-        self.data_entropy = self.entropy(data)
         attr_entropies = {attr: self.entropy_attribute(data, attr) for attr in attributes}
         self.node_attribute = max(attributes, key=lambda attr: self.data_entropy - attr_entropies[attr])  # attribute with the max gain (entropy - entropy of the attribute)
         self.gain = self.data_entropy - attr_entropies[self.node_attribute]
@@ -153,7 +153,7 @@ class RandomTreeNode:
     
     def __str__(self):
         if self.is_leaf:
-            return "{}\n\nSamples: {}".format(self.terminal_class, self.num_samples)
+            return "{}\n\nEntropy: {:.3f}\nSamples: {}".format(self.terminal_class, self.data_entropy, self.num_samples)
         else:
             if self.node_attribute in RandomTree.NumericalAttributes:
                 attribute = "{} <= {:.2f}".format(self.node_attribute, self.cut_point)
