@@ -39,12 +39,12 @@ class RandomTree:
 
     def view_tree(self, name):
         g = Digraph(name)
-        g.node_attr.update(color='lightblue2', style='filled', fontname='Arial')
+        g.node_attr.update(style='filled', fontname='Arial')
         g.edge_attr.update(fontname='Arial')
         nodes = [self.root]
         while len(nodes) != 0:
             node = nodes.pop(0)
-            g.node(str(id(node)), str(node), shape="box" if node.is_leaf else "ellipse", color="gray" if node.is_leaf else "lightblue2")
+            g.node(str(id(node)), str(node), shape="box" if node.is_leaf else "ellipse", color="gray" if node.is_leaf else "green3")
             for value, child in node.children.items():
                 g.edge(str(id(node)), str(id(child)), label=str(value))
                 nodes.append(child)
