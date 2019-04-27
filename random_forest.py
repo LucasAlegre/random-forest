@@ -29,16 +29,18 @@ if __name__ == '__main__':
     #df = pd.read_csv('datasets/pulsar_stars.csv')
     #class_column = 'target_class'
 
-    tree = RandomTree()
+    num_trees = 5
+    attr_sample_ratio = 1
+
+    forest = RandomForest(num_trees)
     train = df.sample(frac=0.7)
     test = df.loc[~df.index.isin(train.index)]
-    tree.train(train, class_column)
+    forest.train(train, class_column, attr_sample_ratio)
    
-    tree.view_tree('DecisionTree')
+    forest.view_forest('RandomForest')
 
     c = 0
     for index, row in test.iterrows():
-        if tree.predict(row) == row[class_column]:
+        if forest.predict(row) == row[class_column]:
             c += 1
     print(c/len(test))
-
