@@ -91,7 +91,7 @@ class RandomTreeNode:
                 if len(dv) == 0:
                     self.is_leaf = True
                     self.terminal_class = data[class_column].value_counts().idxmax()   # most frequent class
-                    self.children = None
+                    self.children = {}
                     return
                 else:
                     self.children[v] = RandomTreeNode(dv, attributes.copy(), class_column, attr_sample_size)

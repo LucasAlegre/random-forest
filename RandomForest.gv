@@ -3,5139 +3,794 @@ digraph RandomForest {
 	node [fontname=Arial style=filled]
 	edge [fontname=Arial]
 	subgraph cluster_1 {
-		140131277726104 [label="Total_Bilirubin <= 3.31
-
-Entropy: 0.867
-Gain: 0.092
-Samples: 326" color=green3 shape=ellipse]
-		140131277726104 -> 140131277726496 [label=False]
-		140131277726104 -> 140131277727336 [label=True]
-		140131277726496 [label="Direct_Bilirubin <= 5.49
-
-Entropy: 0.181
-Gain: 0.019
-Samples: 73" color=green3 shape=ellipse]
-		140131277726496 -> 140131277655456 [label=False]
-		140131277726496 -> 140131277726720 [label=True]
-		140131277727336 [label="Alkaline_Phosphotase <= 260.38
-
-Entropy: 0.946
-Gain: 0.057
-Samples: 253" color=green3 shape=ellipse]
-		140131277727336 -> 140131277727560 [label=False]
-		140131277727336 -> 140131277729016 [label=True]
-		140131277655456 [label="1
-
-Entropy: 0.000
-Samples: 28" color=gray shape=box]
-		140131277726720 [label="Total_Bilirubin <= 6.15
-
-Entropy: 0.262
-Gain: 0.047
-Samples: 45" color=green3 shape=ellipse]
-		140131277726720 -> 140131277726944 [label=False]
-		140131277726720 -> 140131277728568 [label=True]
-		140131277727560 [label="Alamine_Aminotransferase <= 62.30
-
-Entropy: 0.608
-Gain: 0.089
-Samples: 67" color=green3 shape=ellipse]
-		140131277727560 -> 140131277726832 [label=False]
-		140131277727560 -> 140131277726440 [label=True]
-		140131277729016 [label="Aspartate_Aminotransferase <= 50.47
-
-Entropy: 0.990
-Gain: 0.017
-Samples: 186" color=green3 shape=ellipse]
-		140131277729016 -> 140131277728288 [label=False]
-		140131277729016 -> 140131277729744 [label=True]
-		140131277726944 [label="Alkaline_Phosphotase <= 447.41
-
-Entropy: 0.439
-Gain: 0.189
-Samples: 22" color=green3 shape=ellipse]
-		140131277726944 -> 140131277727224 [label=False]
-		140131277726944 -> 140131277729072 [label=True]
-		140131277728568 [label="1
-
-Entropy: 0.000
-Samples: 23" color=gray shape=box]
-		140131277726832 [label="1
-
-Entropy: 0.000
-Samples: 21" color=gray shape=box]
-		140131277726440 [label="Aspartate_Aminotransferase <= 48.74
-
-Entropy: 0.755
-Gain: 0.026
-Samples: 46" color=green3 shape=ellipse]
-		140131277726440 -> 140131277726384 [label=False]
-		140131277726440 -> 140131277727728 [label=True]
-		140131277728288 [label="Alkaline_Phosphotase <= 196.84
-
-Entropy: 0.884
-Gain: 0.120
-Samples: 43" color=green3 shape=ellipse]
-		140131277728288 -> 140131277727448 [label=False]
-		140131277728288 -> 140131277464632 [label=True]
-		140131277729744 [label="Direct_Bilirubin <= 0.33
-
-Entropy: 0.999
-Gain: 0.019
-Samples: 143" color=green3 shape=ellipse]
-		140131277729744 -> 140131277729296 [label=False]
-		140131277729744 -> 140131277465808 [label=True]
-		140131277727224 [label="Albumin <= 2.62
-
-Entropy: 0.918
-Gain: 0.459
-Samples: 6" color=green3 shape=ellipse]
-		140131277727224 -> 140131277727952 [label=False]
-		140131277727224 -> 140131277728456 [label=True]
-		140131277729072 [label="1
-
-Entropy: 0.000
-Samples: 16" color=gray shape=box]
-		140131277726384 [label="Albumin_and_Globulin_Ratio <= 0.83
-
-Entropy: 0.918
-Gain: 0.060
-Samples: 15" color=green3 shape=ellipse]
-		140131277726384 -> 140131277729128 [label=False]
-		140131277726384 -> 140131277729576 [label=True]
-		140131277727728 [label="Aspartate_Aminotransferase <= 32.13
-
-Entropy: 0.637
-Gain: 0.175
-Samples: 31" color=green3 shape=ellipse]
-		140131277727728 -> 140131277729688 [label=False]
-		140131277727728 -> 140131277465584 [label=True]
-		140131277727448 [label="Total_Protiens <= 6.78
-
-Entropy: 0.559
-Gain: 0.034
-Samples: 23" color=green3 shape=ellipse]
-		140131277727448 -> 140131277729464 [label=False]
-		140131277727448 -> 140131277466144 [label=True]
-		140131277464632 [label="Total_Bilirubin <= 1.15
-
-Entropy: 1.000
-Gain: 0.073
-Samples: 20" color=green3 shape=ellipse]
-		140131277464632 -> 140131277464688 [label=False]
-		140131277464632 -> 140131277464184 [label=True]
-		140131277729296 [label="Albumin <= 3.23
-
-Entropy: 0.928
-Gain: 0.050
-Samples: 35" color=green3 shape=ellipse]
-		140131277729296 -> 140131277466816 [label=False]
-		140131277729296 -> 140131277467152 [label=True]
-		140131277465808 [label="Aspartate_Aminotransferase <= 25.56
-
-Entropy: 0.998
-Gain: 0.019
-Samples: 108" color=green3 shape=ellipse]
-		140131277465808 -> 140131277464744 [label=False]
-		140131277465808 -> 140131277572920 [label=True]
-		140131277727952 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277728456 [label="Aspartate_Aminotransferase <= 50.33
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131277728456 -> 140131277728792 [label=False]
-		140131277728456 -> 140131277728680 [label=True]
-		140131277729128 [label="Aspartate_Aminotransferase <= 100.33
-
-Entropy: 1.000
-Gain: 0.459
-Samples: 6" color=green3 shape=ellipse]
-		140131277729128 -> 140131277728960 [label=False]
-		140131277729128 -> 140131277464520 [label=True]
-		140131277729576 [label="Gender
-
-Entropy: 0.764
-Gain: 0.320
-Samples: 9" color=green3 shape=ellipse]
-		140131277729576 -> 140131277464240 [label=Male]
-		140131277729576 -> 140131277464912 [label=Female]
-		140131277729688 [label="Gender
-
-Entropy: 0.896
-Gain: 0.206
-Samples: 16" color=green3 shape=ellipse]
-		140131277729688 -> 140131277465416 [label=Male]
-		140131277729688 -> 140131277465304 [label=Female]
-		140131277465584 [label="1
-
-Entropy: 0.000
-Samples: 15" color=gray shape=box]
-		140131277729464 [label="Albumin <= 4.13
-
-Entropy: 0.764
-Gain: 0.225
-Samples: 9" color=green3 shape=ellipse]
-		140131277729464 -> 140131277463736 [label=False]
-		140131277729464 -> 140131277464016 [label=True]
-		140131277466144 [label="Direct_Bilirubin <= 0.59
-
-Entropy: 0.371
-Gain: 0.093
-Samples: 14" color=green3 shape=ellipse]
-		140131277466144 -> 140131277464352 [label=False]
-		140131277466144 -> 140131277467264 [label=True]
-		140131277464688 [label="Direct_Bilirubin <= 0.91
-
-Entropy: 0.863
-Gain: 0.076
-Samples: 7" color=green3 shape=ellipse]
-		140131277464688 -> 140131277464408 [label=False]
-		140131277464688 -> 140131277465640 [label=True]
-		140131277464184 [label="Gender
-
-Entropy: 0.961
-Gain: 0.183
-Samples: 13" color=green3 shape=ellipse]
-		140131277464184 -> 140131277466032 [label=Male]
-		140131277464184 -> 140131277466760 [label=Female]
-		140131277466816 [label="Total_Protiens <= 7.57
-
-Entropy: 0.764
-Gain: 0.033
-Samples: 18" color=green3 shape=ellipse]
-		140131277466816 -> 140131277465528 [label=False]
-		140131277466816 -> 140131277466424 [label=True]
-		140131277467152 [label="Aspartate_Aminotransferase <= 28.94
-
-Entropy: 0.998
-Gain: 0.211
-Samples: 17" color=green3 shape=ellipse]
-		140131277467152 -> 140131277463792 [label=False]
-		140131277467152 -> 140131277571968 [label=True]
-		140131277464744 [label="Aspartate_Aminotransferase <= 33.36
-
-Entropy: 0.990
-Gain: 0.033
-Samples: 50" color=green3 shape=ellipse]
-		140131277464744 -> 140131277467432 [label=False]
-		140131277464744 -> 140131277572976 [label=True]
-		140131277572920 [label="Total_Bilirubin <= 0.77
-
-Entropy: 0.969
-Gain: 0.079
-Samples: 58" color=green3 shape=ellipse]
-		140131277572920 -> 140131277572024 [label=False]
-		140131277572920 -> 140131277570624 [label=True]
-		140131277728792 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277728680 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277728960 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277464520 [label="Albumin <= 3.65
-
-Entropy: 0.811
-Gain: 0.311
-Samples: 4" color=green3 shape=ellipse]
-		140131277464520 -> 140131277463960 [label=False]
-		140131277464520 -> 140131277465360 [label=True]
-		140131277464240 [label="1
-
-Entropy: 0.000
-Samples: 5" color=gray shape=box]
-		140131277464912 [label="Total_Protiens <= 6.55
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 4" color=green3 shape=ellipse]
-		140131277464912 -> 140131277465024 [label=False]
-		140131277464912 -> 140131277464296 [label=True]
-		140131277465416 [label="Total_Bilirubin <= 1.37
-
-Entropy: 0.650
-Gain: 0.191
-Samples: 12" color=green3 shape=ellipse]
-		140131277465416 -> 140131277464800 [label=False]
-		140131277465416 -> 140131277465192 [label=True]
-		140131277465304 [label="Aspartate_Aminotransferase <= 42.75
-
-Entropy: 0.811
-Gain: 0.311
-Samples: 4" color=green3 shape=ellipse]
-		140131277465304 -> 140131277464128 [label=False]
-		140131277465304 -> 140131277466200 [label=True]
-		140131277463736 [label="1
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131277464016 [label="Albumin <= 3.52
-
-Entropy: 0.971
-Gain: 0.420
-Samples: 5" color=green3 shape=ellipse]
-		140131277464016 -> 140131277464464 [label=False]
-		140131277464016 -> 140131277467208 [label=True]
-		140131277464352 [label="Alamine_Aminotransferase <= 43.67
-
-Entropy: 0.650
-Gain: 0.317
-Samples: 6" color=green3 shape=ellipse]
-		140131277464352 -> 140131277465472 [label=False]
-		140131277464352 -> 140131277465752 [label=True]
-		140131277467264 [label="1
-
-Entropy: 0.000
-Samples: 8" color=gray shape=box]
-		140131277464408 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277465640 [label="Age <= 39.83
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 6" color=green3 shape=ellipse]
-		140131277465640 -> 140131277467040 [label=False]
-		140131277465640 -> 140131277463624 [label=True]
-		140131277466032 [label="Total_Bilirubin <= 0.73
-
-Entropy: 0.764
-Gain: 0.225
-Samples: 9" color=green3 shape=ellipse]
-		140131277466032 -> 140131277467488 [label=False]
-		140131277466032 -> 140131277570456 [label=True]
-		140131277466760 [label="Alamine_Aminotransferase <= 94.25
-
-Entropy: 0.811
-Gain: 0.311
-Samples: 4" color=green3 shape=ellipse]
-		140131277466760 -> 140131277467320 [label=False]
-		140131277466760 -> 140131277571128 [label=True]
-		140131277465528 [label="Alkaline_Phosphotase <= 192.50
-
-Entropy: 0.881
-Gain: 0.557
-Samples: 10" color=green3 shape=ellipse]
-		140131277465528 -> 140131277466256 [label=False]
-		140131277465528 -> 140131277570736 [label=True]
-		140131277466424 [label="Total_Protiens <= 7.20
-
-Entropy: 0.544
-Gain: 0.294
-Samples: 8" color=green3 shape=ellipse]
-		140131277466424 -> 140131277571184 [label=False]
-		140131277466424 -> 140131277572080 [label=True]
-		140131277463792 [label="Total_Protiens <= 4.86
-
-Entropy: 0.764
-Gain: 0.025
-Samples: 9" color=green3 shape=ellipse]
-		140131277463792 -> 140131277571520 [label=False]
-		140131277463792 -> 140131277572696 [label=True]
-		140131277571968 [label="Total_Bilirubin <= 1.48
-
-Entropy: 0.811
-Gain: 0.294
-Samples: 8" color=green3 shape=ellipse]
-		140131277571968 -> 140131277571352 [label=False]
-		140131277571968 -> 140131277572360 [label=True]
-		140131277467432 [label="Albumin_and_Globulin_Ratio <= 1.03
-
-Entropy: 0.977
-Gain: 0.095
-Samples: 17" color=green3 shape=ellipse]
-		140131277467432 -> 140131277570288 [label=False]
-		140131277467432 -> 140131277573648 [label=True]
-		140131277572976 [label="Gender
-
-Entropy: 0.946
-Gain: 0.085
-Samples: 33" color=green3 shape=ellipse]
-		140131277572976 -> 140131277572640 [label=Male]
-		140131277572976 -> 140131277573872 [label=Female]
-		140131277572024 [label="Gender
-
-Entropy: 0.998
-Gain: 0.272
-Samples: 34" color=green3 shape=ellipse]
-		140131277572024 -> 140131277572584 [label=Male]
-		140131277572024 -> 140131277573088 [label=Female]
-		140131277570624 [label="Total_Protiens <= 6.05
-
-Entropy: 0.738
-Gain: 0.117
-Samples: 24" color=green3 shape=ellipse]
-		140131277570624 -> 140131277571016 [label=False]
-		140131277570624 -> 140131277155632 [label=True]
-		140131277463960 [label="Albumin_and_Globulin_Ratio <= 1.02
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277463960 -> 140131277465080 [label=False]
-		140131277463960 -> 140131277464072 [label=True]
-		140131277465360 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277465024 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277464296 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277464800 [label="1
-
-Entropy: 0.000
-Samples: 6" color=gray shape=box]
-		140131277465192 [label="Alkaline_Phosphotase <= 724.33
-
-Entropy: 0.918
-Gain: 0.252
-Samples: 6" color=green3 shape=ellipse]
-		140131277465192 -> 140131277464856 [label=False]
-		140131277465192 -> 140131277465696 [label=True]
-		140131277464128 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277466200 [label="Direct_Bilirubin <= 0.60
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277466200 -> 140131277466368 [label=False]
-		140131277466200 -> 140131277463848 [label=True]
-		140131277464464 [label="Age <= 41.00
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131277464464 -> 140131277466088 [label=False]
-		140131277464464 -> 140131277466984 [label=True]
-		140131277467208 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277465472 [label="1
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131277465752 [label="Aspartate_Aminotransferase <= 95.00
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277465752 -> 140131277465864 [label=False]
-		140131277465752 -> 140131277467376 [label=True]
-		140131277467040 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277463624 [label="1
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131277467488 [label="2
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131277570456 [label="Albumin_and_Globulin_Ratio <= 1.34
-
-Entropy: 0.971
-Gain: 0.420
-Samples: 5" color=green3 shape=ellipse]
-		140131277570456 -> 140131277570568 [label=False]
-		140131277570456 -> 140131277571688 [label=True]
-		140131277467320 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277571128 [label="Albumin_and_Globulin_Ratio <= 0.76
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277571128 -> 140131277570232 [label=False]
-		140131277571128 -> 140131277570680 [label=True]
-		140131277466256 [label="1
-
-Entropy: 0.000
-Samples: 6" color=gray shape=box]
-		140131277570736 [label="Alkaline_Phosphotase <= 166.00
-
-Entropy: 0.811
-Gain: 0.311
-Samples: 4" color=green3 shape=ellipse]
-		140131277570736 -> 140131277570400 [label=False]
-		140131277570736 -> 140131277571632 [label=True]
-		140131277571184 [label="Alkaline_Phosphotase <= 202.00
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277571184 -> 140131277571240 [label=False]
-		140131277571184 -> 140131277571408 [label=True]
-		140131277572080 [label="1
-
-Entropy: 0.000
-Samples: 6" color=gray shape=box]
-		140131277571520 [label="Alamine_Aminotransferase <= 38.17
-
-Entropy: 0.650
-Gain: 0.109
-Samples: 6" color=green3 shape=ellipse]
-		140131277571520 -> 140131277570120 [label=False]
-		140131277571520 -> 140131277570848 [label=True]
-		140131277572696 [label="Alkaline_Phosphotase <= 212.67
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131277572696 -> 140131277572248 [label=False]
-		140131277572696 -> 140131277572864 [label=True]
-		140131277571352 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277572360 [label="Total_Bilirubin <= 1.24
+		140199499656328 [label="f20 <= 15.74
+
+Entropy: 0.924
+Gain: 0.581
+Samples: 318" color=green3 shape=ellipse]
+		140199499656328 -> 140199625463848 [label=False]
+		140199499656328 -> 140199499364168 [label=True]
+		140199625463848 [label="f27 <= 0.17
 
 Entropy: 0.592
-Gain: 0.306
-Samples: 7" color=green3 shape=ellipse]
-		140131277572360 -> 140131277572808 [label=False]
-		140131277572360 -> 140131277573144 [label=True]
-		140131277570288 [label="Albumin_and_Globulin_Ratio <= 1.56
+Gain: 0.158
+Samples: 119" color=green3 shape=ellipse]
+		140199625463848 -> 140199499363888 [label=False]
+		140199625463848 -> 140199499364056 [label=True]
+		140199499364168 [label="f29 <= 0.08
 
-Entropy: 0.811
-Gain: 0.311
-Samples: 4" color=green3 shape=ellipse]
-		140131277570288 -> 140131277570792 [label=False]
-		140131277570288 -> 140131277572472 [label=True]
-		140131277573648 [label="Albumin <= 3.04
+Entropy: 0.195
+Gain: 0.042
+Samples: 199" color=green3 shape=ellipse]
+		140199499364168 -> 140199499366016 [label=False]
+		140199499364168 -> 140199499472792 [label=True]
+		140199499363888 [label="M
 
-Entropy: 0.980
-Gain: 0.104
-Samples: 12" color=green3 shape=ellipse]
-		140131277573648 -> 140131277573256 [label=False]
-		140131277573648 -> 140131277573312 [label=True]
-		140131277572640 [label="Alkaline_Phosphotase <= 192.33
+Entropy: 0.000
+Samples: 59" color=gray shape=box]
+		140199499364056 [label="f13 <= 51.93
 
-Entropy: 0.792
+Entropy: 0.860
 Gain: 0.131
-Samples: 21" color=green3 shape=ellipse]
-		140131277572640 -> 140131277573704 [label=False]
-		140131277572640 -> 140131277154288 [label=True]
-		140131277573872 [label="Alkaline_Phosphotase <= 193.92
+Samples: 60" color=green3 shape=ellipse]
+		140199499364056 -> 140199499365960 [label=False]
+		140199499364056 -> 140199499366128 [label=True]
+		140199499366016 [label="f24 <= 0.13
 
-Entropy: 0.980
-Gain: 0.344
-Samples: 12" color=green3 shape=ellipse]
-		140131277573872 -> 140131277570904 [label=False]
-		140131277573872 -> 140131277152608 [label=True]
-		140131277572584 [label="Aspartate_Aminotransferase <= 21.54
+Entropy: 0.395
+Gain: 0.098
+Samples: 77" color=green3 shape=ellipse]
+		140199499366016 -> 140199499472624 [label=False]
+		140199499366016 -> 140199499470664 [label=True]
+		140199499472792 [label="B
+
+Entropy: 0.000
+Samples: 122" color=gray shape=box]
+		140199499365960 [label="M
+
+Entropy: 0.000
+Samples: 14" color=gray shape=box]
+		140199499366128 [label="f21 <= 26.48
+
+Entropy: 0.950
+Gain: 0.194
+Samples: 46" color=green3 shape=ellipse]
+		140199499366128 -> 140199499470440 [label=False]
+		140199499366128 -> 140199499472568 [label=True]
+		140199499472624 [label="f21 <= 23.23
+
+Entropy: 0.672
+Gain: 0.244
+Samples: 34" color=green3 shape=ellipse]
+		140199499472624 -> 140199499470888 [label=False]
+		140199499472624 -> 140199499045296 [label=True]
+		140199499470664 [label="B
+
+Entropy: 0.000
+Samples: 43" color=gray shape=box]
+		140199499470440 [label="f17 <= 0.01
 
 Entropy: 0.619
-Gain: 0.007
-Samples: 13" color=green3 shape=ellipse]
-		140131277572584 -> 140131277570960 [label=False]
-		140131277572584 -> 140131277153392 [label=True]
-		140131277573088 [label="Aspartate_Aminotransferase <= 18.48
+Gain: 0.174
+Samples: 26" color=green3 shape=ellipse]
+		140199499470440 -> 140199499472288 [label=False]
+		140199499470440 -> 140199499044344 [label=True]
+		140199499472568 [label="f24 <= 0.12
 
-Entropy: 0.792
-Gain: 0.073
-Samples: 21" color=green3 shape=ellipse]
-		140131277573088 -> 140131277570176 [label=False]
-		140131277573088 -> 140131277153728 [label=True]
-		140131277571016 [label="Total_Protiens <= 6.90
-
-Entropy: 0.371
-Gain: 0.113
-Samples: 14" color=green3 shape=ellipse]
-		140131277571016 -> 140131277153280 [label=False]
-		140131277571016 -> 140131277155072 [label=True]
-		140131277155632 [label="Albumin <= 2.40
+Entropy: 0.934
+Gain: 0.493
+Samples: 20" color=green3 shape=ellipse]
+		140199499472568 -> 140199499044400 [label=False]
+		140199499472568 -> 140199499046192 [label=True]
+		140199499470888 [label="f7 <= 0.04
 
 Entropy: 0.971
-Gain: 0.020
-Samples: 10" color=green3 shape=ellipse]
-		140131277155632 -> 140131277156136 [label=False]
-		140131277155632 -> 140131277211240 [label=True]
-		140131277465080 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277464072 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277464856 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277465696 [label="Direct_Bilirubin <= 0.48
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 4" color=green3 shape=ellipse]
-		140131277465696 -> 140131277465976 [label=False]
-		140131277465696 -> 140131277466312 [label=True]
-		140131277466368 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277463848 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277466088 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277466984 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277465864 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277467376 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277570568 [label="Alamine_Aminotransferase <= 43.67
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131277570568 -> 140131277570344 [label=False]
-		140131277570568 -> 140131277571072 [label=True]
-		140131277571688 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277570232 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277570680 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277570400 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277571632 [label="Albumin <= 4.10
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277571632 -> 140131277570512 [label=False]
-		140131277571632 -> 140131277571912 [label=True]
-		140131277571240 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277571408 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277570120 [label="Direct_Bilirubin <= 0.85
-
-Entropy: 0.811
-Gain: 0.311
-Samples: 4" color=green3 shape=ellipse]
-		140131277570120 -> 140131277571576 [label=False]
-		140131277570120 -> 140131277572192 [label=True]
-		140131277570848 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277572248 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277572864 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277572808 [label="2
-
-Entropy: 0.000
-Samples: 5" color=gray shape=box]
-		140131277573144 [label="Direct_Bilirubin <= 0.45
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277573144 -> 140131277573424 [label=False]
-		140131277573144 -> 140131277574040 [label=True]
-		140131277570792 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277572472 [label="Albumin <= 4.40
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277572472 -> 140131277573760 [label=False]
-		140131277572472 -> 140131277572136 [label=True]
-		140131277573256 [label="Gender
-
-Entropy: 0.985
-Gain: 0.128
-Samples: 7" color=green3 shape=ellipse]
-		140131277573256 -> 140131277573928 [label=Male]
-		140131277573256 -> 140131277152440 [label=Female]
-		140131277573312 [label="Alkaline_Phosphotase <= 167.40
-
-Entropy: 0.722
-Gain: 0.722
-Samples: 5" color=green3 shape=ellipse]
-		140131277573312 -> 140131277152496 [label=False]
-		140131277573312 -> 140131277153168 [label=True]
-		140131277573704 [label="Albumin_and_Globulin_Ratio <= 1.09
-
-Entropy: 0.414
-Gain: 0.143
-Samples: 12" color=green3 shape=ellipse]
-		140131277573704 -> 140131277152720 [label=False]
-		140131277573704 -> 140131277154008 [label=True]
-		140131277154288 [label="Aspartate_Aminotransferase <= 29.89
-
-Entropy: 0.991
-Gain: 0.229
-Samples: 9" color=green3 shape=ellipse]
-		140131277154288 -> 140131277152384 [label=False]
-		140131277154288 -> 140131277154624 [label=True]
-		140131277570904 [label="2
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131277152608 [label="Age <= 48.62
-
-Entropy: 0.954
-Gain: 0.348
-Samples: 8" color=green3 shape=ellipse]
-		140131277152608 -> 140131277153000 [label=False]
-		140131277152608 -> 140131277154680 [label=True]
-		140131277570960 [label="Age <= 39.88
-
-Entropy: 0.544
-Gain: 0.138
-Samples: 8" color=green3 shape=ellipse]
-		140131277570960 -> 140131277154344 [label=False]
-		140131277570960 -> 140131277152776 [label=True]
-		140131277153392 [label="Alamine_Aminotransferase <= 30.80
-
-Entropy: 0.722
-Gain: 0.171
-Samples: 5" color=green3 shape=ellipse]
-		140131277153392 -> 140131277154064 [label=False]
-		140131277153392 -> 140131277156192 [label=True]
-		140131277570176 [label="Total_Protiens <= 6.40
-
-Entropy: 0.946
-Gain: 0.072
-Samples: 11" color=green3 shape=ellipse]
-		140131277570176 -> 140131277154904 [label=False]
-		140131277570176 -> 140131277155744 [label=True]
-		140131277153728 [label="Direct_Bilirubin <= 0.22
-
-Entropy: 0.469
-Gain: 0.269
-Samples: 10" color=green3 shape=ellipse]
-		140131277153728 -> 140131277156080 [label=False]
-		140131277153728 -> 140131277154792 [label=True]
-		140131277153280 [label="2
-
-Entropy: 0.000
-Samples: 9" color=gray shape=box]
-		140131277155072 [label="Alkaline_Phosphotase <= 190.40
-
-Entropy: 0.722
-Gain: 0.322
-Samples: 5" color=green3 shape=ellipse]
-		140131277155072 -> 140131277156304 [label=False]
-		140131277155072 -> 140131277209840 [label=True]
-		140131277156136 [label="Albumin_and_Globulin_Ratio <= 0.98
-
-Entropy: 0.918
-Gain: 0.377
-Samples: 6" color=green3 shape=ellipse]
-		140131277156136 -> 140131277210624 [label=False]
-		140131277156136 -> 140131277211408 [label=True]
-		140131277211240 [label="Aspartate_Aminotransferase <= 16.50
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 4" color=green3 shape=ellipse]
-		140131277211240 -> 140131277211184 [label=False]
-		140131277211240 -> 140131277210736 [label=True]
-		140131277465976 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277466312 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277570344 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277571072 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277570512 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277571912 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277571576 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277572192 [label="Total_Bilirubin <= 1.65
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277572192 -> 140131277573480 [label=False]
-		140131277572192 -> 140131277572752 [label=True]
-		140131277573424 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277574040 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277573760 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277572136 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277573928 [label="Total_Protiens <= 6.83
-
-Entropy: 1.000
-Gain: 0.459
-Samples: 6" color=green3 shape=ellipse]
-		140131277573928 -> 140131277153112 [label=False]
-		140131277573928 -> 140131277153224 [label=True]
-		140131277152440 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277152496 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277153168 [label="2
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131277152720 [label="Total_Protiens <= 6.83
-
-Entropy: 0.811
-Gain: 0.311
-Samples: 4" color=green3 shape=ellipse]
-		140131277152720 -> 140131277152888 [label=False]
-		140131277152720 -> 140131277154456 [label=True]
-		140131277154008 [label="1
-
-Entropy: 0.000
-Samples: 8" color=gray shape=box]
-		140131277152384 [label="Total_Protiens <= 7.20
-
-Entropy: 0.722
-Gain: 0.322
-Samples: 5" color=green3 shape=ellipse]
-		140131277152384 -> 140131277152664 [label=False]
-		140131277152384 -> 140131277155240 [label=True]
-		140131277154624 [label="Total_Bilirubin <= 0.62
-
-Entropy: 0.811
-Gain: 0.311
-Samples: 4" color=green3 shape=ellipse]
-		140131277154624 -> 140131277154120 [label=False]
-		140131277154624 -> 140131277154512 [label=True]
-		140131277153000 [label="Albumin <= 3.16
-
-Entropy: 0.971
-Gain: 0.971
-Samples: 5" color=green3 shape=ellipse]
-		140131277153000 -> 140131277153448 [label=False]
-		140131277153000 -> 140131277154176 [label=True]
-		140131277154680 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277154344 [label="Albumin <= 3.40
-
-Entropy: 0.811
-Gain: 0.811
-Samples: 4" color=green3 shape=ellipse]
-		140131277154344 -> 140131277155856 [label=False]
-		140131277154344 -> 140131277154232 [label=True]
-		140131277152776 [label="2
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131277154064 [label="Alamine_Aminotransferase <= 37.00
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131277154064 -> 140131277153840 [label=False]
-		140131277154064 -> 140131277155352 [label=True]
-		140131277156192 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277154904 [label="Albumin_and_Globulin_Ratio <= 0.98
-
-Entropy: 0.722
-Gain: 0.073
-Samples: 5" color=green3 shape=ellipse]
-		140131277154904 -> 140131277155688 [label=False]
-		140131277154904 -> 140131277155800 [label=True]
-		140131277155744 [label="Albumin_and_Globulin_Ratio <= 0.93
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 6" color=green3 shape=ellipse]
-		140131277155744 -> 140131277153056 [label=False]
-		140131277155744 -> 140131277210120 [label=True]
-		140131277156080 [label="Age <= 58.00
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277156080 -> 140131277156024 [label=False]
-		140131277156080 -> 140131277209728 [label=True]
-		140131277154792 [label="1
-
-Entropy: 0.000
-Samples: 8" color=gray shape=box]
-		140131277156304 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277209840 [label="Age <= 65.50
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277209840 -> 140131277210064 [label=False]
-		140131277209840 -> 140131277210792 [label=True]
-		140131277210624 [label="Albumin_and_Globulin_Ratio <= 1.05
-
-Entropy: 0.811
-Gain: 0.311
-Samples: 4" color=green3 shape=ellipse]
-		140131277210624 -> 140131277211016 [label=False]
-		140131277210624 -> 140131277211912 [label=True]
-		140131277211408 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277211184 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277210736 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277573480 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277572752 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277153112 [label="Albumin <= 3.40
-
-Entropy: 0.811
-Gain: 0.811
-Samples: 4" color=green3 shape=ellipse]
-		140131277153112 -> 140131277152944 [label=False]
-		140131277153112 -> 140131277152552 [label=True]
-		140131277153224 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277152888 [label="Alkaline_Phosphotase <= 200.00
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277152888 -> 140131277153336 [label=False]
-		140131277152888 -> 140131277154400 [label=True]
-		140131277154456 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277152664 [label="Age <= 36.00
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277152664 -> 140131277154848 [label=False]
-		140131277152664 -> 140131277154568 [label=True]
-		140131277155240 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277154120 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277154512 [label="Albumin <= 2.05
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277154512 -> 140131277155016 [label=False]
-		140131277154512 -> 140131277155128 [label=True]
-		140131277153448 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277154176 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277155856 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277154232 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277153840 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277155352 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277155688 [label="Aspartate_Aminotransferase <= 21.00
-
-Entropy: 0.811
-Gain: 0.811
-Samples: 4" color=green3 shape=ellipse]
-		140131277155688 -> 140131277155520 [label=False]
-		140131277155688 -> 140131277210008 [label=True]
-		140131277155800 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277153056 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277210120 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277156024 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277209728 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277210064 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277210792 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277211016 [label="Total_Bilirubin <= 0.65
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277211016 -> 140131277210232 [label=False]
-		140131277211016 -> 140131277211296 [label=True]
-		140131277211912 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277152944 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277152552 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277153336 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277154400 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277154848 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277154568 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277155016 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277155128 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277155520 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277210008 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277210232 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277211296 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		label="Tree 1"
-	}
-	subgraph cluster_2 {
-		140131277728120 [label="Total_Bilirubin <= 2.90
-
-Entropy: 0.867
-Gain: 0.081
-Samples: 326" color=green3 shape=ellipse]
-		140131277728120 -> 140131277727504 [label=False]
-		140131277728120 -> 140131277729352 [label=True]
-		140131277727504 [label="Aspartate_Aminotransferase <= 359.98
-
-Entropy: 0.286
-Gain: 0.013
-Samples: 80" color=green3 shape=ellipse]
-		140131277727504 -> 140131277728848 [label=False]
-		140131277727504 -> 140131277728176 [label=True]
-		140131277729352 [label="Age <= 44.28
-
-Entropy: 0.947
-Gain: 0.034
-Samples: 246" color=green3 shape=ellipse]
-		140131277729352 -> 140131277729408 [label=False]
-		140131277729352 -> 140131277466648 [label=True]
-		140131277728848 [label="1
-
-Entropy: 0.000
-Samples: 13" color=gray shape=box]
-		140131277728176 [label="Age <= 45.43
-
-Entropy: 0.326
-Gain: 0.070
-Samples: 67" color=green3 shape=ellipse]
-		140131277728176 -> 140131277729520 [label=False]
-		140131277728176 -> 140131277466872 [label=True]
-		140131277729408 [label="Alkaline_Phosphotase <= 288.26
-
-Entropy: 0.835
-Gain: 0.073
-Samples: 128" color=green3 shape=ellipse]
-		140131277729408 -> 140131277467544 [label=False]
-		140131277729408 -> 140131277463680 [label=True]
-		140131277466648 [label="Alamine_Aminotransferase <= 48.23
-
-Entropy: 0.998
-Gain: 0.031
-Samples: 118" color=green3 shape=ellipse]
-		140131277466648 -> 140131277464576 [label=False]
-		140131277466648 -> 140131277573536 [label=True]
-		140131277729520 [label="1
-
-Entropy: 0.000
-Samples: 36" color=gray shape=box]
-		140131277466872 [label="Alamine_Aminotransferase <= 101.35
-
-Entropy: 0.555
-Gain: 0.069
-Samples: 31" color=green3 shape=ellipse]
-		140131277466872 -> 140131277467096 [label=False]
-		140131277466872 -> 140131277465248 [label=True]
-		140131277467544 [label="1
+Gain: 0.469
+Samples: 15" color=green3 shape=ellipse]
+		140199499470888 -> 140199499045576 [label=False]
+		140199499470888 -> 140199499045408 [label=True]
+		140199499045296 [label="B
 
 Entropy: 0.000
 Samples: 19" color=gray shape=box]
-		140131277463680 [label="Total_Protiens <= 6.34
-
-Entropy: 0.895
-Gain: 0.033
-Samples: 109" color=green3 shape=ellipse]
-		140131277463680 -> 140131277466480 [label=False]
-		140131277463680 -> 140131277573368 [label=True]
-		140131277464576 [label="Aspartate_Aminotransferase <= 134.90
-
-Entropy: 0.881
-Gain: 0.078
-Samples: 30" color=green3 shape=ellipse]
-		140131277464576 -> 140131277573984 [label=False]
-		140131277464576 -> 140131277153672 [label=True]
-		140131277573536 [label="Age <= 29.38
-
-Entropy: 0.997
-Gain: 0.112
-Samples: 88" color=green3 shape=ellipse]
-		140131277573536 -> 140131277572528 [label=False]
-		140131277573536 -> 140131277209672 [label=True]
-		140131277467096 [label="1
-
-Entropy: 0.000
-Samples: 9" color=gray shape=box]
-		140131277465248 [label="Aspartate_Aminotransferase <= 69.59
-
-Entropy: 0.684
-Gain: 0.211
-Samples: 22" color=green3 shape=ellipse]
-		140131277465248 -> 140131277466928 [label=False]
-		140131277465248 -> 140131277571744 [label=True]
-		140131277466480 [label="Direct_Bilirubin <= 0.33
-
-Entropy: 0.730
-Gain: 0.134
-Samples: 49" color=green3 shape=ellipse]
-		140131277466480 -> 140131277573032 [label=False]
-		140131277466480 -> 140131277155296 [label=True]
-		140131277573368 [label="Albumin_and_Globulin_Ratio <= 0.91
-
-Entropy: 0.971
-Gain: 0.028
-Samples: 60" color=green3 shape=ellipse]
-		140131277573368 -> 140131277571464 [label=False]
-		140131277573368 -> 140131277212864 [label=True]
-		140131277573984 [label="Alamine_Aminotransferase <= 128.14
-
-Entropy: 0.592
-Gain: 0.245
-Samples: 14" color=green3 shape=ellipse]
-		140131277573984 -> 140131277154960 [label=False]
-		140131277573984 -> 140131277213088 [label=True]
-		140131277153672 [label="Alkaline_Phosphotase <= 397.94
-
-Entropy: 0.989
-Gain: 0.438
-Samples: 16" color=green3 shape=ellipse]
-		140131277153672 -> 140131277153784 [label=False]
-		140131277153672 -> 140131277212304 [label=True]
-		140131277572528 [label="Alamine_Aminotransferase <= 28.94
-
-Entropy: 0.956
-Gain: 0.014
-Samples: 53" color=green3 shape=ellipse]
-		140131277572528 -> 140131277212920 [label=False]
-		140131277572528 -> 140131277218032 [label=True]
-		140131277209672 [label="Albumin_and_Globulin_Ratio <= 1.02
-
-Entropy: 0.776
-Gain: 0.004
-Samples: 35" color=green3 shape=ellipse]
-		140131277209672 -> 140131277212808 [label=False]
-		140131277209672 -> 140131277219992 [label=True]
-		140131277466928 [label="1
-
-Entropy: 0.000
-Samples: 11" color=gray shape=box]
-		140131277571744 [label="Direct_Bilirubin <= 3.55
-
-Entropy: 0.946
-Gain: 0.218
-Samples: 11" color=green3 shape=ellipse]
-		140131277571744 -> 140131277572416 [label=False]
-		140131277571744 -> 140131277152832 [label=True]
-		140131277573032 [label="1
-
-Entropy: 0.000
-Samples: 16" color=gray shape=box]
-		140131277155296 [label="Total_Protiens <= 7.18
-
-Entropy: 0.885
-Gain: 0.055
-Samples: 33" color=green3 shape=ellipse]
-		140131277155296 -> 140131277155968 [label=False]
-		140131277155296 -> 140131277210848 [label=True]
-		140131277571464 [label="Alkaline_Phosphotase <= 191.43
-
-Entropy: 0.999
-Gain: 0.244
-Samples: 23" color=green3 shape=ellipse]
-		140131277571464 -> 140131277153896 [label=False]
-		140131277571464 -> 140131277213200 [label=True]
-		140131277212864 [label="Total_Protiens <= 5.57
-
-Entropy: 0.909
-Gain: 0.056
-Samples: 37" color=green3 shape=ellipse]
-		140131277212864 -> 140131277209896 [label=False]
-		140131277212864 -> 140131277210400 [label=True]
-		140131277154960 [label="Alkaline_Phosphotase <= 339.40
-
-Entropy: 0.971
-Gain: 0.971
-Samples: 5" color=green3 shape=ellipse]
-		140131277154960 -> 140131277210512 [label=False]
-		140131277154960 -> 140131277212248 [label=True]
-		140131277213088 [label="1
-
-Entropy: 0.000
-Samples: 9" color=gray shape=box]
-		140131277153784 [label="1
-
-Entropy: 0.000
-Samples: 6" color=gray shape=box]
-		140131277212304 [label="Gender
-
-Entropy: 0.881
-Gain: 0.006
-Samples: 10" color=green3 shape=ellipse]
-		140131277212304 -> 140131277210568 [label=Male]
-		140131277212304 -> 140131277212416 [label=Female]
-		140131277212920 [label="Alkaline_Phosphotase <= 240.59
-
-Entropy: 0.991
-Gain: 0.011
-Samples: 27" color=green3 shape=ellipse]
-		140131277212920 -> 140131277212696 [label=False]
-		140131277212920 -> 140131277219488 [label=True]
-		140131277218032 [label="Aspartate_Aminotransferase <= 29.65
+		140199499472288 [label="f7 <= 0.06
 
 Entropy: 0.890
-Gain: 0.056
-Samples: 26" color=green3 shape=ellipse]
-		140131277218032 -> 140131277220160 [label=False]
-		140131277218032 -> 140131277221504 [label=True]
-		140131277212808 [label="Age <= 17.85
-
-Entropy: 0.722
-Gain: 0.047
-Samples: 20" color=green3 shape=ellipse]
-		140131277212808 -> 140131277219376 [label=False]
-		140131277212808 -> 140131277221728 [label=True]
-		140131277219992 [label="Alamine_Aminotransferase <= 23.00
-
-Entropy: 0.837
-Gain: 0.087
-Samples: 15" color=green3 shape=ellipse]
-		140131277219992 -> 140131277221616 [label=False]
-		140131277219992 -> 140131277275712 [label=True]
-		140131277572416 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277152832 [label="Alkaline_Phosphotase <= 282.25
-
-Entropy: 1.000
-Gain: 0.311
-Samples: 8" color=green3 shape=ellipse]
-		140131277152832 -> 140131277155912 [label=False]
-		140131277152832 -> 140131277156248 [label=True]
-		140131277155968 [label="Albumin_and_Globulin_Ratio <= 1.00
-
-Entropy: 1.000
-Gain: 0.108
-Samples: 10" color=green3 shape=ellipse]
-		140131277155968 -> 140131277153616 [label=False]
-		140131277155968 -> 140131277210456 [label=True]
-		140131277210848 [label="Albumin_and_Globulin_Ratio <= 1.12
-
-Entropy: 0.755
-Gain: 0.152
-Samples: 23" color=green3 shape=ellipse]
-		140131277210848 -> 140131277210904 [label=False]
-		140131277210848 -> 140131277211576 [label=True]
-		140131277153896 [label="Alkaline_Phosphotase <= 233.80
-
-Entropy: 0.722
-Gain: 0.322
-Samples: 10" color=green3 shape=ellipse]
-		140131277153896 -> 140131277213592 [label=False]
-		140131277153896 -> 140131277212024 [label=True]
-		140131277213200 [label="Total_Bilirubin <= 0.85
-
-Entropy: 0.779
-Gain: 0.192
+Gain: 0.890
 Samples: 13" color=green3 shape=ellipse]
-		140131277213200 -> 140131277211520 [label=False]
-		140131277213200 -> 140131277212528 [label=True]
-		140131277209896 [label="Gender
-
-Entropy: 0.980
-Gain: 0.190
-Samples: 24" color=green3 shape=ellipse]
-		140131277209896 -> 140131277213368 [label=Male]
-		140131277209896 -> 140131277212752 [label=Female]
-		140131277210400 [label="Age <= 63.15
-
-Entropy: 0.619
-Gain: 0.246
-Samples: 13" color=green3 shape=ellipse]
-		140131277210400 -> 140131277210960 [label=False]
-		140131277210400 -> 140131277217864 [label=True]
-		140131277210512 [label="2
+		140199499472288 -> 140199499044064 [label=False]
+		140199499472288 -> 140199499044232 [label=True]
+		140199499044344 [label="M
 
 Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277212248 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277210568 [label="Albumin <= 4.12
-
-Entropy: 0.811
-Gain: 0.811
-Samples: 4" color=green3 shape=ellipse]
-		140131277210568 -> 140131277219712 [label=False]
-		140131277210568 -> 140131277218760 [label=True]
-		140131277212416 [label="Age <= 28.83
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 6" color=green3 shape=ellipse]
-		140131277212416 -> 140131277219096 [label=False]
-		140131277212416 -> 140131277218928 [label=True]
-		140131277212696 [label="Aspartate_Aminotransferase <= 83.67
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 6" color=green3 shape=ellipse]
-		140131277212696 -> 140131277219208 [label=False]
-		140131277212696 -> 140131277217976 [label=True]
-		140131277219488 [label="Alamine_Aminotransferase <= 35.24
-
-Entropy: 0.998
-Gain: 0.136
-Samples: 21" color=green3 shape=ellipse]
-		140131277219488 -> 140131277218536 [label=False]
-		140131277219488 -> 140131277221336 [label=True]
-		140131277220160 [label="Gender
-
-Entropy: 0.544
-Gain: 0.544
-Samples: 8" color=green3 shape=ellipse]
-		140131277220160 -> 140131277220664 [label=Male]
-		140131277220160 -> 140131277220944 [label=Female]
-		140131277221504 [label="Albumin <= 3.44
-
-Entropy: 0.964
-Gain: 0.030
-Samples: 18" color=green3 shape=ellipse]
-		140131277221504 -> 140131277220888 [label=False]
-		140131277221504 -> 140131277221000 [label=True]
-		140131277219376 [label="Albumin <= 3.98
+Samples: 13" color=gray shape=box]
+		140199499044400 [label="f8 <= 0.18
 
 Entropy: 0.881
-Gain: 0.192
+Gain: 0.881
 Samples: 10" color=green3 shape=ellipse]
-		140131277219376 -> 140131277220104 [label=False]
-		140131277219376 -> 140131277221672 [label=True]
-		140131277221728 [label="Gender
-
-Entropy: 0.469
-Gain: 0.269
-Samples: 10" color=green3 shape=ellipse]
-		140131277221728 -> 140131277220832 [label=Male]
-		140131277221728 -> 140131277220328 [label=Female]
-		140131277221616 [label="Total_Bilirubin <= 0.79
-
-Entropy: 0.985
-Gain: 0.470
-Samples: 7" color=green3 shape=ellipse]
-		140131277221616 -> 140131277221448 [label=False]
-		140131277221616 -> 140131277277616 [label=True]
-		140131277275712 [label="Gender
-
-Entropy: 0.544
-Gain: 0.294
-Samples: 8" color=green3 shape=ellipse]
-		140131277275712 -> 140131277277056 [label=Male]
-		140131277275712 -> 140131277277280 [label=Female]
-		140131277155912 [label="2
+		140199499044400 -> 140199499045912 [label=False]
+		140199499044400 -> 140199499046080 [label=True]
+		140199499046192 [label="B
 
 Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277156248 [label="Alamine_Aminotransferase <= 34.17
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 6" color=green3 shape=ellipse]
-		140131277156248 -> 140131277153560 [label=False]
-		140131277156248 -> 140131277211128 [label=True]
-		140131277153616 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277210456 [label="Aspartate_Aminotransferase <= 23.67
-
-Entropy: 0.991
-Gain: 0.073
-Samples: 9" color=green3 shape=ellipse]
-		140131277210456 -> 140131277211464 [label=False]
-		140131277210456 -> 140131277212472 [label=True]
-		140131277210904 [label="Total_Protiens <= 6.96
-
-Entropy: 0.991
-Gain: 0.590
-Samples: 9" color=green3 shape=ellipse]
-		140131277210904 -> 140131277210288 [label=False]
-		140131277210904 -> 140131277213032 [label=True]
-		140131277211576 [label="Total_Bilirubin <= 0.83
-
-Entropy: 0.414
-Gain: 0.113
-Samples: 12" color=green3 shape=ellipse]
-		140131277211576 -> 140131277212080 [label=False]
-		140131277211576 -> 140131277209784 [label=True]
-		140131277213592 [label="1
-
-Entropy: 0.000
-Samples: 6" color=gray shape=box]
-		140131277212024 [label="Alkaline_Phosphotase <= 199.00
-
-Entropy: 1.000
-Gain: 0.311
-Samples: 4" color=green3 shape=ellipse]
-		140131277212024 -> 140131277210680 [label=False]
-		140131277212024 -> 140131277211968 [label=True]
-		140131277211520 [label="2
-
-Entropy: 0.000
-Samples: 5" color=gray shape=box]
-		140131277212528 [label="Albumin <= 2.95
-
-Entropy: 0.954
-Gain: 0.549
-Samples: 8" color=green3 shape=ellipse]
-		140131277212528 -> 140131277211072 [label=False]
-		140131277212528 -> 140131277218088 [label=True]
-		140131277213368 [label="Albumin_and_Globulin_Ratio <= 0.75
-
-Entropy: 0.998
-Gain: 0.587
-Samples: 19" color=green3 shape=ellipse]
-		140131277213368 -> 140131277210176 [label=False]
-		140131277213368 -> 140131277219320 [label=True]
-		140131277212752 [label="1
-
-Entropy: 0.000
-Samples: 5" color=gray shape=box]
-		140131277210960 [label="1
-
-Entropy: 0.000
-Samples: 8" color=gray shape=box]
-		140131277217864 [label="Alamine_Aminotransferase <= 34.20
-
-Entropy: 0.971
-Gain: 0.420
-Samples: 5" color=green3 shape=ellipse]
-		140131277217864 -> 140131277218816 [label=False]
-		140131277217864 -> 140131277218648 [label=True]
-		140131277219712 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277218760 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277219096 [label="2
+Samples: 10" color=gray shape=box]
+		140199499045576 [label="M
 
 Entropy: 0.000
 Samples: 4" color=gray shape=box]
-		140131277218928 [label="1
+		140199499045408 [label="f1 <= 20.55
 
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277219208 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277217976 [label="1
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131277218536 [label="Age <= 36.27
-
-Entropy: 0.845
-Gain: 0.404
+Entropy: 0.684
+Gain: 0.320
 Samples: 11" color=green3 shape=ellipse]
-		140131277218536 -> 140131277218704 [label=False]
-		140131277218536 -> 140131277220720 [label=True]
-		140131277221336 [label="Aspartate_Aminotransferase <= 64.90
+		140199499045408 -> 140199499046528 [label=False]
+		140199499045408 -> 140199499175584 [label=True]
+		140199499044064 [label="M
 
-Entropy: 0.881
-Gain: 0.281
-Samples: 10" color=green3 shape=ellipse]
-		140131277221336 -> 140131277221112 [label=False]
-		140131277221336 -> 140131277217920 [label=True]
-		140131277220664 [label="1
+Entropy: 0.000
+Samples: 9" color=gray shape=box]
+		140199499044232 [label="B
+
+Entropy: 0.000
+Samples: 4" color=gray shape=box]
+		140199499045912 [label="B
+
+Entropy: 0.000
+Samples: 3" color=gray shape=box]
+		140199499046080 [label="M
 
 Entropy: 0.000
 Samples: 7" color=gray shape=box]
-		140131277220944 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277220888 [label="Alkaline_Phosphotase <= 193.38
-
-Entropy: 1.000
-Gain: 0.000
-Samples: 8" color=green3 shape=ellipse]
-		140131277220888 -> 140131277221280 [label=False]
-		140131277220888 -> 140131277276216 [label=True]
-		140131277221000 [label="Direct_Bilirubin <= 0.21
-
-Entropy: 0.881
-Gain: 0.055
-Samples: 10" color=green3 shape=ellipse]
-		140131277221000 -> 140131277219544 [label=False]
-		140131277221000 -> 140131277275824 [label=True]
-		140131277220104 [label="Albumin <= 4.33
-
-Entropy: 0.592
-Gain: 0.592
-Samples: 7" color=green3 shape=ellipse]
-		140131277220104 -> 140131277218144 [label=False]
-		140131277220104 -> 140131277276832 [label=True]
-		140131277221672 [label="Albumin <= 3.17
-
-Entropy: 0.918
-Gain: 0.252
-Samples: 3" color=green3 shape=ellipse]
-		140131277221672 -> 140131277276272 [label=False]
-		140131277221672 -> 140131277276608 [label=True]
-		140131277220832 [label="2
-
-Entropy: 0.000
-Samples: 8" color=gray shape=box]
-		140131277220328 [label="Albumin <= 3.95
+		140199499046528 [label="f0 <= 11.94
 
 Entropy: 1.000
 Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277220328 -> 140131277275544 [label=False]
-		140131277220328 -> 140131277276440 [label=True]
-		140131277221448 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277277616 [label="Albumin_and_Globulin_Ratio <= 0.80
-
-Entropy: 0.722
-Gain: 0.722
-Samples: 5" color=green3 shape=ellipse]
-		140131277277616 -> 140131277277112 [label=False]
-		140131277277616 -> 140131277275432 [label=True]
-		140131277277056 [label="2
-
-Entropy: 0.000
-Samples: 6" color=gray shape=box]
-		140131277277280 [label="Age <= 25.00
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277277280 -> 140131277276552 [label=False]
-		140131277277280 -> 140131277276496 [label=True]
-		140131277153560 [label="1
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131277211128 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277211464 [label="Alamine_Aminotransferase <= 30.67
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131277211464 -> 140131277211352 [label=False]
-		140131277211464 -> 140131277209952 [label=True]
-		140131277212472 [label="Direct_Bilirubin <= 0.23
-
-Entropy: 0.918
-Gain: 0.252
-Samples: 6" color=green3 shape=ellipse]
-		140131277212472 -> 140131277212136 [label=False]
-		140131277212472 -> 140131277212192 [label=True]
-		140131277210288 [label="Total_Protiens <= 7.04
-
-Entropy: 0.722
-Gain: 0.171
-Samples: 5" color=green3 shape=ellipse]
-		140131277210288 -> 140131277211744 [label=False]
-		140131277210288 -> 140131277212360 [label=True]
-		140131277213032 [label="1
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131277212080 [label="1
+Samples: 4" color=green3 shape=ellipse]
+		140199499046528 -> 140199499175304 [label=False]
+		140199499046528 -> 140199499175472 [label=True]
+		140199499175584 [label="B
 
 Entropy: 0.000
 Samples: 7" color=gray shape=box]
-		140131277209784 [label="Gender
-
-Entropy: 0.722
-Gain: 0.722
-Samples: 5" color=green3 shape=ellipse]
-		140131277209784 -> 140131277213312 [label=Male]
-		140131277209784 -> 140131277210344 [label=Female]
-		140131277210680 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277211968 [label="Total_Protiens <= 6.13
-
-Entropy: 0.918
-Gain: 0.252
-Samples: 3" color=green3 shape=ellipse]
-		140131277211968 -> 140131277212584 [label=False]
-		140131277211968 -> 140131277218872 [label=True]
-		140131277211072 [label="2
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131277218088 [label="Total_Protiens <= 5.00
-
-Entropy: 0.811
-Gain: 0.311
-Samples: 4" color=green3 shape=ellipse]
-		140131277218088 -> 140131277218368 [label=False]
-		140131277218088 -> 140131277219600 [label=True]
-		140131277210176 [label="Total_Protiens <= 6.00
-
-Entropy: 0.650
-Gain: 0.147
-Samples: 12" color=green3 shape=ellipse]
-		140131277210176 -> 140131277219040 [label=False]
-		140131277210176 -> 140131277219880 [label=True]
-		140131277219320 [label="1
-
-Entropy: 0.000
-Samples: 7" color=gray shape=box]
-		140131277218816 [label="1
+		140199499175304 [label="M
 
 Entropy: 0.000
 Samples: 2" color=gray shape=box]
-		140131277218648 [label="Age <= 49.33
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131277218648 -> 140131277219824 [label=False]
-		140131277218648 -> 140131277219768 [label=True]
-		140131277218704 [label="1
-
-Entropy: 0.000
-Samples: 6" color=gray shape=box]
-		140131277220720 [label="Total_Bilirubin <= 0.74
-
-Entropy: 0.971
-Gain: 0.971
-Samples: 5" color=green3 shape=ellipse]
-		140131277220720 -> 140131277221056 [label=False]
-		140131277220720 -> 140131277221392 [label=True]
-		140131277221112 [label="2
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131277217920 [label="Age <= 35.83
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 6" color=green3 shape=ellipse]
-		140131277217920 -> 140131277220384 [label=False]
-		140131277217920 -> 140131277275656 [label=True]
-		140131277221280 [label="Alamine_Aminotransferase <= 19.25
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 4" color=green3 shape=ellipse]
-		140131277221280 -> 140131277275320 [label=False]
-		140131277221280 -> 140131277275376 [label=True]
-		140131277276216 [label="Alkaline_Phosphotase <= 175.75
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 4" color=green3 shape=ellipse]
-		140131277276216 -> 140131277275880 [label=False]
-		140131277276216 -> 140131277275208 [label=True]
-		140131277219544 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277275824 [label="Albumin_and_Globulin_Ratio <= 0.85
-
-Entropy: 0.918
-Gain: 0.474
-Samples: 9" color=green3 shape=ellipse]
-		140131277275824 -> 140131277276104 [label=False]
-		140131277275824 -> 140131277277448 [label=True]
-		140131277218144 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277276832 [label="2
-
-Entropy: 0.000
-Samples: 6" color=gray shape=box]
-		140131277276272 [label="Total_Protiens <= 6.65
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277276272 -> 140131277276160 [label=False]
-		140131277276272 -> 140131277277504 [label=True]
-		140131277276608 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277275544 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277276440 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277277112 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277275432 [label="2
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131277276552 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277276496 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277211352 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277209952 [label="2
+		140199499175472 [label="B
 
 Entropy: 0.000
 Samples: 2" color=gray shape=box]
-		140131277212136 [label="1
+		label="Tree 1"
+	}
+	subgraph cluster_2 {
+		140199499365120 [label="f7 <= 0.05
+
+Entropy: 0.958
+Gain: 0.608
+Samples: 318" color=green3 shape=ellipse]
+		140199499365120 -> 140199499365288 [label=False]
+		140199499365120 -> 140199499364448 [label=True]
+		140199499365288 [label="f1 <= 20.06
+
+Entropy: 0.501
+Gain: 0.133
+Samples: 127" color=green3 shape=ellipse]
+		140199499365288 -> 140199499365400 [label=False]
+		140199499365288 -> 140199499363440 [label=True]
+		140199499364448 [label="f23 <= 577.58
+
+Entropy: 0.251
+Gain: 0.056
+Samples: 191" color=green3 shape=ellipse]
+		140199499364448 -> 140199499472456 [label=False]
+		140199499364448 -> 140199499471952 [label=True]
+		140199499365400 [label="M
 
 Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277212192 [label="Gender
+Samples: 68" color=gray shape=box]
+		140199499363440 [label="f27 <= 0.17
 
-Entropy: 1.000
-Gain: 1.000
-Samples: 4" color=green3 shape=ellipse]
-		140131277212192 -> 140131277213648 [label=Male]
-		140131277212192 -> 140131277213480 [label=Female]
-		140131277211744 [label="2
+Entropy: 0.791
+Gain: 0.352
+Samples: 59" color=green3 shape=ellipse]
+		140199499363440 -> 140199499471728 [label=False]
+		140199499363440 -> 140199499471896 [label=True]
+		140199499472456 [label="f22 <= 100.94
 
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277212360 [label="Age <= 56.67
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131277212360 -> 140131277213256 [label=False]
-		140131277212360 -> 140131277213536 [label=True]
-		140131277213312 [label="1
+Entropy: 0.477
+Gain: 0.167
+Samples: 78" color=green3 shape=ellipse]
+		140199499472456 -> 140199499470608 [label=False]
+		140199499472456 -> 140199499043056 [label=True]
+		140199499471952 [label="B
 
 Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131277210344 [label="2
+Samples: 113" color=gray shape=box]
+		140199499471728 [label="M
 
 Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277212584 [label="Alamine_Aminotransferase <= 28.50
+Samples: 33" color=gray shape=box]
+		140199499471896 [label="f20 <= 17.58
 
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277212584 -> 140131277218256 [label=False]
-		140131277212584 -> 140131277218200 [label=True]
-		140131277218872 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277218368 [label="Alkaline_Phosphotase <= 164.50
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277218368 -> 140131277218424 [label=False]
-		140131277218368 -> 140131277218984 [label=True]
-		140131277219600 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277219040 [label="Total_Bilirubin <= 1.33
+Entropy: 0.996
+Gain: 0.996
+Samples: 26" color=green3 shape=ellipse]
+		140199499471896 -> 140199499046136 [label=False]
+		140199499471896 -> 140199499044008 [label=True]
+		140199499470608 [label="f20 <= 16.81
 
 Entropy: 0.863
-Gain: 0.170
-Samples: 7" color=green3 shape=ellipse]
-		140131277219040 -> 140131277218592 [label=False]
-		140131277219040 -> 140131277218480 [label=True]
-		140131277219880 [label="2
+Gain: 0.239
+Samples: 28" color=green3 shape=ellipse]
+		140199499470608 -> 140199499045184 [label=False]
+		140199499470608 -> 140199499174128 [label=True]
+		140199499043056 [label="B
 
 Entropy: 0.000
-Samples: 5" color=gray shape=box]
-		140131277219824 [label="1
+Samples: 50" color=gray shape=box]
+		140199499046136 [label="M
 
 Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277219768 [label="2
+Samples: 12" color=gray shape=box]
+		140199499044008 [label="B
 
 Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277221056 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277221392 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277220384 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277275656 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277275320 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277275376 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277275880 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277275208 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277276104 [label="Albumin_and_Globulin_Ratio <= 0.98
-
-Entropy: 1.000
-Gain: 0.311
-Samples: 4" color=green3 shape=ellipse]
-		140131277276104 -> 140131277276776 [label=False]
-		140131277276104 -> 140131277277952 [label=True]
-		140131277277448 [label="1
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131277276160 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277277504 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277213648 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277213480 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277213256 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277213536 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277218256 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277218200 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277218424 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277218984 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277218592 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277218480 [label="Alamine_Aminotransferase <= 27.60
-
-Entropy: 0.971
-Gain: 0.971
-Samples: 5" color=green3 shape=ellipse]
-		140131277218480 -> 140131277219656 [label=False]
-		140131277218480 -> 140131277219936 [label=True]
-		140131277276776 [label="Albumin_and_Globulin_Ratio <= 1.01
+Samples: 14" color=gray shape=box]
+		140199499045184 [label="f8 <= 0.15
 
 Entropy: 0.918
 Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131277276776 -> 140131277276664 [label=False]
-		140131277276776 -> 140131277277336 [label=True]
-		140131277277952 [label="2
+Samples: 9" color=green3 shape=ellipse]
+		140199499045184 -> 140199499174912 [label=False]
+		140199499045184 -> 140199499174520 [label=True]
+		140199499174128 [label="f27 <= 0.10
+
+Entropy: 0.485
+Gain: 0.167
+Samples: 19" color=green3 shape=ellipse]
+		140199499174128 -> 140199499176480 [label=False]
+		140199499174128 -> 140199499231864 [label=True]
+		140199499174912 [label="M
 
 Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277219656 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277219936 [label="2
+Samples: 6" color=gray shape=box]
+		140199499174520 [label="B
 
 Entropy: 0.000
 Samples: 3" color=gray shape=box]
-		140131277276664 [label="2
+		140199499176480 [label="f17 <= 0.01
+
+Entropy: 0.863
+Gain: 0.863
+Samples: 7" color=green3 shape=ellipse]
+		140199499176480 -> 140199499231304 [label=False]
+		140199499176480 -> 140199499231416 [label=True]
+		140199499231864 [label="B
 
 Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277277336 [label="1
+Samples: 12" color=gray shape=box]
+		140199499231304 [label="B
+
+Entropy: 0.000
+Samples: 5" color=gray shape=box]
+		140199499231416 [label="M
 
 Entropy: 0.000
 Samples: 2" color=gray shape=box]
 		label="Tree 2"
 	}
 	subgraph cluster_3 {
-		140131277727392 [label="Direct_Bilirubin <= 1.73
+		140199499363664 [label="f20 <= 16.53
 
-Entropy: 0.828
-Gain: 0.090
-Samples: 326" color=green3 shape=ellipse]
-		140131277727392 -> 140131277728232 [label=False]
-		140131277727392 -> 140131277465136 [label=True]
-		140131277728232 [label="Alkaline_Phosphotase <= 408.32
+Entropy: 0.965
+Gain: 0.653
+Samples: 318" color=green3 shape=ellipse]
+		140199499363664 -> 140199499365680 [label=False]
+		140199499363664 -> 140199499470832 [label=True]
+		140199499365680 [label="f27 <= 0.18
 
-Entropy: 0.169
-Gain: 0.045
-Samples: 80" color=green3 shape=ellipse]
-		140131277728232 -> 140131277466592 [label=False]
-		140131277728232 -> 140131277152328 [label=True]
-		140131277465136 [label="Direct_Bilirubin <= 0.38
+Entropy: 0.375
+Gain: 0.084
+Samples: 124" color=green3 shape=ellipse]
+		140199499365680 -> 140199499472064 [label=False]
+		140199499365680 -> 140199499469432 [label=True]
+		140199499470832 [label="f25 <= 0.19
 
-Entropy: 0.922
-Gain: 0.065
-Samples: 246" color=green3 shape=ellipse]
-		140131277465136 -> 140131277155576 [label=False]
-		140131277465136 -> 140131277211632 [label=True]
-		140131277466592 [label="Albumin_and_Globulin_Ratio <= 0.68
-
-Entropy: 0.414
-Gain: 0.143
-Samples: 24" color=green3 shape=ellipse]
-		140131277466592 -> 140131277572304 [label=False]
-		140131277466592 -> 140131277153504 [label=True]
-		140131277152328 [label="1
-
-Entropy: 0.000
-Samples: 56" color=gray shape=box]
-		140131277155576 [label="Total_Bilirubin <= 1.93
-
-Entropy: 0.548
-Gain: 0.001
-Samples: 71" color=green3 shape=ellipse]
-		140131277155576 -> 140131277574096 [label=False]
-		140131277155576 -> 140131277220048 [label=True]
-		140131277211632 [label="Albumin <= 3.21
-
-Entropy: 0.983
+Entropy: 0.271
 Gain: 0.039
-Samples: 175" color=green3 shape=ellipse]
-		140131277211632 -> 140131277213144 [label=False]
-		140131277211632 -> 140131277221560 [label=True]
-		140131277572304 [label="1
+Samples: 194" color=green3 shape=ellipse]
+		140199499470832 -> 140199499046304 [label=False]
+		140199499470832 -> 140199499043784 [label=True]
+		140199499472064 [label="M
 
 Entropy: 0.000
-Samples: 16" color=gray shape=box]
-		140131277153504 [label="Albumin <= 2.30
+Samples: 66" color=gray shape=box]
+		140199499469432 [label="f5 <= 0.10
 
-Entropy: 0.811
-Gain: 0.467
-Samples: 8" color=green3 shape=ellipse]
-		140131277153504 -> 140131277155464 [label=False]
-		140131277153504 -> 140131277220440 [label=True]
-		140131277574096 [label="Alamine_Aminotransferase <= 82.96
+Entropy: 0.623
+Gain: 0.216
+Samples: 58" color=green3 shape=ellipse]
+		140199499469432 -> 140199499046248 [label=False]
+		140199499469432 -> 140199499046360 [label=True]
+		140199499046304 [label="f27 <= 0.11
 
-Entropy: 0.592
-Gain: 0.035
-Samples: 28" color=green3 shape=ellipse]
-		140131277574096 -> 140131277212640 [label=False]
-		140131277574096 -> 140131277219152 [label=True]
-		140131277220048 [label="Aspartate_Aminotransferase <= 64.86
+Entropy: 0.494
+Gain: 0.161
+Samples: 74" color=green3 shape=ellipse]
+		140199499046304 -> 140199499045856 [label=False]
+		140199499046304 -> 140199499175136 [label=True]
+		140199499043784 [label="f1 <= 18.07
 
-Entropy: 0.519
-Gain: 0.042
-Samples: 43" color=green3 shape=ellipse]
-		140131277220048 -> 140131277221168 [label=False]
-		140131277220048 -> 140131277278064 [label=True]
-		140131277213144 [label="Gender
-
-Entropy: 0.992
-Gain: 0.102
-Samples: 78" color=green3 shape=ellipse]
-		140131277213144 -> 140131277220776 [label=Male]
-		140131277213144 -> 140131277278120 [label=Female]
-		140131277221560 [label="Age <= 48.75
-
-Entropy: 0.904
-Gain: 0.042
-Samples: 97" color=green3 shape=ellipse]
-		140131277221560 -> 140131277278960 [label=False]
-		140131277221560 -> 140131277276048 [label=True]
-		140131277155464 [label="1
-
-Entropy: 0.000
-Samples: 5" color=gray shape=box]
-		140131277220440 [label="Alamine_Aminotransferase <= 29.00
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131277220440 -> 140131277220608 [label=False]
-		140131277220440 -> 140131277221840 [label=True]
-		140131277212640 [label="1
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131277219152 [label="Albumin_and_Globulin_Ratio <= 0.78
-
-Entropy: 0.650
-Gain: 0.245
-Samples: 24" color=green3 shape=ellipse]
-		140131277219152 -> 140131277219264 [label=False]
-		140131277219152 -> 140131277276328 [label=True]
-		140131277221168 [label="1
-
-Entropy: 0.000
-Samples: 9" color=gray shape=box]
-		140131277278064 [label="Gender
-
-Entropy: 0.602
-Gain: 0.029
-Samples: 34" color=green3 shape=ellipse]
-		140131277278064 -> 140131277276384 [label=Male]
-		140131277278064 -> 140131277277784 [label=Female]
-		140131277220776 [label="Albumin <= 3.94
-
-Entropy: 0.889
-Gain: 0.020
-Samples: 49" color=green3 shape=ellipse]
-		140131277220776 -> 140131277278232 [label=False]
-		140131277220776 -> 140131277278848 [label=True]
-		140131277278120 [label="Alamine_Aminotransferase <= 40.79
-
-Entropy: 0.894
-Gain: 0.153
-Samples: 29" color=green3 shape=ellipse]
-		140131277278120 -> 140131277277224 [label=False]
-		140131277278120 -> 140131277277560 [label=True]
-		140131277278960 [label="Aspartate_Aminotransferase <= 52.73
-
-Entropy: 0.722
-Gain: 0.046
-Samples: 45" color=green3 shape=ellipse]
-		140131277278960 -> 140131277278792 [label=False]
-		140131277278960 -> 140131277318184 [label=True]
-		140131277276048 [label="Alamine_Aminotransferase <= 142.50
-
-Entropy: 0.983
+Entropy: 0.070
 Gain: 0.011
-Samples: 52" color=green3 shape=ellipse]
-		140131277276048 -> 140131277279184 [label=False]
-		140131277276048 -> 140131277317512 [label=True]
-		140131277220608 [label="1
+Samples: 120" color=green3 shape=ellipse]
+		140199499043784 -> 140199499176648 [label=False]
+		140199499043784 -> 140199499177432 [label=True]
+		140199499046248 [label="M
 
 Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277221840 [label="2
+Samples: 33" color=gray shape=box]
+		140199499046360 [label="f21 <= 26.02
+
+Entropy: 0.943
+Gain: 0.553
+Samples: 25" color=green3 shape=ellipse]
+		140199499046360 -> 140199499043392 [label=False]
+		140199499046360 -> 140199499046864 [label=True]
+		140199499045856 [label="f7 <= 0.05
+
+Entropy: 0.850
+Gain: 0.184
+Samples: 29" color=green3 shape=ellipse]
+		140199499045856 -> 140199499176200 [label=False]
+		140199499045856 -> 140199499176872 [label=True]
+		140199499175136 [label="B
 
 Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277219264 [label="Albumin <= 3.48
+Samples: 45" color=gray shape=box]
+		140199499176648 [label="f13 <= 23.43
 
-Entropy: 0.971
-Gain: 0.610
-Samples: 10" color=green3 shape=ellipse]
-		140131277219264 -> 140131277275992 [label=False]
-		140131277219264 -> 140131277275488 [label=True]
-		140131277276328 [label="1
-
-Entropy: 0.000
-Samples: 14" color=gray shape=box]
-		140131277276384 [label="Total_Protiens <= 6.22
-
-Entropy: 0.650
-Gain: 0.067
-Samples: 30" color=green3 shape=ellipse]
-		140131277276384 -> 140131277278456 [label=False]
-		140131277276384 -> 140131277278176 [label=True]
-		140131277277784 [label="1
+Entropy: 0.141
+Gain: 0.030
+Samples: 50" color=green3 shape=ellipse]
+		140199499176648 -> 140199499176144 [label=False]
+		140199499176648 -> 140199499232032 [label=True]
+		140199499177432 [label="B
 
 Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131277278232 [label="Age <= 39.47
-
-Entropy: 0.742
-Gain: 0.061
-Samples: 19" color=green3 shape=ellipse]
-		140131277278232 -> 140131277278680 [label=False]
-		140131277278232 -> 140131277277168 [label=True]
-		140131277278848 [label="Albumin <= 3.69
-
-Entropy: 0.948
-Gain: 0.029
-Samples: 30" color=green3 shape=ellipse]
-		140131277278848 -> 140131277275936 [label=False]
-		140131277278848 -> 140131277318632 [label=True]
-		140131277277224 [label="1
+Samples: 70" color=gray shape=box]
+		140199499043392 [label="M
 
 Entropy: 0.000
-Samples: 7" color=gray shape=box]
-		140131277277560 [label="Alamine_Aminotransferase <= 21.41
-
-Entropy: 0.976
-Gain: 0.056
-Samples: 22" color=green3 shape=ellipse]
-		140131277277560 -> 140131277277672 [label=False]
-		140131277277560 -> 140131277316616 [label=True]
-		140131277278792 [label="Aspartate_Aminotransferase <= 100.47
-
-Entropy: 0.353
-Gain: 0.137
-Samples: 15" color=green3 shape=ellipse]
-		140131277278792 -> 140131277319528 [label=False]
-		140131277278792 -> 140131277319752 [label=True]
-		140131277318184 [label="Direct_Bilirubin <= 0.20
-
-Entropy: 0.837
-Gain: 0.028
-Samples: 30" color=green3 shape=ellipse]
-		140131277318184 -> 140131277318072 [label=False]
-		140131277318184 -> 140131276842544 [label=True]
-		140131277279184 [label="Albumin_and_Globulin_Ratio <= 1.00
-
-Entropy: 0.881
-Gain: 0.281
-Samples: 10" color=green3 shape=ellipse]
-		140131277279184 -> 140131277319024 [label=False]
-		140131277279184 -> 140131276842824 [label=True]
-		140131277317512 [label="Albumin_and_Globulin_Ratio <= 0.86
-
-Entropy: 0.993
-Gain: 0.095
-Samples: 42" color=green3 shape=ellipse]
-		140131277317512 -> 140131277320144 [label=False]
-		140131277317512 -> 140131276844504 [label=True]
-		140131277275992 [label="1
-
-Entropy: 0.000
-Samples: 5" color=gray shape=box]
-		140131277275488 [label="Alamine_Aminotransferase <= 61.60
-
-Entropy: 0.722
-Gain: 0.171
-Samples: 5" color=green3 shape=ellipse]
-		140131277275488 -> 140131277278008 [label=False]
-		140131277275488 -> 140131277279072 [label=True]
-		140131277278456 [label="Total_Protiens <= 6.89
-
-Entropy: 0.337
-Gain: 0.094
-Samples: 16" color=green3 shape=ellipse]
-		140131277278456 -> 140131277278568 [label=False]
-		140131277278456 -> 140131277276888 [label=True]
-		140131277278176 [label="Alamine_Aminotransferase <= 45.79
-
-Entropy: 0.863
-Gain: 0.371
-Samples: 14" color=green3 shape=ellipse]
-		140131277278176 -> 140131277278904 [label=False]
-		140131277278176 -> 140131277316504 [label=True]
-		140131277278680 [label="Albumin_and_Globulin_Ratio <= 1.30
-
-Entropy: 0.918
-Gain: 0.152
-Samples: 9" color=green3 shape=ellipse]
-		140131277278680 -> 140131277275264 [label=False]
-		140131277278680 -> 140131277316168 [label=True]
-		140131277277168 [label="Age <= 25.80
-
-Entropy: 0.469
-Gain: 0.108
-Samples: 10" color=green3 shape=ellipse]
-		140131277277168 -> 140131277316392 [label=False]
-		140131277277168 -> 140131277316672 [label=True]
-		140131277275936 [label="Direct_Bilirubin <= 0.21
-
-Entropy: 0.985
-Gain: 0.178
-Samples: 21" color=green3 shape=ellipse]
-		140131277275936 -> 140131277316224 [label=False]
-		140131277275936 -> 140131277316728 [label=True]
-		140131277318632 [label="Albumin <= 3.52
-
-Entropy: 0.764
-Gain: 0.225
-Samples: 9" color=green3 shape=ellipse]
-		140131277318632 -> 140131277316784 [label=False]
-		140131277318632 -> 140131277317680 [label=True]
-		140131277277672 [label="Total_Protiens <= 7.30
-
-Entropy: 0.994
-Gain: 0.052
-Samples: 11" color=green3 shape=ellipse]
-		140131277277672 -> 140131277318800 [label=False]
-		140131277277672 -> 140131277318016 [label=True]
-		140131277316616 [label="Age <= 46.55
-
-Entropy: 0.845
-Gain: 0.404
-Samples: 11" color=green3 shape=ellipse]
-		140131277316616 -> 140131277319080 [label=False]
-		140131277316616 -> 140131277319696 [label=True]
-		140131277319528 [label="Aspartate_Aminotransferase <= 124.00
+Samples: 13" color=gray shape=box]
+		140199499046864 [label="f23 <= 968.09
 
 Entropy: 0.811
 Gain: 0.811
-Samples: 4" color=green3 shape=ellipse]
-		140131277319528 -> 140131277318128 [label=False]
-		140131277319528 -> 140131276842656 [label=True]
-		140131277319752 [label="1
-
-Entropy: 0.000
-Samples: 11" color=gray shape=box]
-		140131277318072 [label="Albumin <= 2.73
+Samples: 12" color=green3 shape=ellipse]
+		140199499046864 -> 140199499174296 [label=False]
+		140199499046864 -> 140199499174856 [label=True]
+		140199499176200 [label="f21 <= 24.81
 
 Entropy: 1.000
-Gain: 0.311
-Samples: 4" color=green3 shape=ellipse]
-		140131277318072 -> 140131276842768 [label=False]
-		140131277318072 -> 140131276841424 [label=True]
-		140131276842544 [label="Alamine_Aminotransferase <= 26.69
+Gain: 0.689
+Samples: 14" color=green3 shape=ellipse]
+		140199499176200 -> 140199499174072 [label=False]
+		140199499176200 -> 140199499176704 [label=True]
+		140199499176872 [label="f17 <= 0.01
 
-Entropy: 0.779
-Gain: 0.144
-Samples: 26" color=green3 shape=ellipse]
-		140131276842544 -> 140131276842264 [label=False]
-		140131276842544 -> 140131276842432 [label=True]
-		140131277319024 [label="1
+Entropy: 0.353
+Gain: 0.093
+Samples: 15" color=green3 shape=ellipse]
+		140199499176872 -> 140199499231584 [label=False]
+		140199499176872 -> 140199499234776 [label=True]
+		140199499176144 [label="f11 <= 1.74
 
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131276842824 [label="Age <= 19.00
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 6" color=green3 shape=ellipse]
-		140131276842824 -> 140131276843216 [label=False]
-		140131276842824 -> 140131276842488 [label=True]
-		140131277320144 [label="Aspartate_Aminotransferase <= 34.48
-
-Entropy: 0.887
-Gain: 0.025
-Samples: 23" color=green3 shape=ellipse]
-		140131277320144 -> 140131276841816 [label=False]
-		140131277320144 -> 140131276842040 [label=True]
-		140131276844504 [label="Alkaline_Phosphotase <= 468.56
-
-Entropy: 0.964
-Gain: 0.517
+Entropy: 0.310
+Gain: 0.109
 Samples: 18" color=green3 shape=ellipse]
-		140131276844504 -> 140131276841256 [label=False]
-		140131276844504 -> 140131276845008 [label=True]
-		140131277278008 [label="Total_Protiens <= 5.53
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131277278008 -> 140131277276944 [label=False]
-		140131277278008 -> 140131277278288 [label=True]
-		140131277279072 [label="2
+		140199499176144 -> 140199499233656 [label=False]
+		140199499176144 -> 140199499235112 [label=True]
+		140199499232032 [label="B
 
 Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277278568 [label="Total_Protiens <= 7.42
+Samples: 32" color=gray shape=box]
+		140199499174296 [label="M
+
+Entropy: 0.000
+Samples: 3" color=gray shape=box]
+		140199499174856 [label="B
+
+Entropy: 0.000
+Samples: 9" color=gray shape=box]
+		140199499174072 [label="M
+
+Entropy: 0.000
+Samples: 6" color=gray shape=box]
+		140199499176704 [label="f0 <= 12.85
+
+Entropy: 0.544
+Gain: 0.199
+Samples: 8" color=green3 shape=ellipse]
+		140199499176704 -> 140199499233152 [label=False]
+		140199499176704 -> 140199499233320 [label=True]
+		140199499231584 [label="B
+
+Entropy: 0.000
+Samples: 9" color=gray shape=box]
+		140199499234776 [label="f8 <= 0.17
 
 Entropy: 0.650
 Gain: 0.317
 Samples: 6" color=green3 shape=ellipse]
-		140131277278568 -> 140131277278344 [label=False]
-		140131277278568 -> 140131277316896 [label=True]
-		140131277276888 [label="1
-
-Entropy: 0.000
-Samples: 10" color=gray shape=box]
-		140131277278904 [label="1
-
-Entropy: 0.000
-Samples: 7" color=gray shape=box]
-		140131277316504 [label="Albumin <= 2.31
-
-Entropy: 0.985
-Gain: 0.522
-Samples: 7" color=green3 shape=ellipse]
-		140131277316504 -> 140131277316336 [label=False]
-		140131277316504 -> 140131277317904 [label=True]
-		140131277275264 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277316168 [label="Total_Protiens <= 7.73
-
-Entropy: 0.985
-Gain: 0.020
-Samples: 7" color=green3 shape=ellipse]
-		140131277316168 -> 140131277317344 [label=False]
-		140131277316168 -> 140131277317232 [label=True]
-		140131277316392 [label="2
-
-Entropy: 0.000
-Samples: 5" color=gray shape=box]
-		140131277316672 [label="Aspartate_Aminotransferase <= 34.80
+		140199499234776 -> 140199499233880 [label=False]
+		140199499234776 -> 140199498766152 [label=True]
+		140199499233656 [label="f18 <= 0.03
 
 Entropy: 0.722
-Gain: 0.322
+Gain: 0.722
 Samples: 5" color=green3 shape=ellipse]
-		140131277316672 -> 140131277318352 [label=False]
-		140131277316672 -> 140131277319136 [label=True]
-		140131277316224 [label="2
+		140199499233656 -> 140199499233600 [label=False]
+		140199499233656 -> 140199498765704 [label=True]
+		140199499235112 [label="B
 
 Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131277316728 [label="Total_Bilirubin <= 0.83
-
-Entropy: 0.998
-Gain: 0.124
-Samples: 17" color=green3 shape=ellipse]
-		140131277316728 -> 140131277317568 [label=False]
-		140131277316728 -> 140131277319584 [label=True]
-		140131277316784 [label="2
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131277317680 [label="Total_Bilirubin <= 0.78
-
-Entropy: 0.971
-Gain: 0.420
-Samples: 5" color=green3 shape=ellipse]
-		140131277317680 -> 140131277319808 [label=False]
-		140131277317680 -> 140131277319472 [label=True]
-		140131277318800 [label="Age <= 34.00
-
-Entropy: 0.918
-Gain: 0.459
-Samples: 6" color=green3 shape=ellipse]
-		140131277318800 -> 140131277316280 [label=False]
-		140131277318800 -> 140131277318856 [label=True]
-		140131277318016 [label="Albumin_and_Globulin_Ratio <= 1.21
-
-Entropy: 0.971
-Gain: 0.020
-Samples: 5" color=green3 shape=ellipse]
-		140131277318016 -> 140131277319976 [label=False]
-		140131277318016 -> 140131276842096 [label=True]
-		140131277319080 [label="Total_Protiens <= 7.20
-
-Entropy: 0.971
-Gain: 0.971
-Samples: 5" color=green3 shape=ellipse]
-		140131277319080 -> 140131277317120 [label=False]
-		140131277319080 -> 140131276842376 [label=True]
-		140131277319696 [label="1
-
-Entropy: 0.000
-Samples: 6" color=gray shape=box]
-		140131277318128 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131276842656 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276842768 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276841424 [label="Alamine_Aminotransferase <= 47.00
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131276841424 -> 140131276842880 [label=False]
-		140131276841424 -> 140131276842712 [label=True]
-		140131276842264 [label="1
-
-Entropy: 0.000
-Samples: 8" color=gray shape=box]
-		140131276842432 [label="Alamine_Aminotransferase <= 20.67
-
-Entropy: 0.918
-Gain: 0.171
-Samples: 18" color=green3 shape=ellipse]
-		140131276842432 -> 140131276843160 [label=False]
-		140131276842432 -> 140131276844392 [label=True]
-		140131276843216 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131276842488 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131276841816 [label="Aspartate_Aminotransferase <= 63.67
-
-Entropy: 0.650
-Gain: 0.191
-Samples: 6" color=green3 shape=ellipse]
-		140131276841816 -> 140131276844784 [label=False]
-		140131276841816 -> 140131276842320 [label=True]
-		140131276842040 [label="Total_Protiens <= 5.79
-
-Entropy: 0.937
-Gain: 0.125
-Samples: 17" color=green3 shape=ellipse]
-		140131276842040 -> 140131276844672 [label=False]
-		140131276842040 -> 140131276891528 [label=True]
-		140131276841256 [label="1
+Samples: 13" color=gray shape=box]
+		140199499233152 [label="B
 
 Entropy: 0.000
 Samples: 5" color=gray shape=box]
-		140131276845008 [label="Albumin <= 2.21
+		140199499233320 [label="f18 <= 0.02
 
-Entropy: 0.619
-Gain: 0.155
-Samples: 13" color=green3 shape=ellipse]
-		140131276845008 -> 140131276844616 [label=False]
-		140131276845008 -> 140131276892536 [label=True]
-		140131277276944 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277278288 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277278344 [label="Total_Protiens <= 7.80
+Entropy: 0.918
+Gain: 0.918
+Samples: 3" color=green3 shape=ellipse]
+		140199499233320 -> 140199499235000 [label=False]
+		140199499233320 -> 140199499233712 [label=True]
+		140199499233880 [label="f18 <= 0.02
 
 Entropy: 1.000
 Gain: 1.000
 Samples: 2" color=green3 shape=ellipse]
-		140131277278344 -> 140131277316560 [label=False]
-		140131277278344 -> 140131277317008 [label=True]
-		140131277316896 [label="1
+		140199499233880 -> 140199498765872 [label=False]
+		140199499233880 -> 140199498766040 [label=True]
+		140199498766152 [label="B
 
 Entropy: 0.000
 Samples: 4" color=gray shape=box]
-		140131277316336 [label="Alamine_Aminotransferase <= 25.25
-
-Entropy: 0.811
-Gain: 0.311
-Samples: 4" color=green3 shape=ellipse]
-		140131277316336 -> 140131277317400 [label=False]
-		140131277316336 -> 140131277318408 [label=True]
-		140131277317904 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277317344 [label="Alamine_Aminotransferase <= 40.00
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 4" color=green3 shape=ellipse]
-		140131277317344 -> 140131277316448 [label=False]
-		140131277317344 -> 140131277317288 [label=True]
-		140131277317232 [label="Alamine_Aminotransferase <= 37.67
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131277317232 -> 140131277318744 [label=False]
-		140131277317232 -> 140131277318688 [label=True]
-		140131277318352 [label="Total_Bilirubin <= 0.70
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277318352 -> 140131277318520 [label=False]
-		140131277318352 -> 140131277318912 [label=True]
-		140131277319136 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277317568 [label="Total_Bilirubin <= 0.91
-
-Entropy: 0.863
-Gain: 0.306
-Samples: 7" color=green3 shape=ellipse]
-		140131277317568 -> 140131277318464 [label=False]
-		140131277317568 -> 140131277318968 [label=True]
-		140131277319584 [label="Direct_Bilirubin <= 0.18
-
-Entropy: 0.881
-Gain: 0.118
-Samples: 10" color=green3 shape=ellipse]
-		140131277319584 -> 140131277319360 [label=False]
-		140131277319584 -> 140131277319416 [label=True]
-		140131277319808 [label="Aspartate_Aminotransferase <= 33.67
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131277319808 -> 140131277318296 [label=False]
-		140131277319808 -> 140131277319192 [label=True]
-		140131277319472 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277316280 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277318856 [label="Albumin_and_Globulin_Ratio <= 0.97
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131277318856 -> 140131277318240 [label=False]
-		140131277318856 -> 140131276841032 [label=True]
-		140131277319976 [label="Aspartate_Aminotransferase <= 24.33
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131277319976 -> 140131277318576 [label=False]
-		140131277319976 -> 140131276841144 [label=True]
-		140131276842096 [label="Age <= 19.50
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131276842096 -> 140131276841648 [label=False]
-		140131276842096 -> 140131276841368 [label=True]
-		140131277317120 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276842376 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131276842880 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276842712 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276843160 [label="Albumin <= 2.87
-
-Entropy: 0.503
-Gain: 0.043
-Samples: 9" color=green3 shape=ellipse]
-		140131276843160 -> 140131276841480 [label=False]
-		140131276843160 -> 140131276844896 [label=True]
-		140131276844392 [label="Aspartate_Aminotransferase <= 20.22
-
-Entropy: 0.991
-Gain: 0.225
-Samples: 9" color=green3 shape=ellipse]
-		140131276844392 -> 140131276843944 [label=False]
-		140131276844392 -> 140131276844056 [label=True]
-		140131276844784 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131276842320 [label="Albumin <= 2.63
-
-Entropy: 0.918
-Gain: 0.252
-Samples: 3" color=green3 shape=ellipse]
-		140131276842320 -> 140131276844112 [label=False]
-		140131276842320 -> 140131276891920 [label=True]
-		140131276844672 [label="Total_Bilirubin <= 0.75
-
-Entropy: 0.985
-Gain: 0.161
-Samples: 14" color=green3 shape=ellipse]
-		140131276844672 -> 140131276844560 [label=False]
-		140131276844672 -> 140131276891248 [label=True]
-		140131276891528 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131276844616 [label="Alamine_Aminotransferase <= 27.71
-
-Entropy: 0.863
-Gain: 0.292
-Samples: 7" color=green3 shape=ellipse]
-		140131276844616 -> 140131276891136 [label=False]
-		140131276844616 -> 140131276892424 [label=True]
-		140131276892536 [label="2
-
-Entropy: 0.000
-Samples: 6" color=gray shape=box]
-		140131277316560 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277317008 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277317400 [label="Albumin <= 2.85
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277317400 -> 140131277317176 [label=False]
-		140131277317400 -> 140131277317792 [label=True]
-		140131277318408 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277316448 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277317288 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277318744 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277318688 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277318520 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277318912 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277318464 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277318968 [label="Aspartate_Aminotransferase <= 59.33
-
-Entropy: 0.650
-Gain: 0.191
-Samples: 6" color=green3 shape=ellipse]
-		140131277318968 -> 140131277319304 [label=False]
-		140131277318968 -> 140131277320088 [label=True]
-		140131277319360 [label="Albumin_and_Globulin_Ratio <= 1.12
-
-Entropy: 0.954
-Gain: 0.159
-Samples: 8" color=green3 shape=ellipse]
-		140131277319360 -> 140131277319920 [label=False]
-		140131277319360 -> 140131276841760 [label=True]
-		140131277319416 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277318296 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277319192 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277318240 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276841032 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277318576 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276841144 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276841648 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276841368 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276841480 [label="Alamine_Aminotransferase <= 23.57
-
-Entropy: 0.592
-Gain: 0.198
-Samples: 7" color=green3 shape=ellipse]
-		140131276841480 -> 140131276843776 [label=False]
-		140131276841480 -> 140131276844952 [label=True]
-		140131276844896 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276843944 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276844056 [label="Alkaline_Phosphotase <= 169.14
-
-Entropy: 0.985
-Gain: 0.292
-Samples: 7" color=green3 shape=ellipse]
-		140131276844056 -> 140131276843552 [label=False]
-		140131276844056 -> 140131276890632 [label=True]
-		140131276844112 [label="Aspartate_Aminotransferase <= 47.00
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131276844112 -> 140131276890688 [label=False]
-		140131276844112 -> 140131276891360 [label=True]
-		140131276891920 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276844560 [label="Gender
-
-Entropy: 0.954
-Gain: 0.348
-Samples: 8" color=green3 shape=ellipse]
-		140131276844560 -> 140131276892256 [label=Male]
-		140131276844560 -> 140131276892032 [label=Female]
-		140131276891248 [label="Total_Bilirubin <= 0.62
-
-Entropy: 0.650
-Gain: 0.650
-Samples: 6" color=green3 shape=ellipse]
-		140131276891248 -> 140131276891864 [label=False]
-		140131276891248 -> 140131276892816 [label=True]
-		140131276891136 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131276892424 [label="Albumin <= 2.55
-
-Entropy: 1.000
-Gain: 0.311
-Samples: 4" color=green3 shape=ellipse]
-		140131276892424 -> 140131276892480 [label=False]
-		140131276892424 -> 140131276891976 [label=True]
-		140131277317176 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277317792 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277319304 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277320088 [label="Age <= 67.00
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131277320088 -> 140131277319640 [label=False]
-		140131277320088 -> 140131276841536 [label=True]
-		140131277319920 [label="Albumin <= 3.83
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131277319920 -> 140131276841200 [label=False]
-		140131277319920 -> 140131276841872 [label=True]
-		140131276841760 [label="Total_Protiens <= 7.54
-
-Entropy: 0.722
-Gain: 0.322
-Samples: 5" color=green3 shape=ellipse]
-		140131276841760 -> 140131276841312 [label=False]
-		140131276841760 -> 140131276842936 [label=True]
-		140131276843776 [label="Albumin <= 3.07
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131276843776 -> 140131276844280 [label=False]
-		140131276843776 -> 140131276843496 [label=True]
-		140131276844952 [label="1
+		140199499233600 [label="B
 
 Entropy: 0.000
 Samples: 4" color=gray shape=box]
-		140131276843552 [label="1
+		140199498765704 [label="M
+
+Entropy: 0.000
+Samples: 1" color=gray shape=box]
+		140199499235000 [label="M
+
+Entropy: 0.000
+Samples: 1" color=gray shape=box]
+		140199499233712 [label="B
 
 Entropy: 0.000
 Samples: 2" color=gray shape=box]
-		140131276890632 [label="Alamine_Aminotransferase <= 16.00
-
-Entropy: 0.971
-Gain: 0.420
-Samples: 5" color=green3 shape=ellipse]
-		140131276890632 -> 140131276890744 [label=False]
-		140131276890632 -> 140131276890520 [label=True]
-		140131276890688 [label="2
+		140199498765872 [label="B
 
 Entropy: 0.000
 Samples: 1" color=gray shape=box]
-		140131276891360 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276892256 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131276892032 [label="Age <= 39.40
-
-Entropy: 0.971
-Gain: 0.420
-Samples: 5" color=green3 shape=ellipse]
-		140131276892032 -> 140131276891024 [label=False]
-		140131276892032 -> 140131276890240 [label=True]
-		140131276891864 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276892816 [label="1
-
-Entropy: 0.000
-Samples: 5" color=gray shape=box]
-		140131276892480 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276891976 [label="Aspartate_Aminotransferase <= 17.00
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131276891976 -> 140131276892760 [label=False]
-		140131276891976 -> 140131276892144 [label=True]
-		140131277319640 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276841536 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276841200 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276841872 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276841312 [label="Age <= 27.50
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131276841312 -> 140131276841928 [label=False]
-		140131276841312 -> 140131276842152 [label=True]
-		140131276842936 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131276844280 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276843496 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276890744 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276890520 [label="Alamine_Aminotransferase <= 14.67
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131276890520 -> 140131276891080 [label=False]
-		140131276890520 -> 140131276891416 [label=True]
-		140131276891024 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276890240 [label="Albumin <= 3.07
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131276890240 -> 140131276892368 [label=False]
-		140131276890240 -> 140131276892088 [label=True]
-		140131276892760 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276892144 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276841928 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276842152 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276891080 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276891416 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276892368 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276892088 [label="1
+		140199498766040 [label="M
 
 Entropy: 0.000
 Samples: 1" color=gray shape=box]
 		label="Tree 3"
 	}
 	subgraph cluster_4 {
-		140131277211800 [label="Alamine_Aminotransferase <= 67.06
+		140199499468928 [label="f20 <= 16.26
 
-Entropy: 0.871
-Gain: 0.084
-Samples: 326" color=green3 shape=ellipse]
-		140131277211800 -> 140131277212976 [label=False]
-		140131277211800 -> 140131277218312 [label=True]
-		140131277212976 [label="Alkaline_Phosphotase <= 440.72
-
-Entropy: 0.191
-Gain: 0.021
-Samples: 68" color=green3 shape=ellipse]
-		140131277212976 -> 140131277573816 [label=False]
-		140131277212976 -> 140131277220272 [label=True]
-		140131277218312 [label="Alamine_Aminotransferase <= 30.07
-
-Entropy: 0.943
-Gain: 0.014
-Samples: 258" color=green3 shape=ellipse]
-		140131277218312 -> 140131277219432 [label=False]
-		140131277218312 -> 140131277277728 [label=True]
-		140131277573816 [label="1
-
-Entropy: 0.000
-Samples: 26" color=gray shape=box]
-		140131277220272 [label="Age <= 42.10
+Entropy: 0.969
+Gain: 0.738
+Samples: 318" color=green3 shape=ellipse]
+		140199499468928 -> 140199499470216 [label=False]
+		140199499468928 -> 140199499043280 [label=True]
+		140199499470216 [label="f6 <= 0.16
 
 Entropy: 0.276
-Gain: 0.040
-Samples: 42" color=green3 shape=ellipse]
-		140131277220272 -> 140131277279128 [label=False]
-		140131277220272 -> 140131277276720 [label=True]
-		140131277219432 [label="Direct_Bilirubin <= 1.92
+Gain: 0.050
+Samples: 126" color=green3 shape=ellipse]
+		140199499470216 -> 140199499045520 [label=False]
+		140199499470216 -> 140199499044624 [label=True]
+		140199499043280 [label="f26 <= 0.18
 
-Entropy: 0.852
-Gain: 0.106
-Samples: 101" color=green3 shape=ellipse]
-		140131277219432 -> 140131277277896 [label=False]
-		140131277219432 -> 140131277319864 [label=True]
-		140131277277728 [label="Direct_Bilirubin <= 0.47
-
-Entropy: 0.979
-Gain: 0.007
-Samples: 157" color=green3 shape=ellipse]
-		140131277277728 -> 140131277317960 [label=False]
-		140131277277728 -> 140131276841592 [label=True]
-		140131277279128 [label="1
+Entropy: 0.201
+Gain: 0.045
+Samples: 192" color=green3 shape=ellipse]
+		140199499043280 -> 140199499043224 [label=False]
+		140199499043280 -> 140199499174968 [label=True]
+		140199499045520 [label="M
 
 Entropy: 0.000
-Samples: 18" color=gray shape=box]
-		140131277276720 [label="Alamine_Aminotransferase <= 263.25
+Samples: 64" color=gray shape=box]
+		140199499044624 [label="f27 <= 0.15
 
-Entropy: 0.414
-Gain: 0.036
-Samples: 24" color=green3 shape=ellipse]
-		140131277276720 -> 140131277278400 [label=False]
-		140131277276720 -> 140131277317624 [label=True]
-		140131277277896 [label="1
+Entropy: 0.459
+Gain: 0.126
+Samples: 62" color=green3 shape=ellipse]
+		140199499044624 -> 140199499046416 [label=False]
+		140199499044624 -> 140199499174184 [label=True]
+		140199499043224 [label="f21 <= 24.85
 
-Entropy: 0.000
-Samples: 20" color=gray shape=box]
-		140131277319864 [label="Albumin <= 3.22
-
-Entropy: 0.930
-Gain: 0.060
-Samples: 81" color=green3 shape=ellipse]
-		140131277319864 -> 140131277316840 [label=False]
-		140131277319864 -> 140131276843664 [label=True]
-		140131277317960 [label="Total_Bilirubin <= 2.12
-
-Entropy: 0.918
-Gain: 0.070
-Samples: 39" color=green3 shape=ellipse]
-		140131277317960 -> 140131276841984 [label=False]
-		140131277317960 -> 140131276893544 [label=True]
-		140131276841592 [label="Total_Bilirubin <= 0.80
-
-Entropy: 0.990
-Gain: 0.001
-Samples: 118" color=green3 shape=ellipse]
-		140131276841592 -> 140131276844728 [label=False]
-		140131276841592 -> 140131276891696 [label=True]
-		140131277278400 [label="1
+Entropy: 0.410
+Gain: 0.138
+Samples: 73" color=green3 shape=ellipse]
+		140199499043224 -> 140199499177656 [label=False]
+		140199499043224 -> 140199499233544 [label=True]
+		140199499174968 [label="B
 
 Entropy: 0.000
-Samples: 6" color=gray shape=box]
-		140131277317624 [label="Gender
-
-Entropy: 0.503
-Gain: 0.031
-Samples: 18" color=green3 shape=ellipse]
-		140131277317624 -> 140131276843384 [label=Male]
-		140131277317624 -> 140131276841704 [label=Female]
-		140131277316840 [label="Aspartate_Aminotransferase <= 44.15
-
-Entropy: 1.000
-Gain: 0.024
-Samples: 39" color=green3 shape=ellipse]
-		140131277316840 -> 140131276844840 [label=False]
-		140131277316840 -> 140131276843328 [label=True]
-		140131276843664 [label="Alkaline_Phosphotase <= 256.79
-
-Entropy: 0.750
-Gain: 0.034
-Samples: 42" color=green3 shape=ellipse]
-		140131276843664 -> 140131276844336 [label=False]
-		140131276843664 -> 140131276894048 [label=True]
-		140131276841984 [label="Age <= 54.40
-
-Entropy: 0.469
-Gain: 0.108
-Samples: 10" color=green3 shape=ellipse]
-		140131276841984 -> 140131276843608 [label=False]
-		140131276841984 -> 140131276893712 [label=True]
-		140131276893544 [label="Total_Bilirubin <= 1.51
-
-Entropy: 0.978
-Gain: 0.100
-Samples: 29" color=green3 shape=ellipse]
-		140131276893544 -> 140131276891752 [label=False]
-		140131276893544 -> 140131276927664 [label=True]
-		140131276844728 [label="Albumin_and_Globulin_Ratio <= 1.12
-
-Entropy: 0.980
-Gain: 0.206
-Samples: 36" color=green3 shape=ellipse]
-		140131276844728 -> 140131276893824 [label=False]
-		140131276844728 -> 140131276929344 [label=True]
-		140131276891696 [label="Albumin_and_Globulin_Ratio <= 0.99
-
-Entropy: 0.993
-Gain: 0.033
-Samples: 82" color=green3 shape=ellipse]
-		140131276891696 -> 140131276892648 [label=False]
-		140131276891696 -> 140131276927832 [label=True]
-		140131276843384 [label="Total_Bilirubin <= 4.59
-
-Entropy: 0.567
-Gain: 0.065
-Samples: 15" color=green3 shape=ellipse]
-		140131276843384 -> 140131276842600 [label=False]
-		140131276843384 -> 140131276841088 [label=True]
-		140131276841704 [label="1
+Samples: 119" color=gray shape=box]
+		140199499046416 [label="M
 
 Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131276844840 [label="Alkaline_Phosphotase <= 349.46
+Samples: 35" color=gray shape=box]
+		140199499174184 [label="f7 <= 0.05
 
-Entropy: 0.961
-Gain: 0.114
-Samples: 13" color=green3 shape=ellipse]
-		140131276844840 -> 140131276843440 [label=False]
-		140131276844840 -> 140131276890352 [label=True]
-		140131276843328 [label="Albumin_and_Globulin_Ratio <= 1.19
+Entropy: 0.764
+Gain: 0.285
+Samples: 27" color=green3 shape=ellipse]
+		140199499174184 -> 140199499177264 [label=False]
+		140199499174184 -> 140199499177544 [label=True]
+		140199499177656 [label="f22 <= 90.72
 
-Entropy: 0.983
-Gain: 0.209
-Samples: 26" color=green3 shape=ellipse]
-		140131276843328 -> 140131276843272 [label=False]
-		140131276843328 -> 140131276892312 [label=True]
-		140131276844336 [label="Gender
+Entropy: 0.795
+Gain: 0.222
+Samples: 25" color=green3 shape=ellipse]
+		140199499177656 -> 140199499231640 [label=False]
+		140199499177656 -> 140199499232928 [label=True]
+		140199499233544 [label="B
 
-Entropy: 0.414
-Gain: 0.247
-Samples: 12" color=green3 shape=ellipse]
-		140131276844336 -> 140131276890296 [label=Male]
-		140131276844336 -> 140131276892872 [label=Female]
-		140131276894048 [label="Total_Protiens <= 5.29
+Entropy: 0.000
+Samples: 48" color=gray shape=box]
+		140199499177264 [label="M
 
-Entropy: 0.837
+Entropy: 0.000
+Samples: 14" color=gray shape=box]
+		140199499177544 [label="f1 <= 18.72
+
+Entropy: 0.996
 Gain: 0.377
-Samples: 30" color=green3 shape=ellipse]
-		140131276894048 -> 140131276893264 [label=False]
-		140131276894048 -> 140131276890184 [label=True]
-		140131276843608 [label="1
-
-Entropy: 0.000
-Samples: 5" color=gray shape=box]
-		140131276893712 [label="Albumin_and_Globulin_Ratio <= 0.57
-
-Entropy: 0.722
-Gain: 0.322
-Samples: 5" color=green3 shape=ellipse]
-		140131276893712 -> 140131276890856 [label=False]
-		140131276893712 -> 140131276927384 [label=True]
-		140131276891752 [label="Albumin_and_Globulin_Ratio <= 0.86
-
-Entropy: 0.811
-Gain: 0.204
-Samples: 16" color=green3 shape=ellipse]
-		140131276891752 -> 140131276890408 [label=False]
-		140131276891752 -> 140131276929512 [label=True]
-		140131276927664 [label="Direct_Bilirubin <= 0.65
-
-Entropy: 0.961
-Gain: 0.131
 Samples: 13" color=green3 shape=ellipse]
-		140131276927664 -> 140131276927552 [label=False]
-		140131276927664 -> 140131276929120 [label=True]
-		140131276893824 [label="Total_Bilirubin <= 0.99
-
-Entropy: 0.811
-Gain: 0.811
-Samples: 12" color=green3 shape=ellipse]
-		140131276893824 -> 140131276929624 [label=False]
-		140131276893824 -> 140131276929904 [label=True]
-		140131276929344 [label="Age <= 51.90
-
-Entropy: 0.863
-Gain: 0.119
-Samples: 21" color=green3 shape=ellipse]
-		140131276929344 -> 140131276929288 [label=False]
-		140131276929344 -> 140131276930800 [label=True]
-		140131276892648 [label="Aspartate_Aminotransferase <= 30.02
-
-Entropy: 0.956
-Gain: 0.007
-Samples: 45" color=green3 shape=ellipse]
-		140131276892648 -> 140131276927440 [label=False]
-		140131276892648 -> 140131276930520 [label=True]
-		140131276927832 [label="Direct_Bilirubin <= 0.18
+		140199499177544 -> 140199499233096 [label=False]
+		140199499177544 -> 140199499232424 [label=True]
+		140199499231640 [label="f7 <= 0.05
 
 Entropy: 0.991
-Gain: 0.079
-Samples: 36" color=green3 shape=ellipse]
-		140131276927832 -> 140131276929008 [label=False]
-		140131276927832 -> 140131276933664 [label=True]
-		140131276842600 [label="1
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131276841088 [label="Albumin_and_Globulin_Ratio <= 1.01
-
-Entropy: 0.684
-Gain: 0.135
-Samples: 11" color=green3 shape=ellipse]
-		140131276841088 -> 140131276842992 [label=False]
-		140131276841088 -> 140131276892928 [label=True]
-		140131276843440 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276890352 [label="Total_Bilirubin <= 1.10
-
-Entropy: 0.918
-Gain: 0.617
-Samples: 12" color=green3 shape=ellipse]
-		140131276890352 -> 140131276891584 [label=False]
-		140131276890352 -> 140131276893152 [label=True]
-		140131276843272 [label="Albumin <= 4.36
-
-Entropy: 0.845
-Gain: 0.105
-Samples: 11" color=green3 shape=ellipse]
-		140131276843272 -> 140131276890912 [label=False]
-		140131276843272 -> 140131276894104 [label=True]
-		140131276892312 [label="Age <= 40.60
-
-Entropy: 0.722
-Gain: 0.213
-Samples: 15" color=green3 shape=ellipse]
-		140131276892312 -> 140131276892200 [label=False]
-		140131276892312 -> 140131276890800 [label=True]
-		140131276890296 [label="1
-
-Entropy: 0.000
-Samples: 10" color=gray shape=box]
-		140131276892872 [label="Albumin <= 2.40
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131276892872 -> 140131276891640 [label=False]
-		140131276892872 -> 140131276894160 [label=True]
-		140131276893264 [label="1
-
-Entropy: 0.000
-Samples: 16" color=gray shape=box]
-		140131276890184 [label="Alamine_Aminotransferase <= 43.64
-
-Entropy: 0.985
-Gain: 0.048
-Samples: 14" color=green3 shape=ellipse]
-		140131276890184 -> 140131276893320 [label=False]
-		140131276890184 -> 140131276928560 [label=True]
-		140131276890856 [label="Alkaline_Phosphotase <= 461.00
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131276890856 -> 140131276892984 [label=False]
-		140131276890856 -> 140131276928392 [label=True]
-		140131276927384 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131276890408 [label="Age <= 36.50
-
-Entropy: 0.971
-Gain: 0.171
-Samples: 10" color=green3 shape=ellipse]
-		140131276890408 -> 140131276928280 [label=False]
-		140131276890408 -> 140131276927160 [label=True]
-		140131276929512 [label="1
-
-Entropy: 0.000
-Samples: 6" color=gray shape=box]
-		140131276927552 [label="Total_Protiens <= 6.02
-
-Entropy: 0.650
-Gain: 0.650
-Samples: 6" color=green3 shape=ellipse]
-		140131276927552 -> 140131276928504 [label=False]
-		140131276927552 -> 140131276929176 [label=True]
-		140131276929120 [label="Direct_Bilirubin <= 0.51
-
-Entropy: 0.985
-Gain: 0.198
-Samples: 7" color=green3 shape=ellipse]
-		140131276929120 -> 140131276927216 [label=False]
-		140131276929120 -> 140131276929400 [label=True]
-		140131276929624 [label="2
-
-Entropy: 0.000
-Samples: 9" color=gray shape=box]
-		140131276929904 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131276929288 [label="Albumin_and_Globulin_Ratio <= 0.90
-
-Entropy: 0.469
-Gain: 0.108
-Samples: 10" color=green3 shape=ellipse]
-		140131276929288 -> 140131276927104 [label=False]
-		140131276929288 -> 140131276930464 [label=True]
-		140131276930800 [label="Gender
-
-Entropy: 0.994
-Gain: 0.445
-Samples: 11" color=green3 shape=ellipse]
-		140131276930800 -> 140131276929680 [label=Male]
-		140131276930800 -> 140131276929064 [label=Female]
-		140131276927440 [label="Age <= 47.50
-
-Entropy: 1.000
-Gain: 0.082
-Samples: 6" color=green3 shape=ellipse]
-		140131276927440 -> 140131276931024 [label=False]
-		140131276927440 -> 140131276931816 [label=True]
-		140131276930520 [label="Aspartate_Aminotransferase <= 21.95
-
-Entropy: 0.942
-Gain: 0.052
-Samples: 39" color=green3 shape=ellipse]
-		140131276930520 -> 140131276929736 [label=False]
-		140131276930520 -> 140131276932880 [label=True]
-		140131276929008 [label="Total_Protiens <= 5.97
-
-Entropy: 0.940
-Gain: 0.028
-Samples: 28" color=green3 shape=ellipse]
-		140131276929008 -> 140131276931200 [label=False]
-		140131276929008 -> 140131276934952 [label=True]
-		140131276933664 [label="Alamine_Aminotransferase <= 20.62
-
-Entropy: 0.811
-Gain: 0.311
-Samples: 8" color=green3 shape=ellipse]
-		140131276933664 -> 140131276935064 [label=False]
-		140131276933664 -> 140131276932264 [label=True]
-		140131276842992 [label="1
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131276892928 [label="Alkaline_Phosphotase <= 248.43
-
-Entropy: 0.863
-Gain: 0.292
-Samples: 7" color=green3 shape=ellipse]
-		140131276892928 -> 140131276891472 [label=False]
-		140131276892928 -> 140131276890576 [label=True]
-		140131276891584 [label="Alamine_Aminotransferase <= 42.80
-
-Entropy: 0.722
-Gain: 0.322
-Samples: 5" color=green3 shape=ellipse]
-		140131276891584 -> 140131276893040 [label=False]
-		140131276891584 -> 140131276893992 [label=True]
-		140131276893152 [label="2
-
-Entropy: 0.000
-Samples: 7" color=gray shape=box]
-		140131276890912 [label="Aspartate_Aminotransferase <= 32.00
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 4" color=green3 shape=ellipse]
-		140131276890912 -> 140131276890464 [label=False]
-		140131276890912 -> 140131276893656 [label=True]
-		140131276894104 [label="Total_Protiens <= 7.26
-
-Entropy: 0.592
-Gain: 0.198
-Samples: 7" color=green3 shape=ellipse]
-		140131276894104 -> 140131276893936 [label=False]
-		140131276894104 -> 140131276893432 [label=True]
-		140131276892200 [label="Alamine_Aminotransferase <= 33.62
-
-Entropy: 0.954
-Gain: 0.549
-Samples: 8" color=green3 shape=ellipse]
-		140131276892200 -> 140131276893600 [label=False]
-		140131276892200 -> 140131276927776 [label=True]
-		140131276890800 [label="1
-
-Entropy: 0.000
-Samples: 7" color=gray shape=box]
-		140131276891640 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276894160 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276893320 [label="Albumin_and_Globulin_Ratio <= 0.98
-
-Entropy: 0.971
-Gain: 0.420
-Samples: 5" color=green3 shape=ellipse]
-		140131276893320 -> 140131276928056 [label=False]
-		140131276893320 -> 140131276928112 [label=True]
-		140131276928560 [label="Albumin_and_Globulin_Ratio <= 0.96
-
-Entropy: 0.918
-Gain: 0.252
+Gain: 0.379
 Samples: 9" color=green3 shape=ellipse]
-		140131276928560 -> 140131276928168 [label=False]
-		140131276928560 -> 140131276929568 [label=True]
-		140131276892984 [label="2
+		140199499231640 -> 140199499231360 [label=False]
+		140199499231640 -> 140199499232144 [label=True]
+		140199499232928 [label="f1 <= 20.51
 
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276928392 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276928280 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276927160 [label="Direct_Bilirubin <= 0.69
-
-Entropy: 1.000
-Gain: 0.549
-Samples: 8" color=green3 shape=ellipse]
-		140131276927160 -> 140131276928784 [label=False]
-		140131276927160 -> 140131276930016 [label=True]
-		140131276928504 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276929176 [label="2
-
-Entropy: 0.000
-Samples: 5" color=gray shape=box]
-		140131276927216 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276929400 [label="Total_Protiens <= 6.77
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 6" color=green3 shape=ellipse]
-		140131276929400 -> 140131276930912 [label=False]
-		140131276929400 -> 140131276929960 [label=True]
-		140131276927104 [label="1
-
-Entropy: 0.000
-Samples: 5" color=gray shape=box]
-		140131276930464 [label="Albumin_and_Globulin_Ratio <= 0.80
-
-Entropy: 0.722
-Gain: 0.171
-Samples: 5" color=green3 shape=ellipse]
-		140131276930464 -> 140131276929232 [label=False]
-		140131276930464 -> 140131276930688 [label=True]
-		140131276929680 [label="Alkaline_Phosphotase <= 265.71
-
-Entropy: 0.863
-Gain: 0.470
-Samples: 7" color=green3 shape=ellipse]
-		140131276929680 -> 140131276930296 [label=False]
-		140131276929680 -> 140131276932432 [label=True]
-		140131276929064 [label="1
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131276931024 [label="Alamine_Aminotransferase <= 19.00
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131276931024 -> 140131276930968 [label=False]
-		140131276931024 -> 140131276931928 [label=True]
-		140131276931816 [label="Albumin <= 3.37
-
-Entropy: 0.918
-Gain: 0.252
-Samples: 3" color=green3 shape=ellipse]
-		140131276931816 -> 140131276933048 [label=False]
-		140131276931816 -> 140131276933160 [label=True]
-		140131276929736 [label="Albumin_and_Globulin_Ratio <= 1.18
-
-Entropy: 0.995
-Gain: 0.077
-Samples: 24" color=green3 shape=ellipse]
-		140131276929736 -> 140131276932096 [label=False]
-		140131276929736 -> 140131276933608 [label=True]
-		140131276932880 [label="Direct_Bilirubin <= 0.18
-
-Entropy: 0.722
-Gain: 0.133
-Samples: 15" color=green3 shape=ellipse]
-		140131276932880 -> 140131276931760 [label=False]
-		140131276932880 -> 140131276934056 [label=True]
-		140131276931200 [label="Gender
-
-Entropy: 0.989
-Gain: 0.213
+Entropy: 0.337
+Gain: 0.112
 Samples: 16" color=green3 shape=ellipse]
-		140131276931200 -> 140131276933888 [label=Male]
-		140131276931200 -> 140131276932768 [label=Female]
-		140131276934952 [label="Total_Bilirubin <= 0.70
-
-Entropy: 0.811
-Gain: 0.043
-Samples: 12" color=green3 shape=ellipse]
-		140131276934952 -> 140131276933216 [label=False]
-		140131276934952 -> 140131277009808 [label=True]
-		140131276935064 [label="Gender
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 4" color=green3 shape=ellipse]
-		140131276935064 -> 140131276934392 [label=Male]
-		140131276935064 -> 140131276932376 [label=Female]
-		140131276932264 [label="1
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131276891472 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131276890576 [label="Total_Protiens <= 8.12
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 4" color=green3 shape=ellipse]
-		140131276890576 -> 140131276892704 [label=False]
-		140131276890576 -> 140131276892592 [label=True]
-		140131276893040 [label="Aspartate_Aminotransferase <= 52.00
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131276893040 -> 140131276893376 [label=False]
-		140131276893040 -> 140131276893768 [label=True]
-		140131276893992 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131276890464 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276893656 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276893936 [label="2
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131276893432 [label="Total_Bilirubin <= 0.93
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131276893432 -> 140131276927048 [label=False]
-		140131276893432 -> 140131276927328 [label=True]
-		140131276893600 [label="1
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131276927776 [label="Aspartate_Aminotransferase <= 28.75
-
-Entropy: 0.811
-Gain: 0.811
-Samples: 4" color=green3 shape=ellipse]
-		140131276927776 -> 140131276927720 [label=False]
-		140131276927776 -> 140131276927944 [label=True]
-		140131276928056 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276928112 [label="Direct_Bilirubin <= 0.70
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131276928112 -> 140131276928336 [label=False]
-		140131276928112 -> 140131276928616 [label=True]
-		140131276928168 [label="Alamine_Aminotransferase <= 38.83
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 6" color=green3 shape=ellipse]
-		140131276928168 -> 140131276927272 [label=False]
-		140131276928168 -> 140131276928840 [label=True]
-		140131276929568 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131276928784 [label="Aspartate_Aminotransferase <= 47.40
-
-Entropy: 0.722
-Gain: 0.171
-Samples: 5" color=green3 shape=ellipse]
-		140131276928784 -> 140131276928728 [label=False]
-		140131276928784 -> 140131276930128 [label=True]
-		140131276930016 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131276930912 [label="1
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131276929960 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276929232 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276930688 [label="Total_Bilirubin <= 1.00
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131276930688 -> 140131276931480 [label=False]
-		140131276930688 -> 140131276931424 [label=True]
-		140131276930296 [label="Age <= 21.67
-
-Entropy: 0.918
-Gain: 0.252
-Samples: 3" color=green3 shape=ellipse]
-		140131276930296 -> 140131276932040 [label=False]
-		140131276930296 -> 140131276932208 [label=True]
-		140131276932432 [label="2
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131276930968 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276931928 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276933048 [label="Direct_Bilirubin <= 0.15
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131276933048 -> 140131276932992 [label=False]
-		140131276933048 -> 140131276932936 [label=True]
-		140131276933160 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276932096 [label="Direct_Bilirubin <= 0.19
-
-Entropy: 0.918
-Gain: 0.243
-Samples: 15" color=green3 shape=ellipse]
-		140131276932096 -> 140131276931144 [label=False]
-		140131276932096 -> 140131276934112 [label=True]
-		140131276933608 [label="Total_Protiens <= 6.88
-
-Entropy: 0.918
-Gain: 0.018
-Samples: 9" color=green3 shape=ellipse]
-		140131276933608 -> 140131276932656 [label=False]
-		140131276933608 -> 140131276934784 [label=True]
-		140131276931760 [label="Total_Bilirubin <= 0.75
-
-Entropy: 0.439
-Gain: 0.144
-Samples: 11" color=green3 shape=ellipse]
-		140131276931760 -> 140131276931368 [label=False]
-		140131276931760 -> 140131276931984 [label=True]
-		140131276934056 [label="Albumin <= 2.62
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 4" color=green3 shape=ellipse]
-		140131276934056 -> 140131276933272 [label=False]
-		140131276934056 -> 140131276934672 [label=True]
-		140131276933888 [label="Total_Protiens <= 6.70
+		140199499232928 -> 140199498765256 [label=False]
+		140199499232928 -> 140199498768280 [label=True]
+		140199499233096 [label="f15 <= 0.02
 
 Entropy: 0.592
 Gain: 0.306
 Samples: 7" color=green3 shape=ellipse]
-		140131276933888 -> 140131276933384 [label=False]
-		140131276933888 -> 140131276934000 [label=True]
-		140131276932768 [label="Total_Bilirubin <= 0.79
+		140199499233096 -> 140199499231528 [label=False]
+		140199499233096 -> 140199498765984 [label=True]
+		140199499232424 [label="f29 <= 0.07
 
-Entropy: 0.918
-Gain: 0.197
-Samples: 9" color=green3 shape=ellipse]
-		140131276932768 -> 140131276933104 [label=False]
-		140131276932768 -> 140131276931648 [label=True]
-		140131276933216 [label="Albumin <= 1.93
-
-Entropy: 0.722
-Gain: 0.322
-Samples: 10" color=green3 shape=ellipse]
-		140131276933216 -> 140131276932488 [label=False]
-		140131276933216 -> 140131277009360 [label=True]
-		140131277009808 [label="Alkaline_Phosphotase <= 151.50
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277009808 -> 140131277009416 [label=False]
-		140131277009808 -> 140131277009080 [label=True]
-		140131276934392 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276932376 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276892704 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276892592 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276893376 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276893768 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276927048 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276927328 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276927720 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276927944 [label="2
+Entropy: 0.650
+Gain: 0.650
+Samples: 6" color=green3 shape=ellipse]
+		140199499232424 -> 140199498765928 [label=False]
+		140199499232424 -> 140199498764920 [label=True]
+		140199499231360 [label="M
 
 Entropy: 0.000
 Samples: 3" color=gray shape=box]
-		140131276928336 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276928616 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276927272 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131276928840 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131276928728 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276930128 [label="Alkaline_Phosphotase <= 164.67
+		140199499232144 [label="f5 <= 0.10
 
 Entropy: 0.918
 Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131276930128 -> 140131276930184 [label=False]
-		140131276930128 -> 140131276930072 [label=True]
-		140131276931480 [label="2
+Samples: 6" color=green3 shape=ellipse]
+		140199499232144 -> 140199498766488 [label=False]
+		140199499232144 -> 140199498766656 [label=True]
+		140199498765256 [label="f24 <= 0.15
 
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276931424 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276932040 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276932208 [label="Alamine_Aminotransferase <= 25.50
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131276932208 -> 140131276932152 [label=False]
-		140131276932208 -> 140131276931312 [label=True]
-		140131276932992 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276932936 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276931144 [label="Aspartate_Aminotransferase <= 25.62
-
-Entropy: 0.779
-Gain: 0.318
-Samples: 13" color=green3 shape=ellipse]
-		140131276931144 -> 140131276932320 [label=False]
-		140131276931144 -> 140131276933496 [label=True]
-		140131276934112 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276932656 [label="Aspartate_Aminotransferase <= 23.00
-
-Entropy: 0.811
-Gain: 0.811
-Samples: 4" color=green3 shape=ellipse]
-		140131276932656 -> 140131276932600 [label=False]
-		140131276932656 -> 140131276934728 [label=True]
-		140131276934784 [label="Albumin_and_Globulin_Ratio <= 1.02
-
-Entropy: 0.971
-Gain: 0.971
+Entropy: 0.722
+Gain: 0.722
 Samples: 5" color=green3 shape=ellipse]
-		140131276934784 -> 140131276934560 [label=False]
-		140131276934784 -> 140131276934448 [label=True]
-		140131276931368 [label="1
+		140199498765256 -> 140199498768112 [label=False]
+		140199498765256 -> 140199498767048 [label=True]
+		140199498768280 [label="B
 
 Entropy: 0.000
-Samples: 7" color=gray shape=box]
-		140131276931984 [label="Aspartate_Aminotransferase <= 18.00
-
-Entropy: 0.811
-Gain: 0.311
-Samples: 4" color=green3 shape=ellipse]
-		140131276931984 -> 140131276933440 [label=False]
-		140131276931984 -> 140131276934896 [label=True]
-		140131276933272 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276934672 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276933384 [label="Total_Protiens <= 7.70
+Samples: 11" color=gray shape=box]
+		140199499231528 [label="f18 <= 0.02
 
 Entropy: 1.000
 Gain: 1.000
 Samples: 2" color=green3 shape=ellipse]
-		140131276933384 -> 140131276934504 [label=False]
-		140131276933384 -> 140131277009528 [label=True]
-		140131276934000 [label="2
+		140199499231528 -> 140199498764696 [label=False]
+		140199499231528 -> 140199498764752 [label=True]
+		140199498765984 [label="M
 
 Entropy: 0.000
 Samples: 5" color=gray shape=box]
-		140131276933104 [label="Alkaline_Phosphotase <= 199.38
-
-Entropy: 0.811
-Gain: 0.811
-Samples: 8" color=green3 shape=ellipse]
-		140131276933104 -> 140131276932712 [label=False]
-		140131276933104 -> 140131277009584 [label=True]
-		140131276931648 [label="2
+		140199498765928 [label="M
 
 Entropy: 0.000
 Samples: 1" color=gray shape=box]
-		140131276932488 [label="2
+		140199498764920 [label="B
 
 Entropy: 0.000
-Samples: 6" color=gray shape=box]
-		140131277009360 [label="Alkaline_Phosphotase <= 163.00
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 4" color=green3 shape=ellipse]
-		140131277009360 -> 140131277009248 [label=False]
-		140131277009360 -> 140131277010256 [label=True]
-		140131277009416 [label="2
+Samples: 5" color=gray shape=box]
+		140199498766488 [label="B
 
 Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277009080 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276930184 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276930072 [label="1
+Samples: 4" color=gray shape=box]
+		140199498766656 [label="M
 
 Entropy: 0.000
 Samples: 2" color=gray shape=box]
-		140131276932152 [label="1
+		140199498768112 [label="M
 
 Entropy: 0.000
 Samples: 1" color=gray shape=box]
-		140131276931312 [label="2
+		140199498767048 [label="B
+
+Entropy: 0.000
+Samples: 4" color=gray shape=box]
+		140199498764696 [label="B
 
 Entropy: 0.000
 Samples: 1" color=gray shape=box]
-		140131276932320 [label="1
-
-Entropy: 0.000
-Samples: 7" color=gray shape=box]
-		140131276933496 [label="Total_Bilirubin <= 0.75
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 6" color=green3 shape=ellipse]
-		140131276933496 -> 140131276933832 [label=False]
-		140131276933496 -> 140131276934168 [label=True]
-		140131276932600 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276934728 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131276934560 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131276934448 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276933440 [label="Aspartate_Aminotransferase <= 20.50
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131276933440 -> 140131276934336 [label=False]
-		140131276933440 -> 140131277009472 [label=True]
-		140131276934896 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276934504 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277009528 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276932712 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277009584 [label="1
-
-Entropy: 0.000
-Samples: 6" color=gray shape=box]
-		140131277009248 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277010256 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276933832 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131276934168 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131276934336 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277009472 [label="2
+		140199498764752 [label="M
 
 Entropy: 0.000
 Samples: 1" color=gray shape=box]
 		label="Tree 4"
 	}
 	subgraph cluster_5 {
-		140131277278736 [label="Direct_Bilirubin <= 1.41
+		140199499044456 [label="f7 <= 0.05
 
-Entropy: 0.874
-Gain: 0.057
-Samples: 326" color=green3 shape=ellipse]
-		140131277278736 -> 140131277277840 [label=False]
-		140131277278736 -> 140131277319248 [label=True]
-		140131277277840 [label="Age <= 45.38
+Entropy: 0.947
+Gain: 0.588
+Samples: 318" color=green3 shape=ellipse]
+		140199499044456 -> 140199499044904 [label=False]
+		140199499044456 -> 140199499174408 [label=True]
+		140199499044904 [label="f20 <= 20.14
 
-Entropy: 0.294
-Gain: 0.051
-Samples: 58" color=green3 shape=ellipse]
-		140131277277840 -> 140131277277000 [label=False]
-		140131277277840 -> 140131276844448 [label=True]
-		140131277319248 [label="Alamine_Aminotransferase <= 47.86
+Entropy: 0.535
+Gain: 0.157
+Samples: 123" color=green3 shape=ellipse]
+		140199499044904 -> 140199499174744 [label=False]
+		140199499044904 -> 140199499175976 [label=True]
+		140199499174408 [label="f1 <= 18.30
 
-Entropy: 0.931
-Gain: 0.024
-Samples: 268" color=green3 shape=ellipse]
-		140131277319248 -> 140131277317736 [label=False]
-		140131277319248 -> 140131276891304 [label=True]
-		140131277277000 [label="1
+Entropy: 0.247
+Gain: 0.055
+Samples: 195" color=green3 shape=ellipse]
+		140199499174408 -> 140199499177320 [label=False]
+		140199499174408 -> 140199499232704 [label=True]
+		140199499174744 [label="M
 
 Entropy: 0.000
-Samples: 28" color=gray shape=box]
-		140131276844448 [label="Total_Protiens <= 5.99
+Samples: 68" color=gray shape=box]
+		140199499175976 [label="f23 <= 810.89
+
+Entropy: 0.845
+Gain: 0.381
+Samples: 55" color=green3 shape=ellipse]
+		140199499175976 -> 140199499173960 [label=False]
+		140199499175976 -> 140199499177376 [label=True]
+		140199499177320 [label="f22 <= 90.01
 
 Entropy: 0.469
-Gain: 0.131
-Samples: 30" color=green3 shape=ellipse]
-		140131276844448 -> 140131276843832 [label=False]
-		140131276844448 -> 140131276890968 [label=True]
-		140131277317736 [label="Age <= 44.90
-
-Entropy: 0.728
-Gain: 0.125
-Samples: 69" color=green3 shape=ellipse]
-		140131277317736 -> 140131276843048 [label=False]
-		140131277317736 -> 140131276930632 [label=True]
-		140131276891304 [label="Albumin_and_Globulin_Ratio <= 0.97
-
-Entropy: 0.969
-Gain: 0.015
-Samples: 199" color=green3 shape=ellipse]
-		140131276891304 -> 140131276893208 [label=False]
-		140131276891304 -> 140131276930408 [label=True]
-		140131276843832 [label="Direct_Bilirubin <= 5.42
-
-Entropy: 0.779
-Gain: 0.192
-Samples: 13" color=green3 shape=ellipse]
-		140131276843832 -> 140131276893880 [label=False]
-		140131276843832 -> 140131276927888 [label=True]
-		140131276890968 [label="1
+Gain: 0.130
+Samples: 80" color=green3 shape=ellipse]
+		140199499177320 -> 140199499235056 [label=False]
+		140199499177320 -> 140199498767328 [label=True]
+		140199499232704 [label="B
 
 Entropy: 0.000
-Samples: 17" color=gray shape=box]
-		140131276843048 [label="Albumin <= 2.91
-
-Entropy: 0.206
-Gain: 0.050
-Samples: 31" color=green3 shape=ellipse]
-		140131276843048 -> 140131276929456 [label=False]
-		140131276843048 -> 140131276933720 [label=True]
-		140131276930632 [label="Albumin <= 3.56
-
-Entropy: 0.927
-Gain: 0.163
-Samples: 38" color=green3 shape=ellipse]
-		140131276930632 -> 140131276928224 [label=False]
-		140131276930632 -> 140131276933328 [label=True]
-		140131276893208 [label="Direct_Bilirubin <= 0.34
-
-Entropy: 0.958
-Gain: 0.016
-Samples: 108" color=green3 shape=ellipse]
-		140131276893208 -> 140131276928448 [label=False]
-		140131276893208 -> 140131277012104 [label=True]
-		140131276930408 [label="Aspartate_Aminotransferase <= 33.62
-
-Entropy: 0.982
-Gain: 0.125
-Samples: 88" color=green3 shape=ellipse]
-		140131276930408 -> 140131276931704 [label=False]
-		140131276930408 -> 140131277010200 [label=True]
-		140131276893880 [label="1
+Samples: 115" color=gray shape=box]
+		140199499173960 [label="M
 
 Entropy: 0.000
-Samples: 5" color=gray shape=box]
-		140131276927888 [label="Aspartate_Aminotransferase <= 354.50
-
-Entropy: 0.954
-Gain: 0.204
-Samples: 8" color=green3 shape=ellipse]
-		140131276927888 -> 140131276930352 [label=False]
-		140131276927888 -> 140131276930576 [label=True]
-		140131276929456 [label="Total_Protiens <= 7.11
-
-Entropy: 0.439
-Gain: 0.111
-Samples: 11" color=green3 shape=ellipse]
-		140131276929456 -> 140131276928672 [label=False]
-		140131276929456 -> 140131276932544 [label=True]
-		140131276933720 [label="1
-
-Entropy: 0.000
-Samples: 20" color=gray shape=box]
-		140131276928224 [label="Gender
-
-Entropy: 0.977
-Gain: 0.106
-Samples: 17" color=green3 shape=ellipse]
-		140131276928224 -> 140131276934280 [label=Male]
-		140131276928224 -> 140131276933944 [label=Female]
-		140131276933328 [label="Total_Bilirubin <= 1.20
-
-Entropy: 0.592
-Gain: 0.077
-Samples: 21" color=green3 shape=ellipse]
-		140131276933328 -> 140131277011376 [label=False]
-		140131276933328 -> 140131277012440 [label=True]
-		140131276928448 [label="Total_Protiens <= 6.90
-
-Entropy: 0.837
-Gain: 0.097
-Samples: 30" color=green3 shape=ellipse]
-		140131276928448 -> 140131276931256 [label=False]
-		140131276928448 -> 140131277012328 [label=True]
-		140131277012104 [label="Albumin_and_Globulin_Ratio <= 1.15
+Samples: 29" color=gray shape=box]
+		140199499177376 [label="f21 <= 24.00
 
 Entropy: 0.983
-Gain: 0.045
-Samples: 78" color=green3 shape=ellipse]
-		140131277012104 -> 140131277011768 [label=False]
-		140131277012104 -> 140131277012552 [label=True]
-		140131276931704 [label="Alamine_Aminotransferase <= 25.57
+Gain: 0.775
+Samples: 26" color=green3 shape=ellipse]
+		140199499177376 -> 140199499232648 [label=False]
+		140199499177376 -> 140199499232256 [label=True]
+		140199499235056 [label="f17 <= 0.01
 
-Entropy: 0.722
-Gain: 0.092
-Samples: 40" color=green3 shape=ellipse]
-		140131276931704 -> 140131277011656 [label=False]
-		140131276931704 -> 140131277045656 [label=True]
-		140131277010200 [label="Age <= 45.85
-
-Entropy: 0.968
-Gain: 0.044
-Samples: 48" color=green3 shape=ellipse]
-		140131277010200 -> 140131277012720 [label=False]
-		140131277010200 -> 140131277042408 [label=True]
-		140131276930352 [label="1
+Entropy: 0.776
+Gain: 0.242
+Samples: 35" color=green3 shape=ellipse]
+		140199499235056 -> 140199498766824 [label=False]
+		140199499235056 -> 140199498765760 [label=True]
+		140199498767328 [label="B
 
 Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276930576 [label="Direct_Bilirubin <= 2.52
-
-Entropy: 1.000
-Gain: 0.082
-Samples: 6" color=green3 shape=ellipse]
-		140131276930576 -> 140131276928896 [label=False]
-		140131276930576 -> 140131276932824 [label=True]
-		140131276928672 [label="1
-
-Entropy: 0.000
-Samples: 6" color=gray shape=box]
-		140131276932544 [label="Alkaline_Phosphotase <= 205.40
-
-Entropy: 0.722
-Gain: 0.171
-Samples: 5" color=green3 shape=ellipse]
-		140131276932544 -> 140131276933552 [label=False]
-		140131276932544 -> 140131277009864 [label=True]
-		140131276934280 [label="Direct_Bilirubin <= 0.38
-
-Entropy: 0.890
-Gain: 0.144
-Samples: 13" color=green3 shape=ellipse]
-		140131276934280 -> 140131277010368 [label=False]
-		140131276934280 -> 140131277010592 [label=True]
-		140131276933944 [label="Albumin_and_Globulin_Ratio <= 1.28
-
-Entropy: 0.811
-Gain: 0.311
-Samples: 4" color=green3 shape=ellipse]
-		140131276933944 -> 140131276931872 [label=False]
-		140131276933944 -> 140131277010312 [label=True]
-		140131277011376 [label="Aspartate_Aminotransferase <= 101.50
-
-Entropy: 0.918
-Gain: 0.459
-Samples: 6" color=green3 shape=ellipse]
-		140131277011376 -> 140131277009696 [label=False]
-		140131277011376 -> 140131277012216 [label=True]
-		140131277012440 [label="Direct_Bilirubin <= 0.27
-
-Entropy: 0.353
-Gain: 0.113
-Samples: 15" color=green3 shape=ellipse]
-		140131277012440 -> 140131277010872 [label=False]
-		140131277012440 -> 140131277010704 [label=True]
-		140131276931256 [label="Total_Protiens <= 7.54
-
-Entropy: 0.610
-Gain: 0.197
-Samples: 20" color=green3 shape=ellipse]
-		140131276931256 -> 140131277008968 [label=False]
-		140131276931256 -> 140131277010424 [label=True]
-		140131277012328 [label="Alamine_Aminotransferase <= 31.90
-
-Entropy: 1.000
-Gain: 0.610
-Samples: 10" color=green3 shape=ellipse]
-		140131277012328 -> 140131277012608 [label=False]
-		140131277012328 -> 140131277011992 [label=True]
-		140131277011768 [label="Age <= 41.74
-
-Entropy: 0.975
-Gain: 0.048
-Samples: 27" color=green3 shape=ellipse]
-		140131277011768 -> 140131277010984 [label=False]
-		140131277011768 -> 140131277042240 [label=True]
-		140131277012552 [label="Alamine_Aminotransferase <= 25.04
-
-Entropy: 0.918
-Gain: 0.075
-Samples: 51" color=green3 shape=ellipse]
-		140131277012552 -> 140131277012384 [label=False]
-		140131277012552 -> 140131277044592 [label=True]
-		140131277011656 [label="Alamine_Aminotransferase <= 35.12
-
-Entropy: 0.954
-Gain: 0.138
-Samples: 16" color=green3 shape=ellipse]
-		140131277011656 -> 140131277009976 [label=False]
-		140131277011656 -> 140131277044984 [label=True]
-		140131277045656 [label="Total_Bilirubin <= 1.32
-
-Entropy: 0.414
-Gain: 0.078
-Samples: 24" color=green3 shape=ellipse]
-		140131277045656 -> 140131277044760 [label=False]
-		140131277045656 -> 140131277042352 [label=True]
-		140131277012720 [label="Total_Bilirubin <= 0.96
-
-Entropy: 0.999
-Gain: 0.182
-Samples: 31" color=green3 shape=ellipse]
-		140131277012720 -> 140131277043248 [label=False]
-		140131277012720 -> 140131277045544 [label=True]
-		140131277042408 [label="Albumin <= 2.36
-
-Entropy: 0.787
-Gain: 0.463
-Samples: 17" color=green3 shape=ellipse]
-		140131277042408 -> 140131277044088 [label=False]
-		140131277042408 -> 140131276557560 [label=True]
-		140131276928896 [label="Albumin_and_Globulin_Ratio <= 0.73
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131276928896 -> 140131276935120 [label=False]
-		140131276928896 -> 140131276934224 [label=True]
-		140131276932824 [label="Total_Protiens <= 7.67
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131276932824 -> 140131276934840 [label=False]
-		140131276932824 -> 140131277010032 [label=True]
-		140131276933552 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277009864 [label="Albumin <= 3.50
-
-Entropy: 0.918
-Gain: 0.252
-Samples: 3" color=green3 shape=ellipse]
-		140131277009864 -> 140131277009304 [label=False]
-		140131277009864 -> 140131277011152 [label=True]
-		140131277010368 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277010592 [label="Age <= 28.00
-
-Entropy: 0.971
-Gain: 0.125
-Samples: 10" color=green3 shape=ellipse]
-		140131277010592 -> 140131277010648 [label=False]
-		140131277010592 -> 140131277011824 [label=True]
-		140131276931872 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277010312 [label="Alkaline_Phosphotase <= 260.00
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277010312 -> 140131277011320 [label=False]
-		140131277010312 -> 140131277011936 [label=True]
-		140131277009696 [label="Albumin_and_Globulin_Ratio <= 1.00
-
-Entropy: 0.918
-Gain: 0.252
-Samples: 3" color=green3 shape=ellipse]
-		140131277009696 -> 140131277011264 [label=False]
-		140131277009696 -> 140131277009192 [label=True]
-		140131277012216 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277010872 [label="1
+Samples: 45" color=gray shape=box]
+		140199499232648 [label="M
 
 Entropy: 0.000
 Samples: 10" color=gray shape=box]
-		140131277010704 [label="Age <= 18.40
+		140199499232256 [label="f6 <= 0.12
 
-Entropy: 0.722
-Gain: 0.322
-Samples: 5" color=green3 shape=ellipse]
-		140131277010704 -> 140131277012664 [label=False]
-		140131277010704 -> 140131277012832 [label=True]
-		140131277008968 [label="Alamine_Aminotransferase <= 25.44
-
-Entropy: 0.918
-Gain: 0.458
-Samples: 9" color=green3 shape=ellipse]
-		140131277008968 -> 140131277009752 [label=False]
-		140131277008968 -> 140131277009024 [label=True]
-		140131277010424 [label="1
+Entropy: 0.337
+Gain: 0.112
+Samples: 16" color=green3 shape=ellipse]
+		140199499232256 -> 140199498765200 [label=False]
+		140199499232256 -> 140199498766600 [label=True]
+		140199498766824 [label="B
 
 Entropy: 0.000
-Samples: 11" color=gray shape=box]
-		140131277012608 [label="Total_Protiens <= 5.48
+Samples: 16" color=gray shape=box]
+		140199498765760 [label="f27 <= 0.08
 
-Entropy: 0.650
-Gain: 0.191
-Samples: 6" color=green3 shape=ellipse]
-		140131277012608 -> 140131277009136 [label=False]
-		140131277012608 -> 140131277043192 [label=True]
-		140131277011992 [label="2
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131277010984 [label="Alkaline_Phosphotase <= 295.31
-
-Entropy: 0.996
-Gain: 0.155
-Samples: 13" color=green3 shape=ellipse]
-		140131277010984 -> 140131277012160 [label=False]
-		140131277010984 -> 140131277042856 [label=True]
-		140131277042240 [label="Alamine_Aminotransferase <= 28.00
-
-Entropy: 0.863
-Gain: 0.371
-Samples: 14" color=green3 shape=ellipse]
-		140131277042240 -> 140131277043696 [label=False]
-		140131277042240 -> 140131277041736 [label=True]
-		140131277012384 [label="Direct_Bilirubin <= 0.19
-
-Entropy: 0.610
-Gain: 0.310
-Samples: 20" color=green3 shape=ellipse]
-		140131277012384 -> 140131277041848 [label=False]
-		140131277012384 -> 140131277041960 [label=True]
-		140131277044592 [label="Direct_Bilirubin <= 0.22
-
-Entropy: 0.993
-Gain: 0.092
-Samples: 31" color=green3 shape=ellipse]
-		140131277044592 -> 140131277043472 [label=False]
-		140131277044592 -> 140131277045432 [label=True]
-		140131277009976 [label="Total_Protiens <= 6.36
-
-Entropy: 0.592
-Gain: 0.198
-Samples: 7" color=green3 shape=ellipse]
-		140131277009976 -> 140131277042688 [label=False]
-		140131277009976 -> 140131277045264 [label=True]
-		140131277044984 [label="Age <= 56.67
-
-Entropy: 0.991
-Gain: 0.225
-Samples: 9" color=green3 shape=ellipse]
-		140131277044984 -> 140131277044312 [label=False]
-		140131277044984 -> 140131277043304 [label=True]
-		140131277044760 [label="1
-
-Entropy: 0.000
-Samples: 11" color=gray shape=box]
-		140131277042352 [label="Alkaline_Phosphotase <= 417.62
-
-Entropy: 0.619
-Gain: 0.064
-Samples: 13" color=green3 shape=ellipse]
-		140131277042352 -> 140131277044368 [label=False]
-		140131277042352 -> 140131277043640 [label=True]
-		140131277043248 [label="Alkaline_Phosphotase <= 206.33
-
-Entropy: 0.503
-Gain: 0.281
-Samples: 9" color=green3 shape=ellipse]
-		140131277043248 -> 140131277042464 [label=False]
-		140131277043248 -> 140131276557056 [label=True]
-		140131277045544 [label="Alamine_Aminotransferase <= 20.05
-
-Entropy: 0.946
-Gain: 0.198
-Samples: 22" color=green3 shape=ellipse]
-		140131277045544 -> 140131276554424 [label=False]
-		140131277045544 -> 140131276556720 [label=True]
-		140131277044088 [label="Total_Protiens <= 6.52
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 6" color=green3 shape=ellipse]
-		140131277044088 -> 140131276554480 [label=False]
-		140131277044088 -> 140131276556776 [label=True]
-		140131276557560 [label="2
-
-Entropy: 0.000
-Samples: 11" color=gray shape=box]
-		140131276935120 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276934224 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276934840 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277010032 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277009304 [label="Total_Bilirubin <= 0.85
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277009304 -> 140131277010536 [label=False]
-		140131277009304 -> 140131277010760 [label=True]
-		140131277011152 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277010648 [label="Total_Bilirubin <= 0.74
-
-Entropy: 0.971
-Gain: 0.971
-Samples: 5" color=green3 shape=ellipse]
-		140131277010648 -> 140131277011096 [label=False]
-		140131277010648 -> 140131277011040 [label=True]
-		140131277011824 [label="Alamine_Aminotransferase <= 76.60
+Entropy: 0.982
+Gain: 0.744
+Samples: 19" color=green3 shape=ellipse]
+		140199498765760 -> 140199498767776 [label=False]
+		140199498765760 -> 140199498831688 [label=True]
+		140199498765200 [label="f1 <= 19.10
 
 Entropy: 0.722
 Gain: 0.722
 Samples: 5" color=green3 shape=ellipse]
-		140131277011824 -> 140131277011488 [label=False]
-		140131277011824 -> 140131277012048 [label=True]
-		140131277011320 [label="2
+		140199498765200 -> 140199498764360 [label=False]
+		140199498765200 -> 140199498766992 [label=True]
+		140199498766600 [label="B
+
+Entropy: 0.000
+Samples: 11" color=gray shape=box]
+		140199498767776 [label="f10 <= 0.25
+
+Entropy: 0.503
+Gain: 0.281
+Samples: 9" color=green3 shape=ellipse]
+		140199498767776 -> 140199498831408 [label=False]
+		140199498767776 -> 140199498833424 [label=True]
+		140199498831688 [label="B
+
+Entropy: 0.000
+Samples: 10" color=gray shape=box]
+		140199498764360 [label="B
+
+Entropy: 0.000
+Samples: 4" color=gray shape=box]
+		140199498766992 [label="M
 
 Entropy: 0.000
 Samples: 1" color=gray shape=box]
-		140131277011936 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277011264 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277009192 [label="Aspartate_Aminotransferase <= 158.50
+		140199498831408 [label="f18 <= 0.01
 
 Entropy: 1.000
 Gain: 1.000
 Samples: 2" color=green3 shape=ellipse]
-		140131277009192 -> 140131277011880 [label=False]
-		140131277009192 -> 140131277012776 [label=True]
-		140131277012664 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277012832 [label="Alkaline_Phosphotase <= 371.00
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277012832 -> 140131277012272 [label=False]
-		140131277012832 -> 140131277042296 [label=True]
-		140131277009752 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277009024 [label="Total_Protiens <= 8.09
-
-Entropy: 0.592
-Gain: 0.076
-Samples: 7" color=green3 shape=ellipse]
-		140131277009024 -> 140131277011712 [label=False]
-		140131277009024 -> 140131277042912 [label=True]
-		140131277009136 [label="Total_Protiens <= 6.37
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131277009136 -> 140131277042184 [label=False]
-		140131277009136 -> 140131277042576 [label=True]
-		140131277043192 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277012160 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277042856 [label="Total_Protiens <= 6.69
-
-Entropy: 0.994
-Gain: 0.052
-Samples: 11" color=green3 shape=ellipse]
-		140131277042856 -> 140131277043024 [label=False]
-		140131277042856 -> 140131277044200 [label=True]
-		140131277043696 [label="2
+		140199498831408 -> 140199498833144 [label=False]
+		140199498831408 -> 140199498833312 [label=True]
+		140199498833424 [label="M
 
 Entropy: 0.000
 Samples: 7" color=gray shape=box]
-		140131277041736 [label="Alkaline_Phosphotase <= 219.71
-
-Entropy: 0.985
-Gain: 0.292
-Samples: 7" color=green3 shape=ellipse]
-		140131277041736 -> 140131277042744 [label=False]
-		140131277041736 -> 140131277043864 [label=True]
-		140131277041848 [label="1
-
-Entropy: 0.000
-Samples: 14" color=gray shape=box]
-		140131277041960 [label="Alamine_Aminotransferase <= 30.83
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 6" color=green3 shape=ellipse]
-		140131277041960 -> 140131277043584 [label=False]
-		140131277041960 -> 140131277043976 [label=True]
-		140131277043472 [label="Total_Bilirubin <= 0.96
-
-Entropy: 0.811
-Gain: 0.467
-Samples: 8" color=green3 shape=ellipse]
-		140131277043472 -> 140131277043808 [label=False]
-		140131277043472 -> 140131277043416 [label=True]
-		140131277045432 [label="Direct_Bilirubin <= 0.19
-
-Entropy: 0.932
-Gain: 0.057
-Samples: 23" color=green3 shape=ellipse]
-		140131277045432 -> 140131277045488 [label=False]
-		140131277045432 -> 140131276555208 [label=True]
-		140131277042688 [label="1
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131277045264 [label="Aspartate_Aminotransferase <= 43.33
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131277045264 -> 140131277044424 [label=False]
-		140131277045264 -> 140131277042800 [label=True]
-		140131277044312 [label="Alamine_Aminotransferase <= 29.14
-
-Entropy: 0.985
-Gain: 0.985
-Samples: 7" color=green3 shape=ellipse]
-		140131277044312 -> 140131277044144 [label=False]
-		140131277044312 -> 140131276554928 [label=True]
-		140131277043304 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277044368 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277043640 [label="Aspartate_Aminotransferase <= 50.50
-
-Entropy: 0.722
-Gain: 0.073
-Samples: 10" color=green3 shape=ellipse]
-		140131277043640 -> 140131276555096 [label=False]
-		140131277043640 -> 140131276555824 [label=True]
-		140131277042464 [label="Age <= 65.00
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277042464 -> 140131276554704 [label=False]
-		140131277042464 -> 140131276555936 [label=True]
-		140131276557056 [label="2
-
-Entropy: 0.000
-Samples: 7" color=gray shape=box]
-		140131276554424 [label="Alkaline_Phosphotase <= 198.60
-
-Entropy: 0.469
-Gain: 0.108
-Samples: 10" color=green3 shape=ellipse]
-		140131276554424 -> 140131276555040 [label=False]
-		140131276554424 -> 140131276557448 [label=True]
-		140131276556720 [label="Gender
-
-Entropy: 0.980
-Gain: 0.196
-Samples: 12" color=green3 shape=ellipse]
-		140131276556720 -> 140131276557392 [label=Male]
-		140131276556720 -> 140131276557336 [label=Female]
-		140131276554480 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276556776 [label="1
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131277010536 [label="2
+		140199498833144 [label="M
 
 Entropy: 0.000
 Samples: 1" color=gray shape=box]
-		140131277010760 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277011096 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277011040 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277011488 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277012048 [label="2
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131277011880 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277012776 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277012272 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277042296 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277011712 [label="Aspartate_Aminotransferase <= 24.60
-
-Entropy: 0.722
-Gain: 0.322
-Samples: 5" color=green3 shape=ellipse]
-		140131277011712 -> 140131277041904 [label=False]
-		140131277011712 -> 140131277042016 [label=True]
-		140131277042912 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277042184 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277042576 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277043024 [label="Albumin <= 3.96
-
-Entropy: 0.971
-Gain: 0.971
-Samples: 5" color=green3 shape=ellipse]
-		140131277043024 -> 140131277043528 [label=False]
-		140131277043024 -> 140131277043360 [label=True]
-		140131277044200 [label="Albumin_and_Globulin_Ratio <= 1.28
-
-Entropy: 0.918
-Gain: 0.459
-Samples: 6" color=green3 shape=ellipse]
-		140131277044200 -> 140131277043080 [label=False]
-		140131277044200 -> 140131277045096 [label=True]
-		140131277042744 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277043864 [label="Aspartate_Aminotransferase <= 17.80
-
-Entropy: 0.971
-Gain: 0.971
-Samples: 5" color=green3 shape=ellipse]
-		140131277043864 -> 140131277043752 [label=False]
-		140131277043864 -> 140131277044872 [label=True]
-		140131277043584 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277043976 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277043808 [label="2
-
-Entropy: 0.000
-Samples: 5" color=gray shape=box]
-		140131277043416 [label="Alkaline_Phosphotase <= 259.33
-
-Entropy: 0.918
-Gain: 0.252
-Samples: 3" color=green3 shape=ellipse]
-		140131277043416 -> 140131277045040 [label=False]
-		140131277043416 -> 140131276555152 [label=True]
-		140131277045488 [label="Aspartate_Aminotransferase <= 22.14
-
-Entropy: 0.959
-Gain: 0.034
-Samples: 21" color=green3 shape=ellipse]
-		140131277045488 -> 140131277045376 [label=False]
-		140131277045488 -> 140131276555880 [label=True]
-		140131276555208 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277044424 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277042800 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277044144 [label="1
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131276554928 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131276555096 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276555824 [label="Alamine_Aminotransferase <= 20.62
-
-Entropy: 0.811
-Gain: 0.811
-Samples: 8" color=green3 shape=ellipse]
-		140131276555824 -> 140131276556608 [label=False]
-		140131276555824 -> 140131276555376 [label=True]
-		140131276554704 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276555936 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276555040 [label="Alamine_Aminotransferase <= 28.80
-
-Entropy: 0.722
-Gain: 0.171
-Samples: 5" color=green3 shape=ellipse]
-		140131276555040 -> 140131276556160 [label=False]
-		140131276555040 -> 140131276556552 [label=True]
-		140131276557448 [label="1
-
-Entropy: 0.000
-Samples: 5" color=gray shape=box]
-		140131276557392 [label="Age <= 55.00
-
-Entropy: 0.918
-Gain: 0.044
-Samples: 6" color=green3 shape=ellipse]
-		140131276557392 -> 140131276557728 [label=False]
-		140131276557392 -> 140131276554368 [label=True]
-		140131276557336 [label="Alkaline_Phosphotase <= 214.00
-
-Entropy: 0.650
-Gain: 0.191
-Samples: 6" color=green3 shape=ellipse]
-		140131276557336 -> 140131276558064 [label=False]
-		140131276557336 -> 140131276557112 [label=True]
-		140131277041904 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277042016 [label="Total_Protiens <= 8.25
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277042016 -> 140131277042632 [label=False]
-		140131277042016 -> 140131277042520 [label=True]
-		140131277043528 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277043360 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277043080 [label="Total_Protiens <= 6.33
-
-Entropy: 0.918
-Gain: 0.252
-Samples: 3" color=green3 shape=ellipse]
-		140131277043080 -> 140131277043920 [label=False]
-		140131277043080 -> 140131277044480 [label=True]
-		140131277045096 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277043752 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131277044872 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277045040 [label="Total_Protiens <= 6.80
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277045040 -> 140131277044256 [label=False]
-		140131277045040 -> 140131276554536 [label=True]
-		140131276555152 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277045376 [label="Gender
-
-Entropy: 0.722
-Gain: 0.322
-Samples: 5" color=green3 shape=ellipse]
-		140131277045376 -> 140131276555264 [label=Male]
-		140131277045376 -> 140131276555320 [label=Female]
-		140131276555880 [label="Albumin <= 3.31
-
-Entropy: 0.989
-Gain: 0.019
-Samples: 16" color=green3 shape=ellipse]
-		140131276555880 -> 140131276555488 [label=False]
-		140131276555880 -> 140131276556664 [label=True]
-		140131276556608 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276555376 [label="1
-
-Entropy: 0.000
-Samples: 6" color=gray shape=box]
-		140131276556160 [label="1
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276556552 [label="Alkaline_Phosphotase <= 233.33
-
-Entropy: 0.918
-Gain: 0.252
-Samples: 3" color=green3 shape=ellipse]
-		140131276556552 -> 140131276557168 [label=False]
-		140131276556552 -> 140131276557504 [label=True]
-		140131276557728 [label="Total_Protiens <= 6.50
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131276557728 -> 140131276556944 [label=False]
-		140131276557728 -> 140131276557672 [label=True]
-		140131276554368 [label="Age <= 52.25
-
-Entropy: 0.811
-Gain: 0.811
-Samples: 4" color=green3 shape=ellipse]
-		140131276554368 -> 140131276558232 [label=False]
-		140131276554368 -> 140131276587640 [label=True]
-		140131276558064 [label="2
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131276557112 [label="Age <= 56.33
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 3" color=green3 shape=ellipse]
-		140131276557112 -> 140131276555656 [label=False]
-		140131276557112 -> 140131276587472 [label=True]
-		140131277042632 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277042520 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277043920 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277044480 [label="Alkaline_Phosphotase <= 219.00
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131277044480 -> 140131277044816 [label=False]
-		140131277044480 -> 140131277045152 [label=True]
-		140131277044256 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276554536 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276555264 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131276555320 [label="Albumin_and_Globulin_Ratio <= 1.06
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131276555320 -> 140131276554648 [label=False]
-		140131276555320 -> 140131276555992 [label=True]
-		140131276555488 [label="Total_Bilirubin <= 0.77
-
-Entropy: 0.918
-Gain: 0.918
-Samples: 6" color=green3 shape=ellipse]
-		140131276555488 -> 140131276554984 [label=False]
-		140131276555488 -> 140131276555712 [label=True]
-		140131276556664 [label="Aspartate_Aminotransferase <= 18.60
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 10" color=green3 shape=ellipse]
-		140131276556664 -> 140131276556216 [label=False]
-		140131276556664 -> 140131276556328 [label=True]
-		140131276557168 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276557504 [label="Alkaline_Phosphotase <= 210.00
-
-Entropy: 1.000
-Gain: 1.000
-Samples: 2" color=green3 shape=ellipse]
-		140131276557504 -> 140131276557784 [label=False]
-		140131276557504 -> 140131276558120 [label=True]
-		140131276556944 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276557672 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276558232 [label="1
-
-Entropy: 0.000
-Samples: 3" color=gray shape=box]
-		140131276587640 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276555656 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276587472 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131277044816 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131277045152 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276554648 [label="1
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276555992 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276554984 [label="1
-
-Entropy: 0.000
-Samples: 4" color=gray shape=box]
-		140131276555712 [label="2
-
-Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140131276556216 [label="2
-
-Entropy: 0.000
-Samples: 5" color=gray shape=box]
-		140131276556328 [label="1
-
-Entropy: 0.000
-Samples: 5" color=gray shape=box]
-		140131276557784 [label="2
-
-Entropy: 0.000
-Samples: 1" color=gray shape=box]
-		140131276558120 [label="1
+		140199498833312 [label="B
 
 Entropy: 0.000
 Samples: 1" color=gray shape=box]

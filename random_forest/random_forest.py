@@ -11,9 +11,12 @@ class RandomForest:
         self.trees = [RandomTree() for _ in range(self.num_trees)]
     
     def train(self, data, class_column, attr_sample_size=None):
-        bootstrap_size = int(len(data) * 0.8)
-        for tree in self.trees:
-            tree.train(bootstrap(data, size=bootstrap_size, seed=self.seed), class_column, attr_sample_size)
+        if self.num_trees > 1:
+            bootstrap_size = int(len(data) * 0.8)
+            for tree in self.trees:
+                tree.train(bootstrap(data, size=bootstrap_size, seed=self.seed), class_column, attr_sample_size)
+        else:
+            self.trees[0].train(data, class_column, attr_sample_size=attr_sample_size)
 
     def predict(self, instance):
         # Majority Voting
