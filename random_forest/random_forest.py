@@ -5,13 +5,15 @@ from graphviz import Digraph
 
 class RandomForest:
 
-    def __init__(self, num_trees):
+    def __init__(self, num_trees, seed=None):
+        self.seed = seed
         self.num_trees = num_trees
         self.trees = [RandomTree() for _ in range(self.num_trees)]
     
-    def train(self, data, class_column, attr_sample_ratio):
+    def train(self, data, class_column, attr_sample_size=None):
+        bootstrap_size = int(len(data) * 0.8)
         for tree in self.trees:
-            tree.train(bootstrap(data, class_column, attr_sample_ratio), class_column)
+            tree.train(bootstrap(data, size=bootstrap_size, seed=self.seed), class_column, attr_sample_size)
 
     def predict(self, instance):
         # Majority Voting

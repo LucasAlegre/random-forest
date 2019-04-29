@@ -1,3 +1,4 @@
+import random
 from math import log2
 from graphviz import Digraph
 
@@ -13,7 +14,7 @@ class RandomTree:
         self.attributes = None
         self.root = None
 
-    def train(self, data, class_column):
+    def train(self, data, class_column, attr_sample_size=None):
         self.data = data
         self.class_column = class_column
 
@@ -22,7 +23,7 @@ class RandomTree:
 
         self._compute_metadata()
 
-        self.root = RandomTreeNode(data, self.attributes.copy(), self.class_column)
+        self.root = RandomTreeNode(data, self.attributes.copy(), self.class_column, attr_sample_size)
        
     def predict(self, instance):
         return self.root.predict(instance)
@@ -53,7 +54,7 @@ class RandomTree:
 
 class RandomTreeNode:
 
-    def __init__(self, data, attributes, class_column, cut_point_by_mean=True):
+    def __init__(self, data, attributes, class_column, attr_sample_size=None, cut_point_by_mean=True):
         self.is_leaf = False
         self.class_column = class_column
         self.cut_point_by_mean = cut_point_by_mean
@@ -73,11 +74,17 @@ class RandomTreeNode:
             self.terminal_class = data[class_column].value_counts().idxmax()
             return
 
-        attr_entropies = {attr: self.entropy_attribute(data, attr) for attr in attributes}
-        self.node_attribute = max(attributes, key=lambda attr: self.data_entropy - attr_entropies[attr])  # attribute with the max gain (entropy - entropy of the attribute)
+        if attr_sample_size != None:
+            sample_attributes = random.sample(attributes, attr_sample_size)
+        else:
+            sample_attributes = attributes
+
+        attr_entropies = {attr: self.entropy_attribute(data, attr) for attr in sample_attributes}
+        self.node_attribute = max(sample_attributes, key=lambda attr: self.data_entropy - attr_entropies[attr])  # attribute with the max gain (entropy - entropy of the attribute)
         self.gain = self.data_entropy - attr_entropies[self.node_attribute]
         attributes.remove(self.node_attribute)
 
+        # Categorial Attribute
         if self.node_attribute not in RandomTree.NumericalAttributes:
             for v in RandomTree.AttributesDomain[self.node_attribute]:
                 dv = data[data[self.node_attribute] == v]
@@ -87,15 +94,15 @@ class RandomTreeNode:
                     self.children = None
                     return
                 else:
-                    self.children[v] = RandomTreeNode(dv, attributes.copy(), class_column)
-        
+                    self.children[v] = RandomTreeNode(dv, attributes.copy(), class_column, attr_sample_size)
+        # Numerical Attribute
         else:
             self.cut_point = self._calculate_cut_point_for(self.node_attribute, data)
             subset_greater_than_cut = data[data[self.node_attribute] > self.cut_point]
             less_or_equal_cut = data[data[self.node_attribute] <= self.cut_point]
             self.children = {
-                False: RandomTreeNode(subset_greater_than_cut, attributes.copy(), class_column),
-                True: RandomTreeNode(less_or_equal_cut, attributes.copy(), class_column)
+                False: RandomTreeNode(subset_greater_than_cut, attributes.copy(), class_column, attr_sample_size),
+                True: RandomTreeNode(less_or_equal_cut, attributes.copy(), class_column, attr_sample_size)
             }
 
     def predict(self, instance):
@@ -124,7 +131,7 @@ class RandomTreeNode:
         n = len(data)
         mean_entropy = 0
 
-        if attribute not in RandomTree.NumericalAttributes:  # categorical attribute (object == str on Pandas)
+        if attribute not in RandomTree.NumericalAttributes:  # categorical attribute
             for _, g in data.groupby(attribute):
                 g_size = len(g)
                 value_counts = g[self.class_column].value_counts().tolist()
