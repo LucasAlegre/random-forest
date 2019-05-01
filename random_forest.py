@@ -16,8 +16,10 @@ if __name__ == '__main__':
     prs.add_argument("-d", dest="data", required=True, help="The dataset .csv file.\n")
     prs.add_argument("-c", dest="class_column", required=True, help="The column of the .csv to be predicted.\n")
     prs.add_argument("-sep", dest="sep", default=',', required=False, help=".csv separator.\n")
+    prs.add_argument('-drop', nargs='+', required=False, default=[], help="Columns to drop from .csv.")
     prs.add_argument("-n", dest="num_trees", type=int, default=5, required=False, help="The number of trees in the random forest.\n")
-    prs.add_argument("-sa", action='store_true', default=False, required=False, help="Sample attributes on each node.\n")
+    prs.add_argument("-not-sample", action='store_true', default=False, required=False, help="Do not sample attributes on each node.\n")
+    prs.add_argument("-cut-by-mean", action='store_true', default=False, required=False, help="Cut point by mean of numerical attribute.\n")
     prs.add_argument("-v", action='store_true', default=False, required=False, help="View random tree image.\n")
 
     args = prs.parse_args()
@@ -28,17 +30,20 @@ if __name__ == '__main__':
     df = pd.read_csv(args.data, sep=args.sep)
     class_column = args.class_column
 
-    if args.sa:
-        attr_sample_size = int(sqrt(len(df.columns.values)))
-    else:
+    for column in args.drop:
+        df.drop(column, inplace=True, axis=1)
+
+    if args.not_sample:
         attr_sample_size = None
+    else:
+        attr_sample_size = int(sqrt(len(df.columns.values)))
 
     forest = RandomForest(args.num_trees, seed=args.seed)
 
     train = df.sample(frac=0.7, random_state=args.seed)
     test = df.loc[~df.index.isin(train.index)]
 
-    forest.train(train, class_column, attr_sample_size)
+    forest.train(train, class_column, attr_sample_size, cut_point_by_mean=args.cut_by_mean)
     
     if args.v:
         forest.view_forest('RandomForest')

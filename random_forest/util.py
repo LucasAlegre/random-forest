@@ -10,8 +10,8 @@ def evaluate(model, test_data, class_column):
     print(c/len(test_data))
 
 
-def bootstrap(data, size, seed):
-    bootstrap = data.sample(n=size, replace=True, random_state=seed)
+def bootstrap(data, seed):
+    bootstrap = data.sample(n=len(data), replace=True, random_state=seed)
     return bootstrap
 
 

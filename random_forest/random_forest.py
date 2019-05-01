@@ -1,7 +1,7 @@
 from .random_tree import RandomTree
 from .util import bootstrap
 from graphviz import Digraph
-
+from tqdm import tqdm
 
 class RandomForest:
 
@@ -10,13 +10,15 @@ class RandomForest:
         self.num_trees = num_trees
         self.trees = [RandomTree() for _ in range(self.num_trees)]
     
-    def train(self, data, class_column, attr_sample_size=None):
+    def train(self, data, class_column, attr_sample_size=None, cut_point_by_mean=True):
         if self.num_trees > 1:
-            bootstrap_size = int(len(data) * 0.8)
-            for tree in self.trees:
-                tree.train(bootstrap(data, size=bootstrap_size, seed=self.seed), class_column, attr_sample_size)
+            pbar = tqdm(self.trees)
+            for ind, tree in enumerate(pbar):
+                pbar.set_description("Training Tree {}/{}".format(ind+1, len(self.trees)))
+
+                tree.train(bootstrap(data, seed=self.seed), class_column, attr_sample_size, cut_point_by_mean)
         else:
-            self.trees[0].train(data, class_column, attr_sample_size=attr_sample_size)
+            self.trees[0].train(data, class_column, attr_sample_size, cut_point_by_mean)
 
     def predict(self, instance):
         # Majority Voting
