@@ -9,11 +9,9 @@ def evaluate(model, test_data, class_column):
     
     print(c/len(test_data))
 
-
-def bootstrap(data, seed):
-    bootstrap = data.sample(n=len(data), replace=True, random_state=seed)
+def bootstrap(data):
+    bootstrap = data.sample(n=len(data), replace=True)
     return bootstrap
-
 
 def f_measure():
     raise Exception("Not implemented")

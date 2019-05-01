@@ -3,48 +3,318 @@ digraph RandomForest {
 	node [fontname=Arial style=filled]
 	edge [fontname=Arial]
 	subgraph cluster_1 {
-		140511370386344 [label="Tempo
+		140288584536248 [label="f11 <= 2.68
 
-Entropy: 0.940
-Gain: 0.247
+Entropy: 1.558
+Gain: 0.539
+Samples: 125" color=green3 shape=ellipse]
+		140288584536248 -> 140288719832456 [label=False]
+		140288584536248 -> 140288584538936 [label=True]
+		140288719832456 [label="f6 <= 2.68
+
+Entropy: 0.984
+Gain: 0.225
+Samples: 75" color=green3 shape=ellipse]
+		140288719832456 -> 140288584538264 [label=False]
+		140288719832456 -> 140288584539440 [label=True]
+		140288584538936 [label="f7 <= 0.44
+
+Entropy: 1.071
+Gain: 0.045
+Samples: 50" color=green3 shape=ellipse]
+		140288584538936 -> 140288584538768 [label=False]
+		140288584538936 -> 140288584539608 [label=True]
+		140288584538264 [label="f3 <= 18.11
+
+Entropy: 0.669
+Gain: 0.137
+Samples: 40" color=green3 shape=ellipse]
+		140288584538264 -> 140288584538544 [label=False]
+		140288584538264 -> 140288584539888 [label=True]
+		140288584539440 [label="f12 <= 647.09
+
+Entropy: 0.863
+Gain: 0.518
+Samples: 35" color=green3 shape=ellipse]
+		140288584539440 -> 140288584539048 [label=False]
+		140288584539440 -> 140288584539664 [label=True]
+		140288584538768 [label="f6 <= 0.95
+
+Entropy: 0.855
+Gain: 0.580
+Samples: 25" color=green3 shape=ellipse]
+		140288584538768 -> 140288584539384 [label=False]
+		140288584538768 -> 140288583960056 [label=True]
+		140288584539608 [label="f2 <= 2.32
+
+Entropy: 1.197
+Gain: 0.127
+Samples: 25" color=green3 shape=ellipse]
+		140288584539608 -> 140288584539944 [label=False]
+		140288584539608 -> 140288583961232 [label=True]
+		140288584538544 [label="f0 <= 12.97
+
+Entropy: 0.954
+Gain: 0.652
+Samples: 16" color=green3 shape=ellipse]
+		140288584538544 -> 140288584538040 [label=False]
+		140288584538544 -> 140288584538600 [label=True]
+		140288584539888 [label="f4 <= 106.54
+
+Entropy: 0.250
+Gain: 0.048
+Samples: 24" color=green3 shape=ellipse]
+		140288584539888 -> 140288584540112 [label=False]
+		140288584539888 -> 140288583959440 [label=True]
+		140288584539048 [label="f10 <= 1.10
+
+Entropy: 0.863
+Gain: 0.124
 Samples: 14" color=green3 shape=ellipse]
-		140511370386344 -> 140511370386680 [label=Ensolarado]
-		140511370386344 -> 140511370383880 [label=Nublado]
-		140511370386344 -> 140511737633536 [label=Chuvoso]
-		140511370386680 [label="Umidade
+		140288584539048 -> 140288584539776 [label=False]
+		140288584539048 -> 140288583960224 [label=True]
+		140288584539664 [label="2
 
-Entropy: 0.971
+Entropy: 0.000
+Samples: 21" color=gray shape=box]
+		140288584539384 [label="f0 <= 12.66
+
+Entropy: 0.764
+Gain: 0.458
+Samples: 9" color=green3 shape=ellipse]
+		140288584539384 -> 140288583959944 [label=False]
+		140288584539384 -> 140288583961120 [label=True]
+		140288583960056 [label="3
+
+Entropy: 0.000
+Samples: 16" color=gray shape=box]
+		140288584539944 [label="f10 <= 0.83
+
+Entropy: 1.189
+Gain: 0.617
+Samples: 12" color=green3 shape=ellipse]
+		140288584539944 -> 140288583959552 [label=False]
+		140288584539944 -> 140288583958880 [label=True]
+		140288583961232 [label="f10 <= 0.93
+
+Entropy: 0.961
+Gain: 0.661
+Samples: 13" color=green3 shape=ellipse]
+		140288583961232 -> 140288583959048 [label=False]
+		140288583961232 -> 140288583961736 [label=True]
+		140288584538040 [label="f9 <= 5.01
+
+Entropy: 0.439
+Gain: 0.111
+Samples: 11" color=green3 shape=ellipse]
+		140288584538040 -> 140288584538880 [label=False]
+		140288584538040 -> 140288583958992 [label=True]
+		140288584538600 [label="2
+
+Entropy: 0.000
+Samples: 5" color=gray shape=box]
+		140288584540112 [label="1
+
+Entropy: 0.000
+Samples: 13" color=gray shape=box]
+		140288583959440 [label="f0 <= 13.78
+
+Entropy: 0.439
+Gain: 0.111
+Samples: 11" color=green3 shape=ellipse]
+		140288583959440 -> 140288583959384 [label=False]
+		140288583959440 -> 140288583958824 [label=True]
+		140288584539776 [label="f5 <= 2.23
+
+Entropy: 1.000
+Gain: 0.459
+Samples: 6" color=green3 shape=ellipse]
+		140288584539776 -> 140288583959608 [label=False]
+		140288584539776 -> 140288583960000 [label=True]
+		140288583960224 [label="f5 <= 2.50
+
+Entropy: 0.544
+Gain: 0.092
+Samples: 8" color=green3 shape=ellipse]
+		140288583960224 -> 140288583958712 [label=False]
+		140288583960224 -> 140288583960728 [label=True]
+		140288583959944 [label="f1 <= 1.43
+
+Entropy: 0.918
+Gain: 0.918
+Samples: 3" color=green3 shape=ellipse]
+		140288583959944 -> 140288583959328 [label=False]
+		140288583959944 -> 140288583961456 [label=True]
+		140288583961120 [label="2
+
+Entropy: 0.000
+Samples: 6" color=gray shape=box]
+		140288583959552 [label="f0 <= 12.67
+
+Entropy: 1.371
 Gain: 0.971
 Samples: 5" color=green3 shape=ellipse]
-		140511370386680 -> 140511370065232 [label=Alta]
-		140511370386680 -> 140511370066184 [label=Normal]
-		140511370383880 [label="Sim
+		140288583959552 -> 140288583960392 [label=False]
+		140288583959552 -> 140288583962128 [label=True]
+		140288583958880 [label="3
+
+Entropy: 0.000
+Samples: 7" color=gray shape=box]
+		140288583959048 [label="2
+
+Entropy: 0.000
+Samples: 7" color=gray shape=box]
+		140288583961736 [label="f6 <= 0.71
+
+Entropy: 0.650
+Gain: 0.317
+Samples: 6" color=green3 shape=ellipse]
+		140288583961736 -> 140288583961624 [label=False]
+		140288583961736 -> 140288583962520 [label=True]
+		140288584538880 [label="1
+
+Entropy: 0.000
+Samples: 6" color=gray shape=box]
+		140288583958992 [label="f2 <= 2.72
+
+Entropy: 0.722
+Gain: 0.322
+Samples: 5" color=green3 shape=ellipse]
+		140288583958992 -> 140288583959160 [label=False]
+		140288583958992 -> 140288583959664 [label=True]
+		140288583959384 [label="1
+
+Entropy: 0.000
+Samples: 6" color=gray shape=box]
+		140288583958824 [label="f1 <= 1.64
+
+Entropy: 0.722
+Gain: 0.722
+Samples: 5" color=green3 shape=ellipse]
+		140288583958824 -> 140288583959888 [label=False]
+		140288583958824 -> 140288583960504 [label=True]
+		140288583959608 [label="1
+
+Entropy: 0.000
+Samples: 2" color=gray shape=box]
+		140288583960000 [label="f0 <= 12.78
+
+Entropy: 0.811
+Gain: 0.811
+Samples: 4" color=green3 shape=ellipse]
+		140288583960000 -> 140288583960616 [label=False]
+		140288583960000 -> 140288583960840 [label=True]
+		140288583958712 [label="1
+
+Entropy: 0.000
+Samples: 3" color=gray shape=box]
+		140288583960728 [label="f1 <= 1.74
+
+Entropy: 0.722
+Gain: 0.171
+Samples: 5" color=green3 shape=ellipse]
+		140288583960728 -> 140288583960784 [label=False]
+		140288583960728 -> 140288583961344 [label=True]
+		140288583959328 [label="3
+
+Entropy: 0.000
+Samples: 2" color=gray shape=box]
+		140288583961456 [label="2
+
+Entropy: 0.000
+Samples: 1" color=gray shape=box]
+		140288583960392 [label="f5 <= 2.25
+
+Entropy: 1.000
+Gain: 1.000
+Samples: 2" color=green3 shape=ellipse]
+		140288583960392 -> 140288583959104 [label=False]
+		140288583960392 -> 140288583962240 [label=True]
+		140288583962128 [label="2
+
+Entropy: 0.000
+Samples: 3" color=gray shape=box]
+		140288583961624 [label="f0 <= 12.51
+
+Entropy: 1.000
+Gain: 1.000
+Samples: 2" color=green3 shape=ellipse]
+		140288583961624 -> 140288583962016 [label=False]
+		140288583961624 -> 140288584102240 [label=True]
+		140288583962520 [label="3
 
 Entropy: 0.000
 Samples: 4" color=gray shape=box]
-		140511737633536 [label="Ventoso
-
-Entropy: 0.971
-Gain: 0.971
-Samples: 5" color=green3 shape=ellipse]
-		140511737633536 -> 140511370064392 [label=Falso]
-		140511737633536 -> 140511370066408 [label=Verdadeiro]
-		140511370065232 [label="Nao
+		140288583959160 [label="1
 
 Entropy: 0.000
 Samples: 3" color=gray shape=box]
-		140511370066184 [label="Sim
+		140288583959664 [label="f7 <= 0.24
+
+Entropy: 1.000
+Gain: 1.000
+Samples: 2" color=green3 shape=ellipse]
+		140288583959664 -> 140288583959720 [label=False]
+		140288583959664 -> 140288583960280 [label=True]
+		140288583959888 [label="1
 
 Entropy: 0.000
-Samples: 2" color=gray shape=box]
-		140511370064392 [label="Sim
+Samples: 4" color=gray shape=box]
+		140288583960504 [label="2
+
+Entropy: 0.000
+Samples: 1" color=gray shape=box]
+		140288583960616 [label="1
+
+Entropy: 0.000
+Samples: 1" color=gray shape=box]
+		140288583960840 [label="2
 
 Entropy: 0.000
 Samples: 3" color=gray shape=box]
-		140511370066408 [label="Nao
+		140288583960784 [label="1
 
 Entropy: 0.000
 Samples: 2" color=gray shape=box]
+		140288583961344 [label="f9 <= 3.61
+
+Entropy: 0.918
+Gain: 0.918
+Samples: 3" color=green3 shape=ellipse]
+		140288583961344 -> 140288583961400 [label=False]
+		140288583961344 -> 140288583961960 [label=True]
+		140288583959104 [label="1
+
+Entropy: 0.000
+Samples: 1" color=gray shape=box]
+		140288583962240 [label="3
+
+Entropy: 0.000
+Samples: 1" color=gray shape=box]
+		140288583962016 [label="2
+
+Entropy: 0.000
+Samples: 1" color=gray shape=box]
+		140288584102240 [label="3
+
+Entropy: 0.000
+Samples: 1" color=gray shape=box]
+		140288583959720 [label="1
+
+Entropy: 0.000
+Samples: 1" color=gray shape=box]
+		140288583960280 [label="2
+
+Entropy: 0.000
+Samples: 1" color=gray shape=box]
+		140288583961400 [label="1
+
+Entropy: 0.000
+Samples: 2" color=gray shape=box]
+		140288583961960 [label="2
+
+Entropy: 0.000
+Samples: 1" color=gray shape=box]
 		label="Tree 1"
 	}
 }

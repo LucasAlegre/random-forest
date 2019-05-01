@@ -1,12 +1,15 @@
-import random
 from math import log2
+import random
 from graphviz import Digraph
+import numpy as np
+import pandas as pd
 
 
 class RandomTree:
 
     AttributesDomain = dict()
     NumericalAttributes = set()
+    Classes = set()
 
     def __init__(self):
         self.data = None
@@ -18,8 +21,7 @@ class RandomTree:
         self.data = data
         self.class_column = class_column
 
-        self.attributes = set(self.data.columns.values)
-        self._compute_metadata()
+        self.attributes = self.data.columns.values.tolist()
         self.attributes.remove(self.class_column)  # all columns except the class
 
         self._compute_metadata()
@@ -30,6 +32,7 @@ class RandomTree:
         return self.root.predict(instance)
 
     def _compute_metadata(self):
+        RandomTree.Classes.update(self.data[self.class_column].unique().tolist())
         for atr in self.attributes:
             if self.data[atr].dtype == object:  # Categorical Attribute (object == str on Pandas)
                 RandomTree.AttributesDomain[atr] = self.data[atr].unique().tolist()
@@ -67,7 +70,7 @@ class RandomTreeNode:
 
         if self.num_samples == 0:
             self.is_leaf = True
-            self.terminal_class = RandomTree.AttributesDomain[self.class_column][0]
+            self.terminal_class = random.sample(RandomTree.Classes, 1)[0]
             return
 
         if self._number_of_classes(data) == 1:  # if all instances have the same class
@@ -81,7 +84,7 @@ class RandomTreeNode:
             return
 
         if attr_sample_size != None:
-            sample_attributes = random.sample(attributes, attr_sample_size)
+            sample_attributes = random.sample(attributes, min(attr_sample_size, len(attributes)))
         else:
             sample_attributes = attributes
 

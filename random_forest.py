@@ -38,7 +38,7 @@ if __name__ == '__main__':
     else:
         attr_sample_size = int(sqrt(len(df.columns.values)))
 
-    forest = RandomForest(args.num_trees, seed=args.seed)
+    forest = RandomForest(args.num_trees)
 
     train = df.sample(frac=0.7, random_state=args.seed)
     test = df.loc[~df.index.isin(train.index)]
