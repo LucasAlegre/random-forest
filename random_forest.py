@@ -34,6 +34,7 @@ if __name__ == '__main__':
     df = df.sample(frac=1).reset_index(drop=True) # Shuffle DataFrame rows
 
     class_column = args.class_column
+    class_column_values = df[class_column].unique()
 
     for column in args.drop:
         df.drop(column, inplace=True, axis=1)
@@ -45,9 +46,17 @@ if __name__ == '__main__':
 
     forests = create_cross_validation_forests(df, args.num_trees, args.num_folds)
 
+    scores = []
     for forest in forests:
         forest.train(class_column, attr_sample_size, cut_point_by_mean=args.cut_by_mean)
-        evaluate(forest, forest.testing_data, class_column)
+        score = evaluate(forest, forest.testing_data, class_column, class_column_values)
+        scores.append(score)
+
+    average_score = np.mean(scores)
+    standard_deviation = np.std(scores)
+    
+    print('Average score:', average_score)
+    print('Standard deviation:', standard_deviation)
     
     if args.v:
         forests[0].view_forest('RandomForest')
