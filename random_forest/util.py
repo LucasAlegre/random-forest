@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import random
 
 def evaluate(model, test_data, class_column):
@@ -15,3 +16,20 @@ def bootstrap(data):
 
 def f_measure():
     raise Exception("Not implemented")
+
+def create_cross_validation_forests(df, num_trees, num_folds):
+    from .random_forest import RandomForest
+    
+    forests = []
+    folds = np.array_split(df, num_folds)
+
+    for i in range(num_folds):
+        train = folds.copy()
+        train.pop(i)
+        train = pd.concat(train, sort=False)
+        test = folds[i]
+
+        forest = RandomForest(num_trees, train, test)
+        forests.append(forest)
+
+    return forests

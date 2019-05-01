@@ -5,22 +5,25 @@ import random
 from math import sqrt
 from random_forest.random_forest import RandomForest
 from random_forest.random_tree import RandomTree
-from random_forest.util import bootstrap, evaluate
+from random_forest.util import bootstrap, evaluate, create_cross_validation_forests
 
 
 if __name__ == '__main__':
 
     prs = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
                                   description="Random Forest - Aprendizado de Máquina 2019/1 UFRGS")
-    prs.add_argument("-s", dest="seed", type=int, default=None, required=False, help="The random seed.\n")
-    prs.add_argument("-d", dest="data", required=True, help="The dataset .csv file.\n")
-    prs.add_argument("-c", dest="class_column", required=True, help="The column of the .csv to be predicted.\n")
-    prs.add_argument("-sep", dest="sep", default=',', required=False, help=".csv separator.\n")
-    prs.add_argument('-drop', nargs='+', required=False, default=[], help="Columns to drop from .csv.")
-    prs.add_argument("-n", dest="num_trees", type=int, default=5, required=False, help="The number of trees in the random forest.\n")
-    prs.add_argument("-not-sample", action='store_true', default=False, required=False, help="Do not sample attributes on each node.\n")
+
+    prs.add_argument("-s",    dest="seed",         required=False, default=None, type=int, help="The random seed.\n")
+    prs.add_argument("-d",    dest="data",         required=False, default='datasets/wdbc.csv', help="The dataset .csv file.\n")
+    prs.add_argument("-c",    dest="class_column", required=False, default='diagnosis', help="The column of the .csv to be predicted.\n")
+    prs.add_argument("-sep",  dest="sep",          required=False, default=',',  help=".csv separator.\n")
+    prs.add_argument("-n",    dest="num_trees",    required=False, default=5,    type=int,help="The number of trees in the random forest.\n")
+    prs.add_argument("-k",    dest="num_folds",    required=False, default=10,   type=int, help="The number of folds used on cross validation.\n")
+    prs.add_argument('-drop', nargs='+',           required=False, default=[],   help="Columns to drop from .csv.")
+    
+    prs.add_argument("-not-sample",  action='store_true', default=False, required=False, help="Do not sample attributes on each node.\n")
     prs.add_argument("-cut-by-mean", action='store_true', default=False, required=False, help="Cut point by mean of numerical attribute.\n")
-    prs.add_argument("-v", action='store_true', default=False, required=False, help="View random tree image.\n")
+    prs.add_argument("-v",           action='store_true', default=False, required=False, help="View random tree image.\n")
 
     args = prs.parse_args()
 
@@ -38,14 +41,11 @@ if __name__ == '__main__':
     else:
         attr_sample_size = int(sqrt(len(df.columns.values)))
 
-    forest = RandomForest(args.num_trees)
+    forests = create_cross_validation_forests(df, args.num_trees, args.num_folds)
 
-    train = df.sample(frac=0.7, random_state=args.seed)
-    test = df.loc[~df.index.isin(train.index)]
-
-    forest.train(train, class_column, attr_sample_size, cut_point_by_mean=args.cut_by_mean)
+    for forest in forests:
+        forest.train(class_column, attr_sample_size, cut_point_by_mean=args.cut_by_mean)
+        evaluate(forest, forest.testing_data, class_column)
     
     if args.v:
-        forest.view_forest('RandomForest')
-
-    evaluate(forest, test, class_column)
+        forests[0].view_forest('RandomForest')
