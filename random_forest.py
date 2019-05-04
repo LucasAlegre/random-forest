@@ -5,7 +5,7 @@ import random
 from math import sqrt
 from random_forest.random_forest import RandomForest
 from random_forest.random_tree import RandomTree
-from random_forest.util import bootstrap, evaluate, create_cross_validation_forests
+from random_forest.util import k_cross_validation
 
 
 if __name__ == '__main__':
@@ -31,10 +31,7 @@ if __name__ == '__main__':
     np.random.seed(args.seed)
 
     df = pd.read_csv(args.data, sep=args.sep)
-    df = df.sample(frac=1).reset_index(drop=True) # Shuffle DataFrame rows
-
     class_column = args.class_column
-    class_column_values = df[class_column].unique()
 
     for column in args.drop:
         df.drop(column, inplace=True, axis=1)
@@ -44,19 +41,10 @@ if __name__ == '__main__':
     else:
         attr_sample_size = int(sqrt(len(df.columns.values)))
 
-    forests = create_cross_validation_forests(df, args.num_trees, args.num_folds)
+    forest = RandomForest(args.num_trees, attr_sample_size=attr_sample_size, cut_point_by_mean=args.cut_by_mean)
+    #forest.train(df, class_column)
 
-    scores = []
-    for forest in forests:
-        forest.train(class_column, attr_sample_size, cut_point_by_mean=args.cut_by_mean)
-        score = evaluate(forest, forest.testing_data, class_column, class_column_values)
-        scores.append(score)
-
-    average_score = np.mean(scores)
-    standard_deviation = np.std(scores)
-    
-    print('Average score:', average_score)
-    print('Standard deviation:', standard_deviation)
+    k_cross_validation(forest, df, class_column, k=args.num_folds)
     
     if args.v:
-        forests[0].view_forest('RandomForest')
+        forest.view_forest('RandomForest')

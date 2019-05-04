@@ -7,21 +7,21 @@ import random
 
 class RandomForest:
 
-    def __init__(self, num_trees, train, test):
-        self.training_data = train
-        self.testing_data = test
+    def __init__(self, num_trees, attr_sample_size=None, cut_point_by_mean=False):
         self.num_trees = num_trees
         self.trees = [RandomTree() for _ in range(self.num_trees)]
+        self.attr_sample_size = attr_sample_size
+        self.cut_point_by_mean = cut_point_by_mean
     
-    def train(self, class_column, attr_sample_size=None, cut_point_by_mean=False):
+    def train(self, data, class_column):
         if self.num_trees > 1:
             pbar = tqdm(self.trees)
             for ind, tree in enumerate(pbar):
                 pbar.set_description("Training Tree {}/{}".format(ind+1, len(self.trees)))
 
-                tree.train(bootstrap(self.training_data), class_column, attr_sample_size, cut_point_by_mean)
+                tree.train(bootstrap(data), class_column, self.attr_sample_size, self.cut_point_by_mean)
         else:
-            self.trees[0].train(self.training_data, class_column, attr_sample_size, cut_point_by_mean)
+            self.trees[0].train(data, class_column, self.attr_sample_size, self.cut_point_by_mean)
 
     def predict(self, instance):
         # Majority Voting

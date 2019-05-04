@@ -4,37 +4,55 @@ import random
 
 def evaluate(model, test_data, class_column, class_column_values):
     confusion_matrix = calculate_confusion_matrix(model, test_data, class_column, class_column_values)
-    return f1_measure(confusion_matrix, class_column_values)
+    accuracy = calculate_accuracy(confusion_matrix, class_column_values)
+    precision = calculate_precision(confusion_matrix, class_column_values)
+    recall = calculate_recall(confusion_matrix, class_column_values)
+    mean_precision = np.mean(list(precision.values()))
+    mean_recall = np.mean(list(recall.values()))
+    f1_score = f1_measure(mean_precision, mean_recall)
+    print(32*'=')
+    print('Accuracy: {:.4f}'.format(accuracy))
+    for value in class_column_values:
+        print('Class {} precision: {:.4f}'.format(value, precision[value]))
+        print('Class {} recall: {:.4f}'.format(value, recall[value]))
+    print('Mean precision: {:.4f}'.format(mean_precision))
+    print('Mean recall: {:.4f}'.format(mean_recall))
+    print('F1-score: {:.4f}'.format(f1_score))
+    print(32*'=')
+
+    return f1_score
 
 def bootstrap(data):
     bootstrap = data.sample(n=len(data), replace=True)
     return bootstrap
 
-def f1_measure(confusion_matrix, class_column_values):
-    precision = calculate_precision(confusion_matrix, class_column_values)
-    recall    = calculate_recall(confusion_matrix, class_column_values)
+def f1_measure(precision, recall):
     f1 = (2 * precision * recall) / (precision + recall)
-
-    print(f1)
-
     return f1
 
-def create_cross_validation_forests(df, num_trees, num_folds):
-    from .random_forest import RandomForest
-    
-    forests = []
-    folds = np.array_split(df, num_folds)
-
-    for i in range(num_folds):
+def k_cross_fold(data, k=10):
+    data = data.sample(frac=1).reset_index(drop=True) # Shuffle DataFrame rows
+    folds = np.array_split(data, k)
+    for i in range(k):
         train = folds.copy()
         train.pop(i)
         train = pd.concat(train, sort=False)
         test = folds[i]
+        yield train, test
 
-        forest = RandomForest(num_trees, train, test)
-        forests.append(forest)
+def k_cross_validation(model, data, class_column, k=10):
+    class_column_values = data[class_column].unique()
+    k_folds = k_cross_fold(data, k)
+    scores = []
+    for _ in range(k):
+        train, test = next(k_folds)
+        model.train(train, class_column)
+        f1_score = evaluate(model, test, class_column, class_column_values)
+        scores.append(f1_score) 
 
-    return forests
+    print('Average F1-score: {:.4f}'.format(np.mean(scores)))
+    print('Standard deviation: {:.4f}'.format(np.std(scores)))
+    print(32*'=')
 
 def calculate_confusion_matrix(model, test_data, class_column, class_column_values):
     confusion_matrix = {}
@@ -53,22 +71,28 @@ def calculate_confusion_matrix(model, test_data, class_column, class_column_valu
 
     return confusion_matrix
 
+def calculate_accuracy(confusion_matrix, class_column_values):
+    acc = 0
+    total = 0
+    for value in class_column_values:
+        acc += confusion_matrix[value][value]
+        total += sum(confusion_matrix[value][i] for i in class_column_values)
+    return acc / total
+
 def calculate_precision(confusion_matrix, class_column_values):
-    classes_precision = []
+    classes_precision = {}
     for value in class_column_values:
         vp = confusion_matrix[value][value]
         vp_fp = sum([confusion_matrix[i][value] for i in class_column_values])
         precision =  vp / vp_fp
-        classes_precision.append(precision)
-
-    return sum(classes_precision) / len(classes_precision)
+        classes_precision[value] = precision
+    return classes_precision
 
 def calculate_recall(confusion_matrix, class_column_values):
-    classes_recall = []
+    classes_recall = {}
     for value in class_column_values:
         vp = confusion_matrix[value][value]
         vp_fp = sum([confusion_matrix[value][i] for i in class_column_values])
         recall =  vp / vp_fp
-        classes_recall.append(recall)
-
-    return sum(classes_recall) / len(classes_recall)
+        classes_recall[value] = recall
+    return classes_recall
