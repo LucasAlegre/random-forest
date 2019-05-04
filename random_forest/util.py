@@ -82,10 +82,14 @@ def calculate_accuracy(confusion_matrix, class_column_values):
 def calculate_precision(confusion_matrix, class_column_values):
     classes_precision = {}
     for value in class_column_values:
-        vp = confusion_matrix[value][value]
-        vp_fp = sum([confusion_matrix[i][value] for i in class_column_values])
-        precision =  vp / vp_fp
-        classes_precision[value] = precision
+        try:
+            vp = confusion_matrix[value][value]
+            vp_fp = sum([confusion_matrix[i][value] for i in class_column_values])
+            precision =  vp / vp_fp
+        except ZeroDivisionError:
+            precision = 0
+        finally:
+            classes_precision[value] = precision
     return classes_precision
 
 def calculate_recall(confusion_matrix, class_column_values):
