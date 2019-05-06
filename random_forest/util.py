@@ -96,7 +96,7 @@ def calculate_recall(confusion_matrix, class_column_values):
     classes_recall = {}
     for value in class_column_values:
         vp = confusion_matrix[value][value]
-        vp_fp = sum([confusion_matrix[value][i] for i in class_column_values])
-        recall =  vp / vp_fp
+        vp_fn = sum([confusion_matrix[value][i] for i in class_column_values])
+        recall =  vp / vp_fn
         classes_recall[value] = recall
     return classes_recall

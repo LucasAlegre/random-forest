@@ -92,8 +92,8 @@ class RandomTreeNode:
         self.node_attribute = max(sample_attributes, key=lambda attr: self.data_entropy - attr_entropies[attr]['entropy'])  # attribute with the max gain (entropy - entropy of the attribute)
         self.gain = self.data_entropy - attr_entropies[self.node_attribute]['entropy']
 
-        #if self.node_attribute not in RandomTree.NumericalAttributes or self.cut_point_by_mean:
-        attributes.remove(self.node_attribute)
+        if self.node_attribute not in RandomTree.NumericalAttributes:  # Categorical attribute is not used twice in the same branch
+            attributes.remove(self.node_attribute)
 
         # Categorial Attribute
         if self.node_attribute not in RandomTree.NumericalAttributes:
@@ -151,7 +151,7 @@ class RandomTreeNode:
         else:  
             cut_points = self._calculate_cut_points(data, attribute)
             entropies = [self.entropy_numerical_attribute(data, attribute, cut_point) for cut_point in cut_points]
-            max_entropy = max(entropies)
+            max_entropy = min(entropies)
             cut_point = cut_points[entropies.index(max_entropy)]
             return {'entropy': max_entropy, 'cut-point': cut_point}
     
