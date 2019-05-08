@@ -5,7 +5,7 @@ import random
 from math import sqrt
 from random_forest.random_forest import RandomForest
 from random_forest.random_tree import RandomTree
-from random_forest.util import k_cross_validation
+from random_forest.util import stratified_k_cross_validation
 
 
 if __name__ == '__main__':
@@ -14,8 +14,8 @@ if __name__ == '__main__':
                                   description="Random Forest - Aprendizado de Máquina 2019/1 UFRGS")
 
     prs.add_argument("-s",    dest="seed",         required=False, default=None,                help="The random seed.\n", type=int)
-    prs.add_argument("-d",    dest="data",         required=False, default='datasets/wdbc.csv', help="The dataset .csv file.\n")
-    prs.add_argument("-c",    dest="class_column", required=False, default='diagnosis',         help="The column of the .csv to be predicted.\n")
+    prs.add_argument("-d",    dest="data",         required=False, default='datasets/wine.csv', help="The dataset .csv file.\n")
+    prs.add_argument("-c",    dest="class_column", required=False, default='class',             help="The column of the .csv to be predicted.\n")
     prs.add_argument("-sep",  dest="sep",          required=False, default=',',                 help=".csv separator.\n")
     prs.add_argument("-n",    dest="num_trees",    required=False, default=5,                   help="The number of trees in the random forest.\n", type=int)
     prs.add_argument("-k",    dest="num_folds",    required=False, default=10,                  help="The number of folds used on cross validation.\n", type=int)
@@ -44,7 +44,7 @@ if __name__ == '__main__':
     forest = RandomForest(args.num_trees, attr_sample_size=attr_sample_size, cut_point_by_mean=args.cut_by_mean)
     #forest.train(df, class_column)
 
-    k_cross_validation(forest, df, class_column, k=args.num_folds)
+    stratified_k_cross_validation(forest, df, class_column, k=args.num_folds)
     
     if args.v:
         forest.view_forest('RandomForest')

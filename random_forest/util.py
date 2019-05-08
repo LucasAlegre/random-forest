@@ -31,7 +31,6 @@ def f1_measure(precision, recall):
     return f1
 
 def k_cross_fold(data, k=10):
-    data = data.sample(frac=1).reset_index(drop=True) # Shuffle DataFrame rows
     folds = np.array_split(data, k)
     for i in range(k):
         train = folds.copy()
@@ -40,9 +39,25 @@ def k_cross_fold(data, k=10):
         test = folds[i]
         yield train, test
 
-def k_cross_validation(model, data, class_column, k=10):
+def stratified_k_cross_fold(data, class_column, k=10):
+    data = data.sample(frac=1).reset_index(drop=True) # Shuffle DataFrame rows
+
+    folds_per_class = []
+    for _, g in data.groupby(class_column):
+        folds_per_class.append(k_cross_fold(g, k=k))  # create fold for each class
+    
+    for _ in range(k):
+        train = pd.DataFrame()
+        test = pd.DataFrame()
+        for c in range(len(folds_per_class)):         # append the next fold for each class
+            train_c, test_c = next(folds_per_class[c])
+            train = train.append(train_c)
+            test = test.append(test_c)
+        yield train, test
+
+def stratified_k_cross_validation(model, data, class_column, k=10):
     class_column_values = data[class_column].unique()
-    k_folds = k_cross_fold(data, k)
+    k_folds = stratified_k_cross_fold(data, class_column, k)
     scores = []
     for _ in range(k):
         train, test = next(k_folds)
