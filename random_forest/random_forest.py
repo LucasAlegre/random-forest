@@ -1,9 +1,11 @@
-from .random_tree import RandomTree
-from .util import bootstrap
-from graphviz import Digraph
-from tqdm import tqdm
 import numpy as np
 import random
+from graphviz import Digraph
+from tqdm import tqdm
+
+from .random_tree import RandomTree
+from .util import bootstrap
+
 
 class RandomForest:
 

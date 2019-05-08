@@ -7,7 +7,7 @@ import pandas as pd
 
 class RandomTree:
 
-    AttributesDomain = dict()
+    CategoricalAttrDomain = dict()
     NumericalAttributes = set()
     Classes = set()
 
@@ -33,11 +33,11 @@ class RandomTree:
 
     def _compute_metadata(self):
         RandomTree.Classes.update(self.data[self.class_column].unique().tolist())
-        for atr in self.attributes:
-            if self.data[atr].dtype == object:  # Categorical Attribute (object == str on Pandas)
-                RandomTree.AttributesDomain[atr] = self.data[atr].unique().tolist()
+        for attr in self.attributes:
+            if self.data[attr].dtype == object:  # Categorical Attribute (object == str on Pandas)
+                RandomTree.CategoricalAttrDomain[attr] = self.data[attr].unique().tolist()
             else:
-                RandomTree.NumericalAttributes.add(atr)
+                RandomTree.NumericalAttributes.add(attr)
 
     def print_tree(self):
         self.root.print_node()
@@ -97,7 +97,7 @@ class RandomTreeNode:
 
         # Categorial Attribute
         if self.node_attribute not in RandomTree.NumericalAttributes:
-            for v in RandomTree.AttributesDomain[self.node_attribute]:
+            for v in RandomTree.CategoricalAttrDomain[self.node_attribute]:
                 dv = data[data[self.node_attribute] == v]
                 if len(dv) == 0:
                     self.is_leaf = True
@@ -151,9 +151,9 @@ class RandomTreeNode:
         else:  
             cut_points = self._calculate_cut_points(data, attribute)
             entropies = [self.entropy_numerical_attribute(data, attribute, cut_point) for cut_point in cut_points]
-            max_entropy = min(entropies)
-            cut_point = cut_points[entropies.index(max_entropy)]
-            return {'entropy': max_entropy, 'cut-point': cut_point}
+            min_entropy = min(entropies)
+            cut_point = cut_points[entropies.index(min_entropy)]
+            return {'entropy': min_entropy, 'cut-point': cut_point}
     
     def entropy_categorical_attribute(self, data, attribute):
         n = len(data)
