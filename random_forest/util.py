@@ -10,6 +10,9 @@ def evaluate(model, test_data, class_column, class_column_values):
     mean_precision = np.mean(list(precision.values()))
     mean_recall = np.mean(list(recall.values()))
     f1_score = f1_measure(mean_precision, mean_recall)
+
+    #print(','.join(str(x) for x in [f1_score,accuracy,mean_precision,mean_recall]))
+
     print(32*'=')
     print('Accuracy: {:.4f}'.format(accuracy))
     for value in class_column_values:
@@ -59,6 +62,7 @@ def stratified_k_cross_validation(model, data, class_column, k=10):
     class_column_values = data[class_column].unique()
     k_folds = stratified_k_cross_fold(data, class_column, k)
     scores = []
+    #print('f1,acc,meanprec,meanrec')
     for _ in range(k):
         train, test = next(k_folds)
         model.train(train, class_column)

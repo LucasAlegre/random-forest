@@ -29,7 +29,7 @@ if __name__ == '__main__':
 
     random.seed(args.seed)
     np.random.seed(args.seed)
-
+    
     df = pd.read_csv(args.data, sep=args.sep)
     class_column = args.class_column
 
@@ -42,7 +42,6 @@ if __name__ == '__main__':
         attr_sample_size = int(sqrt(len(df.columns.values)))
 
     forest = RandomForest(args.num_trees, attr_sample_size=attr_sample_size, cut_point_by_mean=args.cut_by_mean)
-    #forest.train(df, class_column)
 
     stratified_k_cross_validation(forest, df, class_column, k=args.num_folds)
     
