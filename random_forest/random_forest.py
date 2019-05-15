@@ -18,7 +18,7 @@ class RandomForest:
     def train(self, data, class_column):
         if self.num_trees > 1:
             pbar = tqdm(self.trees)
-            for ind, tree in enumerate(self.trees):
+            for ind, tree in enumerate(pbar):
                 pbar.set_description("Training Tree {}/{}".format(ind+1, len(self.trees)))
                 tree.train(bootstrap(data), class_column, self.attr_sample_size, self.cut_point_by_mean)
         else:
