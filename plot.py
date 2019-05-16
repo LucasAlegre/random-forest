@@ -12,18 +12,21 @@ colors = bmap.mpl_colors
 
 ntrees = [1,5,10,25,50,100]
 
-boxplots = []
-for i in ntrees:
-    df = pd.read_csv('results/wine.csv_n_{}.csv'.format(i))
-    for j in range(len(df)):
-        boxplots.append({'x': str(i), 'y': df['f1'][j]})
-boxplots = pd.DataFrame(boxplots)
+files = [('wdbc.csv','diagnosis'), ('wine.csv', 'class'), ('car.csv', 'class'), ('ionosphere.csv', 'g/b'), ('pima.tsv','target')]
 
-ax = sns.boxplot(x='x', y='y', data=boxplots, linewidth=2.5, order=[str(x) for x in ntrees])
-ax = sns.swarmplot(x='x', y='y', data=boxplots, color=".2", size=6, order=[str(x) for x in ntrees])
+for f in files:
+        boxplots = []
+        for i in ntrees:
+                df = pd.read_csv('results/{}_n_{}.csv'.format(f[0], i))
+                for j in range(len(df)):
+                        boxplots.append({'x': str(i), 'y': df['f1'][j]})
+        boxplots = pd.DataFrame(boxplots)
 
-ax.set(xlabel='Number of Trees', ylabel='Average F1 score')
+        ax = sns.boxplot(x='x', y='y', data=boxplots, linewidth=2.5, order=[str(x) for x in ntrees])
+        ax = sns.swarmplot(x='x', y='y', data=boxplots, color=".2", size=6, order=[str(x) for x in ntrees])
 
-plt.show()
+        ax.set(xlabel='Number of Trees', ylabel='F1 score')
 
-ax.get_figure().savefig('results/wine'+'.pdf', bbox_inches='tight')
+        plt.show()
+
+        ax.get_figure().savefig('results/{}'.format(f[0]) + '.pdf', bbox_inches='tight')
